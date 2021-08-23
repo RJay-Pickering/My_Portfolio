@@ -1,37 +1,35 @@
 body {
-  margin: 50px;
-  background-color: black;
+  background-image: url("images/code.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.textmain {
+.selfie {
+  width: 300px;
+  height: 500px;
+  float: left;
+  padding: 0.5em;
+}
+
+.my_name {
+  text-align: left;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
   font-size: 75px;
-  text-align: center;
-  color: grey;
-  font-family: Impact, "Arial Narrow Bold", sans-serif;
-}
-
-.text {
-  font-size: 50px;
-  text-align: center;
-  color: grey;
-  font-family: "Special Elite", cursive;
-}
-
-.learning {
-  text-align: center;
   color: ghostwhite;
-  font-size: 25px;
-  font-family: "Source Sans Pro", sans-serif;
-}
-.war {
-  width: 1325px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.undead {
-  width: 1325px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
+.aboutme {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 55px;
+  color: ghostwhite;
+}
+
+.para {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: ghostwhite;
 }
