@@ -18,28 +18,30 @@ body {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   font-size: 70px;
-  color: #ffd700;
+  color: #95d600;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .para {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   font-size: 35px;
-  color: #ffd700;
+  color: #95d600;
   padding: 0.5em;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .linkedin:link {
-  color: #ffd700;
+  color: #95d600;
   text-decoration: none;
 }
 
 .linkedin:visited {
   text-decoration: none;
-  color: #ffd700;
+  color: #95d600;
 }
 
 .linkedin:hover {
-  color: crimson;
+  color: whitesmoke;
   text-decoration: none;
 }
