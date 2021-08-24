@@ -2,34 +2,44 @@ body {
   background-image: url("images/code.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
 }
 
 .selfie {
   width: 300px;
   height: 500px;
   float: left;
-  padding: 0.5em;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
 }
 
 .my_name {
-  text-align: left;
-  font-weight: bold;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 75px;
-  color: ghostwhite;
-}
-
-.aboutme {
   text-align: center;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  font-size: 55px;
-  color: ghostwhite;
+  font-size: 70px;
+  color: #ffd700;
 }
 
 .para {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  font-size: 25px;
-  color: ghostwhite;
+  font-size: 35px;
+  color: #ffd700;
+  padding: 0.5em;
+}
+
+.linkedin:link {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.linkedin:visited {
+  text-decoration: none;
+  color: #ffd700;
+}
+
+.linkedin:hover {
+  color: crimson;
+  text-decoration: none;
 }
