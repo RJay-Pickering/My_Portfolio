@@ -6,7 +6,7 @@ body {
   width: 300px;
   height: 500px;
   float: left;
-  padding: 1em;
+  padding: 1.5em;
 }
 
 .my_name {
@@ -16,6 +16,7 @@ body {
   font-size: 70px;
   color: #39ff14;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 0px;
 }
 
 .para {
@@ -25,6 +26,7 @@ body {
   color: #39ff14;
   padding: 0.5em;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  margin: 0px;
 }
 
 .linkedin:link {
@@ -38,6 +40,6 @@ body {
 }
 
 .linkedin:hover {
-  color: #95d600;
+  color: #7fffd4;
   text-decoration: none;
 }
