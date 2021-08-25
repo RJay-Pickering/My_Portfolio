@@ -33,18 +33,21 @@ body {
   color: #39ff14;
   text-decoration: none;
   border-style: outset;
+  border-color: #39ff14;
 }
 
 .more_about:visited {
   text-decoration: none;
   color: #39ff14;
   border-style: outset;
+  border-color: #39ff14;
 }
 
 .more_about:hover {
   color: #7fffd4;
   text-decoration: none;
   border-style: inset;
+  border-color: #7fffd4;
 }
 
 .linkedin:link {
