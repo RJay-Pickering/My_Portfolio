@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #71797e;
 }
 
 .selfie {
@@ -14,8 +14,8 @@ body {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   font-size: 70px;
-  color: #39ff14;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color: #d0f0c0;
+
   margin: 0px;
 }
 
@@ -23,41 +23,43 @@ body {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   font-size: 35px;
-  color: #39ff14;
+  color: #d0f0c0;
   padding: 0.5em;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
   margin: -20px;
 }
 
 .more_about:link {
-  color: #39ff14;
-  text-decoration: none;
-  border-style: outset;
-  border-color: #39ff14;
+  padding: 15px 25px;
+  font-size: 35px;
+  text-align: center;
+  color: #d0f0c0;
+  background-color: #04aa6d;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
 .more_about:visited {
   text-decoration: none;
-  color: #39ff14;
+  color: #d0f0c0;
   border-style: outset;
-  border-color: #39ff14;
+  border-color: #d0f0c0;
 }
 
-.more_about:hover {
-  color: #7fffd4;
-  text-decoration: none;
-  border-style: inset;
-  border-color: #7fffd4;
+.more_about:active {
+  background-color: #d0f0c0;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .linkedin:link {
-  color: #39ff14;
+  color: #d0f0c0;
   text-decoration: none;
 }
 
 .linkedin:visited {
   text-decoration: none;
-  color: #39ff14;
+  color: #d0f0c0;
 }
 
 .linkedin:hover {
