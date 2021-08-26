@@ -14,9 +14,18 @@ body {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
   font-size: 70px;
-  color: #d0f0c0;
-
+  color: #333;
   margin: 0px;
+}
+
+.para_head {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 35px;
+  color: #333;
+  padding: 0.5em;
+
+  margin: -20px;
 }
 
 .para {
@@ -24,45 +33,65 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 35px;
   color: #d0f0c0;
-  padding: 0.5em;
+  padding: 1em;
 
   margin: -20px;
 }
 
-.more_about:link {
-  padding: 15px 25px;
-  font-size: 35px;
+.container {
+  padding: 60px;
   text-align: center;
-  color: #d0f0c0;
-  background-color: #04aa6d;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
 }
 
-.more_about:visited {
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
   text-decoration: none;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+.the_head {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
   color: #d0f0c0;
-  border-style: outset;
-  border-color: #d0f0c0;
+  margin: 0px;
 }
 
-.more_about:active {
-  background-color: #d0f0c0;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+.linkedin {
+  width: 100px;
+  height: 100px;
 }
 
-.linkedin:link {
-  color: #d0f0c0;
-  text-decoration: none;
+.github {
+  width: 110px;
+  height: 110px;
 }
 
-.linkedin:visited {
-  text-decoration: none;
-  color: #d0f0c0;
-}
-
-.linkedin:hover {
-  color: #7fffd4;
-  text-decoration: none;
+.the_middle {
+  text-align: center;
 }
