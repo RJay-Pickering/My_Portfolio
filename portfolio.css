@@ -24,8 +24,8 @@ body {
   font-size: 35px;
   color: #333;
   padding: 0.5em;
-
   margin: -20px;
+  text-align: center;
 }
 
 .para {
@@ -34,16 +34,14 @@ body {
   font-size: 35px;
   color: #d0f0c0;
   padding: 1em;
-
   margin: -20px;
 }
 
 .container {
-  padding: 60px;
-  text-align: center;
+  padding: 2.5em;
   background: #1abc9c;
-  color: white;
   font-size: 30px;
+  margin: -7.5px;
 }
 
 .navbar {
@@ -51,6 +49,7 @@ body {
   background-color: #333;
   position: sticky;
   top: 0;
+  margin: -7.5px;
 }
 
 .navbar a {
@@ -85,6 +84,7 @@ body {
 .linkedin {
   width: 100px;
   height: 100px;
+  padding-left: 1em;
 }
 
 .github {
