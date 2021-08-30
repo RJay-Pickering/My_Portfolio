@@ -18,6 +18,15 @@ body {
   height: 30%;
 }
 
+.img-git {
+  padding: 1em;
+  padding-top: 2em;
+  float: left;
+  width: 30%;
+  height: 100%;
+  display: block;
+}
+
 .my_name {
   text-align: center;
   font-weight: bold;
@@ -71,9 +80,9 @@ body {
 .para-projects {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  font-size: 35px;
+  font-size: 34.5px;
   color: #d0f0c0;
-  padding: 0.8em;
+  padding: 0.7em;
   margin: -17px;
   padding-left: 10em;
 }
