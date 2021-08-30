@@ -6,7 +6,16 @@ body {
   width: 300px;
   height: 500px;
   float: left;
-  padding: 1.5em;
+  padding: 1em;
+  padding-top: 2em;
+}
+
+.img-memory {
+  padding: 1em;
+  padding-top: 2em;
+  float: left;
+  width: 30%;
+  height: 30%;
 }
 
 .my_name {
@@ -31,14 +40,26 @@ body {
 .para {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
+  font-size: 45px;
+  color: #d0f0c0;
+  padding: 1em;
+  margin: -17px;
+  padding-left: 10em;
+}
+
+.para-skills {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
   font-size: 35px;
   color: #d0f0c0;
   padding: 1em;
-  margin: -20px;
+  margin: -17px;
+  padding-left: 10em;
+  text-align: center;
 }
 
 .container {
-  padding: 2.5em;
+  padding: 2em;
   background: #1abc9c;
   font-size: 30px;
   margin: -7.5px;
