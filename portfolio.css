@@ -27,6 +27,16 @@ body {
   margin: 0px;
 }
 
+.nav-header {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  color: #d0f0c0;
+  margin: 0px;
+  padding-top: 0.3em;
+}
+
 .para_head {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
@@ -42,7 +52,7 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 36px;
   color: #d0f0c0;
-  padding: 1em;
+  padding: 0.5em;
   margin: -17px;
   padding-left: 10em;
 }
@@ -52,9 +62,29 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 35px;
   color: #d0f0c0;
-  padding: 1em;
+  padding: 0.5em;
   margin: -17px;
   padding-left: 10em;
+  text-align: center;
+}
+
+.para-projects {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 35px;
+  color: #d0f0c0;
+  padding: 0.8em;
+  margin: -17px;
+  padding-left: 10em;
+}
+
+.nav-para {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 35px;
+  color: #d0f0c0;
+  padding-top: 0.8em;
+  margin: -17px;
   text-align: center;
 }
 
@@ -100,6 +130,7 @@ body {
   font-size: 60px;
   color: #d0f0c0;
   margin: 0px;
+  padding-top: 0.5em;
 }
 
 .linkedin {
