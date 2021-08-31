@@ -1,5 +1,6 @@
 body {
-  background-color: #71797e;
+  background-color: #5e6768;
+  margin: 0;
 }
 
 .selfie {
@@ -13,6 +14,7 @@ body {
 .img-memory {
   padding: 1em;
   padding-top: 2em;
+  padding-right: 1.5em;
   float: left;
   width: 30%;
   height: 30%;
@@ -25,6 +27,23 @@ body {
   width: 30%;
   height: 100%;
   display: block;
+  padding-right: 1.5em;
+}
+
+.img-safari {
+  padding: 1em;
+  padding-right: 1.5em;
+  float: left;
+  width: 30%;
+  height: 30%;
+}
+
+.img-ford {
+  padding: 1em;
+  float: left;
+  width: 30%;
+  height: 30%;
+  padding-right: 1.5em;
 }
 
 .my_name {
@@ -63,7 +82,6 @@ body {
   color: #d0f0c0;
   padding: 0.5em;
   margin: -17px;
-  padding-left: 10em;
 }
 
 .para-skills {
@@ -73,7 +91,6 @@ body {
   color: #d0f0c0;
   padding: 0.5em;
   margin: -17px;
-  padding-left: 10em;
   text-align: center;
 }
 
@@ -84,7 +101,15 @@ body {
   color: #d0f0c0;
   padding: 0.7em;
   margin: -17px;
-  padding-left: 10em;
+}
+
+.para-underproject {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 34.5px;
+  color: #d0f0c0;
+  padding: 0.3em;
+  margin: 0px;
 }
 
 .nav-para {
