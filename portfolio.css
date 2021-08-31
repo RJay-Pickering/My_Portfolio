@@ -65,16 +65,6 @@ body {
   padding-top: 0.3em;
 }
 
-.para_head {
-  font-weight: bold;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 35px;
-  color: #333;
-  padding: 0.5em;
-  margin: -20px;
-  text-align: center;
-}
-
 .paragraph {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
@@ -90,6 +80,7 @@ body {
   font-size: 35px;
   color: #d0f0c0;
   padding: 0.5em;
+  padding-right: 1em;
   margin: -17px;
   text-align: center;
 }
