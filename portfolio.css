@@ -172,3 +172,69 @@ body {
 .the_middle {
   text-align: center;
 }
+
+@media screen and (max-width: 375px) {
+  .nav-header {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    color: #d0f0c0;
+    margin: 0px;
+    padding-top: 0.3em;
+  }
+
+  .paragraph {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    margin: -17px;
+    padding-top: 1em;
+    padding-left: 9em;
+  }
+
+  .img-memory {
+    padding: 0.3em;
+    padding-top: 1em;
+    padding-right: 0;
+    float: left;
+    width: 30%;
+    height: 30%;
+  }
+  .container {
+    padding: 1em;
+    background: #1abc9c;
+    font-size: 2em;
+    margin: -7.5px;
+  }
+
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    margin: -7.5px;
+  }
+
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 0.5em;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navbar a.active {
+    background-color: #666;
+    color: white;
+  }
+}
