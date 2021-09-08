@@ -346,8 +346,8 @@ body {
   .img-memory {
     padding: 0.3em;
     padding-right: 0;
-    float: left;
-    width: 30%;
+    float: center;
+    width: 50%;
     height: min-content;
   }
   .container {
