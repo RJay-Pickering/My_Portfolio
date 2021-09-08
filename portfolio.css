@@ -16,13 +16,14 @@ body {
   padding-top: 2em;
   padding-right: 1.5em;
   float: left;
-  width: 30%;
-  height: 30%;
+  width: 15%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 .img-git {
   padding: 1em;
-  padding-top: 2em;
   float: left;
   width: 30%;
   height: 100%;
@@ -38,12 +39,44 @@ body {
   height: 30%;
 }
 
-.img-ford {
-  padding: 1em;
+.python-image {
   float: left;
-  width: 30%;
-  height: 30%;
-  padding-right: 1.5em;
+  width: 10%;
+  padding-right: 3.3em;
+}
+
+.html-image {
+  float: left;
+  width: 10%;
+  height: 10%;
+  padding-right: 3em;
+  padding-left: 1.5em;
+}
+
+.css-image {
+  float: left;
+  width: 10.5%;
+  height: 10.5%;
+  padding-right: 2.5em;
+}
+
+.django-image {
+  float: left;
+  width: 8em;
+  height: 5em;
+  padding-right: 3.5em;
+}
+
+.js-image {
+  float: left;
+  width: 8em;
+  padding-left: 3.9em;
+}
+
+.boot-image {
+  float: left;
+  width: 8em;
+  padding-right: 2.8em;
 }
 
 .my_name {
@@ -65,42 +98,116 @@ body {
   padding-top: 0.3em;
 }
 
+.the-nav-header {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  color: #d0f0c0;
+  margin: 0px;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
 .paragraph {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  font-size: 36px;
+  font-size: 25px;
   color: #d0f0c0;
   padding: 0.5em;
-  margin: -17px;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .para-skills {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  font-size: 35px;
+  font-size: 50px;
   color: #d0f0c0;
   padding: 0.5em;
-  padding-right: 1em;
+  padding-right: 1.1em;
   margin: -17px;
-  text-align: center;
+}
+
+.para-skills-html {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.6em;
+  padding-right: 1.5em;
+  margin: -17px;
+}
+
+.para-skills-css {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 2.4em;
+  margin: -17px;
+}
+
+.para-skills-django {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 1.2em;
+  margin: -17px;
+}
+
+.para-skills-java {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 2.3em;
+  margin: -17px;
+}
+
+.para-skills-js {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-left: 1.6em;
+  margin: -17px;
+}
+
+.para-skills-boot {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 0;
+  margin: -17px;
 }
 
 .para-projects {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  font-size: 34.5px;
+  font-size: 25px;
   color: #d0f0c0;
-  padding: 0.7em;
+  padding: 1.1em;
   margin: -17px;
+  line-height: 1.3;
 }
 
 .para-underproject {
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  font-size: 34.5px;
+  font-size: 25px;
   color: #d0f0c0;
   padding: 0.3em;
+  padding-top: 0.5em;
   margin: 0px;
+  line-height: 1.3;
 }
 
 .nav-para {
@@ -130,7 +237,6 @@ body {
 
 .navbar a {
   float: left;
-  display: block;
   color: white;
   text-align: center;
   padding: 14px 20px;
@@ -152,36 +258,78 @@ body {
   text-align: center;
   font-weight: bold;
   font-family: "Times New Roman", Times, serif;
-  font-size: 60px;
-  color: #d0f0c0;
+  font-size: 40px;
+  color: #333;
   margin: 0px;
   padding-top: 0.5em;
 }
 
-.linkedin {
+.gmail {
   width: 100px;
   height: 100px;
   padding-left: 1em;
 }
 
+.linkedin {
+  width: 90px;
+  height: 76px;
+  padding-left: 1em;
+}
+
 .github {
-  width: 110px;
-  height: 110px;
+  width: 120px;
+  height: 120px;
 }
 
 .the_middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
   text-align: center;
+  background: #1abc9c;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
 }
 
-@media screen and (max-width: 375px) {
+.projects-div {
+  overflow: hidden;
+}
+
+.skills-div {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5em;
+}
+
+.skills-div-bottom {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.5em;
+}
+
+.skills-div-django {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+@media screen and (max-width: 400px) {
   .nav-header {
     text-align: center;
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
-    font-size: 2em;
+    font-size: 1.5em;
     color: #d0f0c0;
     margin: 0px;
-    padding-top: 0.3em;
+    padding-top: 1em;
   }
 
   .paragraph {
@@ -192,16 +340,15 @@ body {
     padding: 0.5em;
     margin: -17px;
     padding-top: 1em;
-    padding-left: 9em;
+    padding-left: 8.9em;
   }
 
   .img-memory {
     padding: 0.3em;
-    padding-top: 1em;
     padding-right: 0;
     float: left;
     width: 30%;
-    height: 30%;
+    height: min-content;
   }
   .container {
     padding: 1em;
@@ -237,4 +384,8 @@ body {
     background-color: #666;
     color: white;
   }
+}
+.main {
+  border-bottom: solid 2px;
+  overflow: hidden;
 }
