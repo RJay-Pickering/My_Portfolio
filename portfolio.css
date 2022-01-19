@@ -29,6 +29,7 @@ body {
   height: 100%;
   display: block;
   padding-right: 1.5em;
+  padding-bottom: 2em;
 }
 
 .img-safari {
@@ -70,13 +71,19 @@ body {
 .js-image {
   float: left;
   width: 8em;
-  padding-left: 3.9em;
+  margin-left: 2em;
 }
 
 .boot-image {
   float: left;
   width: 8em;
   padding-right: 2.8em;
+}
+
+.sql-image {
+  float: left;
+  width: 8em;
+  padding-right: 3em;
 }
 
 .my_name {
@@ -186,6 +193,26 @@ body {
   color: #d0f0c0;
   padding: 0.5em;
   padding-right: 0;
+  margin: -17px;
+}
+
+.para-skills-sql {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 2em;
+  margin: -17px;
+}
+
+.para-skills-spring {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 1.5em;
   margin: -17px;
 }
 
