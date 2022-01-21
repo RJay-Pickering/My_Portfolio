@@ -74,6 +74,13 @@ body {
   margin-left: 2em;
 }
 
+.java-image {
+  float: left;
+  width: 10.5%;
+  height: 10.5%;
+  padding-right: 2.5em;
+}
+
 .boot-image {
   float: left;
   width: 8em;
@@ -313,6 +320,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .footer {
   text-align: center;
   background: #1abc9c;
@@ -367,14 +375,16 @@ body {
     padding: 0.5em;
     margin: 0;
     padding-top: 1em;
+    padding-bottom: 1em;
   }
 
   .img-memory {
     padding: 0.3em;
+    padding-top: 1.5em;
     padding-right: 0;
     float: center;
     width: 100%;
-    height: min-content;
+    height: 85%;
   }
   .container {
     padding: 1em;
@@ -392,7 +402,7 @@ body {
   }
 
   .navbar a {
-    float: left;
+    float: none;
     display: block;
     color: white;
     text-align: center;
@@ -467,7 +477,7 @@ body {
     font-size: 1em;
     color: #d0f0c0;
     padding: 0.5em;
-    padding-right: 2.3em;
+    padding-right: 3em;
     margin: -17px;
   }
 
@@ -488,6 +498,26 @@ body {
     color: #d0f0c0;
     padding: 0.5em;
     padding-right: 1em;
+    margin: -17px;
+  }
+
+  .para-skills-sql {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 3em;
+    margin: -17px;
+  }
+
+  .para-skills-spring {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 2.5em;
     margin: -17px;
   }
 
@@ -522,10 +552,24 @@ body {
   .js-image {
     float: left;
     width: 2.5em;
-    padding-right: 2em;
+    padding-right: 2.9em;
+    padding-left: 1.5em;
+  }
+
+  .java-image {
+    float: left;
+    width: 10.5%;
+    height: 10.5%;
+    padding-right: 3.5em;
   }
 
   .boot-image {
+    float: left;
+    width: 2.5em;
+    padding-right: 3.5em;
+  }
+
+  .sql-image {
     float: left;
     width: 2.5em;
     padding-right: 3.5em;
@@ -566,6 +610,33 @@ body {
     padding-right: 1.5em;
     float: left;
     width: 90%;
+  }
+
+  .the_head {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    color: #333;
+    margin: 0px;
+    padding-top: 0.5em;
+  }
+  
+  .gmail {
+    width: 4em;
+    height: 4em;
+    margin-left: 2em;
+    margin-right: 1em;
+  }
+  
+  .linkedin {
+    width: 3em;
+    height: 2.8em;
+  }
+  
+  .github {
+    width: 5em;
+    height: 5em;
   }
 }
 
