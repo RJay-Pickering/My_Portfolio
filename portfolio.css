@@ -457,7 +457,7 @@ body {
     font-size: 1em;
     color: #d0f0c0;
     padding: 0.5em;
-    padding-right: 2.2em;
+    padding-right: 2.7em;
     margin: -17px;
   }
 
@@ -467,7 +467,7 @@ body {
     font-size: 1em;
     color: #d0f0c0;
     padding: 0.5em;
-    padding-right: 1.5em;
+    padding-right: 2em;
     margin: -17px;
   }
 
@@ -523,44 +523,42 @@ body {
 
   .python-image {
     float: left;
-    width: 10%;
+    width: 3.5em;
     padding-right: 3.3em;
   }
 
   .html-image {
     float: left;
-    width: 10%;
-    height: 10%;
+    width: 11.5%;
     padding-right: 3em;
     padding-left: 0.5em;
   }
 
   .css-image {
     float: left;
-    width: 10.5%;
-    height: 10.5%;
+    width: 12%;
     padding-right: 3em;
   }
 
   .django-image {
     float: left;
-    width: 2.5em;
-    height: 2.5em;
+    width: 3.5em;
+    height: 3em;
     padding-right: 3.7em;
   }
 
   .js-image {
     float: left;
-    width: 2.5em;
-    padding-right: 2.9em;
-    padding-left: 1.5em;
+    width: 2.7em;
+    padding-right: 2.7em;
+    padding-left: 1.9em;
   }
 
   .java-image {
     float: left;
-    width: 10.5%;
-    height: 10.5%;
-    padding-right: 3.5em;
+    width: 11%;
+    height: 11%;
+    padding-right: 3em;
   }
 
   .boot-image {
@@ -580,7 +578,8 @@ body {
     font-family: "Times New Roman", Times, serif;
     font-size: 1em;
     color: #d0f0c0;
-    padding: 1.1em;
+    padding: 1em;
+    padding-right: 2em;
     margin: 0;
     line-height: 1.3;
   }
@@ -592,6 +591,8 @@ body {
     color: #d0f0c0;
     padding: 0.3em;
     padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 2em;
     margin: 0;
     line-height: 1.3;
   }
@@ -621,19 +622,19 @@ body {
     margin: 0px;
     padding-top: 0.5em;
   }
-  
+
   .gmail {
     width: 4em;
     height: 4em;
     margin-left: 2em;
     margin-right: 1em;
   }
-  
+
   .linkedin {
     width: 3em;
     height: 2.8em;
   }
-  
+
   .github {
     width: 5em;
     height: 5em;
