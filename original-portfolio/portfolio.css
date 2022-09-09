@@ -1,0 +1,647 @@
+body {
+  background-color: #5e6768;
+  margin: 0;
+}
+
+.selfie {
+  width: 300px;
+  height: 500px;
+  float: left;
+  padding: 1em;
+  padding-top: 2em;
+}
+
+.img-memory {
+  padding: 1em;
+  padding-top: 2em;
+  padding-right: 1.5em;
+  float: left;
+  width: 15%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.img-git {
+  padding: 1em;
+  float: left;
+  width: 30%;
+  height: 100%;
+  display: block;
+  padding-right: 1.5em;
+  padding-bottom: 2em;
+}
+
+.img-safari {
+  padding: 1em;
+  padding-right: 1.5em;
+  float: left;
+  width: 30%;
+  height: 30%;
+}
+
+.python-image {
+  float: left;
+  width: 10%;
+  padding-right: 3.3em;
+}
+
+.html-image {
+  float: left;
+  width: 10%;
+  height: 10%;
+  padding-right: 3em;
+  padding-left: 1.5em;
+}
+
+.css-image {
+  float: left;
+  width: 10.5%;
+  height: 10.5%;
+  padding-right: 2.5em;
+}
+
+.django-image {
+  float: left;
+  width: 8em;
+  height: 5em;
+  padding-right: 3.5em;
+}
+
+.js-image {
+  float: left;
+  width: 8em;
+  margin-left: 2em;
+}
+
+.java-image {
+  float: left;
+  width: 10.5%;
+  height: 10.5%;
+  padding-right: 2.5em;
+}
+
+.boot-image {
+  float: left;
+  width: 8em;
+  padding-right: 2.8em;
+}
+
+.sql-image {
+  float: left;
+  width: 8em;
+  padding-right: 3em;
+}
+
+.my_name {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 70px;
+  color: #333;
+  margin: 0px;
+}
+
+.nav-header {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  color: #d0f0c0;
+  margin: 0px;
+  padding-top: 0.3em;
+}
+
+.the-nav-header {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 60px;
+  color: #d0f0c0;
+  margin: 0px;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+
+.paragraph {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.para-skills {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 1.1em;
+  margin: -17px;
+}
+
+.para-skills-html {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.6em;
+  padding-right: 1.5em;
+  margin: -17px;
+}
+
+.para-skills-css {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 2.4em;
+  margin: -17px;
+}
+
+.para-skills-django {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 1.2em;
+  margin: -17px;
+}
+
+.para-skills-java {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 2.3em;
+  margin: -17px;
+}
+
+.para-skills-js {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-left: 1.6em;
+  margin: -17px;
+}
+
+.para-skills-boot {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 0;
+  margin: -17px;
+}
+
+.para-skills-sql {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 2em;
+  margin: -17px;
+}
+
+.para-skills-spring {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+  color: #d0f0c0;
+  padding: 0.5em;
+  padding-right: 1.5em;
+  margin: -17px;
+}
+
+.para-projects {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: #d0f0c0;
+  padding: 1.1em;
+  margin: -17px;
+  line-height: 1.3;
+}
+
+.para-underproject {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  color: #d0f0c0;
+  padding: 0.3em;
+  padding-top: 0.5em;
+  margin: 0px;
+  line-height: 1.3;
+}
+
+.nav-para {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 35px;
+  color: #d0f0c0;
+  padding-top: 0.8em;
+  margin: -17px;
+  text-align: center;
+}
+
+.container {
+  padding: 2em;
+  background: #1abc9c;
+  font-size: 30px;
+  margin: -7.5px;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  margin: -7.5px;
+}
+
+.navbar a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+.the_head {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  color: #333;
+  margin: 0px;
+  padding-top: 0.5em;
+}
+
+.gmail {
+  width: 100px;
+  height: 100px;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+
+.linkedin {
+  width: 90px;
+  height: 76px;
+}
+
+.github {
+  width: 120px;
+  height: 120px;
+}
+
+.the_middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  text-align: center;
+  background: #1abc9c;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
+
+.projects-div {
+  overflow: hidden;
+}
+
+.skills-div {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5em;
+}
+
+.skills-div-bottom {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.5em;
+}
+
+.skills-div-django {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-header {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    color: #d0f0c0;
+    margin: 0px;
+    padding-top: 1em;
+  }
+
+  .paragraph {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .img-memory {
+    padding: 0.3em;
+    padding-top: 1.5em;
+    padding-right: 0;
+    float: center;
+    width: 100%;
+    height: 85%;
+  }
+  .container {
+    padding: 1em;
+    background: #1abc9c;
+    font-size: 2em;
+    margin: -7.5px;
+  }
+
+  .navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    margin: -7.5px;
+  }
+
+  .navbar a {
+    float: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navbar a.active {
+    background-color: #666;
+    color: white;
+  }
+
+  .the-nav-header {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.5em;
+    color: #d0f0c0;
+    margin: 0px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+  }
+  .para-skills {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 1.1em;
+    margin: -17px;
+  }
+
+  .para-skills-html {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.6em;
+    padding-right: 1.5em;
+    margin: -17px;
+  }
+
+  .para-skills-css {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 2.7em;
+    margin: -17px;
+  }
+
+  .para-skills-django {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 2em;
+    margin: -17px;
+  }
+
+  .para-skills-java {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 3em;
+    margin: -17px;
+  }
+
+  .para-skills-js {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 2.8em;
+    margin: 0;
+  }
+
+  .para-skills-boot {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 1em;
+    margin: -17px;
+  }
+
+  .para-skills-sql {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 3em;
+    margin: -17px;
+  }
+
+  .para-skills-spring {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.5em;
+    padding-right: 2.5em;
+    margin: -17px;
+  }
+
+  .python-image {
+    float: left;
+    width: 3.5em;
+    padding-right: 3.3em;
+  }
+
+  .html-image {
+    float: left;
+    width: 11.5%;
+    padding-right: 3em;
+    padding-left: 0.5em;
+  }
+
+  .css-image {
+    float: left;
+    width: 12%;
+    padding-right: 3em;
+  }
+
+  .django-image {
+    float: left;
+    width: 3.5em;
+    height: 3em;
+    padding-right: 3.7em;
+  }
+
+  .js-image {
+    float: left;
+    width: 2.7em;
+    padding-right: 2.7em;
+    padding-left: 1.9em;
+  }
+
+  .java-image {
+    float: left;
+    width: 11%;
+    height: 11%;
+    padding-right: 3em;
+  }
+
+  .boot-image {
+    float: left;
+    width: 2.5em;
+    padding-right: 3.5em;
+  }
+
+  .sql-image {
+    float: left;
+    width: 2.5em;
+    padding-right: 3.5em;
+  }
+
+  .para-projects {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 1em;
+    padding-right: 2em;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .para-underproject {
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    color: #d0f0c0;
+    padding: 0.3em;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 2em;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .img-git {
+    padding: 1em;
+    float: left;
+    width: 90%;
+    display: block;
+    padding-right: 1.5em;
+    margin: 0;
+  }
+
+  .img-safari {
+    padding: 1em;
+    padding-right: 1.5em;
+    float: left;
+    width: 90%;
+  }
+
+  .the_head {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    color: #333;
+    margin: 0px;
+    padding-top: 0.5em;
+  }
+
+  .gmail {
+    width: 4em;
+    height: 4em;
+    margin-left: 2em;
+    margin-right: 1em;
+  }
+
+  .linkedin {
+    width: 3em;
+    height: 2.8em;
+  }
+
+  .github {
+    width: 5em;
+    height: 5em;
+  }
+}
+
+.main {
+  border-bottom: solid 2px;
+  overflow: hidden;
+}
