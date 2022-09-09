@@ -1,0 +1,3 @@
+This text file will explain some confusions on this repository.
+1: The folder labeled "original-portfolio" is what the project was originally looked liked before i started from scratch to remake it!
+    1.1: Why? It seems like it could be better than it is now.
