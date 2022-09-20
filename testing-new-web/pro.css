@@ -19,8 +19,8 @@ html, body {
 html *, body * {
   font-family: 'Source Sans Pro', sans-serif;
 }
-html > p, body > p {
-  font-size: 0.95em;
+h1 {
+  font-size: 2em;
   font-weight: bold;
   position: absolute;
   top: 7.5%;
@@ -69,16 +69,16 @@ html > .carousel, body > .carousel {
   position: relative;
   transition: transform 1s ease-in-out;
   background: var(--crsl-bg);
-  width: auto;
-  transform: auto;
 }
 .carousel__body .carousel__slider__item {
   position: relative;
-  display: block;
+  display: table-row;
   float: left;
   box-sizing: border-box;
   margin-left: 20px;
   margin-right: 20px;
+  width: 235px;
+  height: 305px;
 }
 .carousel__body .carousel__slider__item .item__3d-frame {
   position: relative;
@@ -88,7 +88,7 @@ html > .carousel, body > .carousel {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.carousel__body .carousel__slider__item .item__3d-frame:after {
+.carousel__body .carousel__slider__item .item__3d-frame::after {
   content: '';
   position: absolute;
   bottom: -15%;
