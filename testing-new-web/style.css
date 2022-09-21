@@ -6,6 +6,7 @@ body {
   padding: 0;
   font-family: "Helvetica", sans-serif;
   color: rgb(211, 211, 211);
+  background-color: #18181b;
 }
 
 .container {
@@ -36,9 +37,8 @@ body {
   align-items: center;
 }
 
-.logo img {
-  width: auto;
-  height: 100%;
+.logo h1 {
+  content: '';
 }
 .bar .nav .item {
   margin: 0 20px;
@@ -59,8 +59,6 @@ body {
 
 .main {
   height: 100%;
-  display: grid;
-  grid-template-columns: 2fr 10fr;
 }
 
 .main .stream-content p:hover {
