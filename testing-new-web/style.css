@@ -155,8 +155,13 @@ body {
   max-width: 100%;
   display: grid;
   height: auto;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 50px;
+}
+
+.videos h3{
+  font-size: 2em;
+  text-align: center;
 }
 
 .stream-carousel .stream .stream-thumbnail,
@@ -338,3 +343,28 @@ p {
   }
 }
 
+/* for projects */
+.card {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
+  height: fit-content;
+  padding: 20px;
+  text-align: center;
+}
+
+.card:hover {
+  color: #a970ff;
+  background-color: #0e0e10;
+  box-shadow: -5px 5px #a970ff;
+}
+
+.apiImage {
+  height: 200px;
+  width: 250px;
+}
+
+.aLink {
+  color: black;
+  text-decoration: none;
+}
