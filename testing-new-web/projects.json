@@ -1,0 +1,72 @@
+[
+    {
+      "title": "Base Camp News",
+      "link": "https://github.com/RJay-Pickering/capstone_project_QS_WC_RP",
+      "creator": "RJay Pickering, Will Collins, and Quinton Summerford",
+      "image_url": "imageStorage/projects/BCN.jpg",
+      "description": ""
+    },
+    {
+      "title": "Base Camp ChatBot",
+      "link": "https://github.com/RJay-Pickering/JS-BOT-PROJECT-BCCA.git",
+      "creator": "RJay Pickering and Randy Trullet",
+      "image_url": "imageStorage/projects/bcca_logo.png",
+      "description": ""
+    },
+    {
+      "title": "Missing Cats of America",
+      "link": "https://github.com/BaseCampCoding/unit-5-module-2-auth-RJay-Pickering",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/naruto-with-cat.jpeg",
+      "description": ""
+    },
+    {
+      "title": "Anime Storage",
+      "link": "https://github.com/RJay-Pickering/AnimeStorage",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/animeStorage.jpeg",
+      "description": ""
+    },
+    {
+      "title": "Rock, Paper, Scissors!",
+      "link": "https://rjay-pickering.github.io/RockPaperScissorsGameJS/",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/RockPaperScissors.png",
+      "description": ""
+    },
+    {
+      "title": "Black Ops Fundraiser",
+      "link": "https://github.com/RJay-Pickering/Charity",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/BlackOps.jpeg",
+      "description": ""
+    },
+    {
+      "title": "Pokemon Safari",
+      "link": "https://github.com/RJay-Pickering/Pokemon-Safari.py",
+      "creator": "RJay Pickering and Logan Colley",
+      "image_url": "imageStorage/projects/safari-park.jpeg",
+      "description": ""
+    },
+    {
+      "title": "Demon Overthrow",
+      "link": "https://github.com/RJay-Pickering/HealthDepleter",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/demon.jpg",
+      "description": ""
+    },
+    {
+        "title": "The Hacker Man",
+        "link": "https://github.com/RJay-Pickering/hacker-game",
+        "creator": "RJay Pickering",
+        "image_url": "imageStorage/projects/Hackerman.jpeg",
+        "description": ""
+    },
+    {
+        "title": "The Static at my Door",
+        "link": "https://github.com/RJay-Pickering/TheStaticAtMyDoor",
+        "creator": "RJay Pickering",
+        "image_url": "imageStorage/projects/static.jpeg",
+        "description": ""
+    }
+  ]
