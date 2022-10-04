@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="style.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -19,22 +19,21 @@
           <div class="logo">
             <h1>RJay Pickering</h1>
           </div>
-          <div class="item" id="selected">Home</div>
-          <div class="item">About Me</div>
-          <div class="item">My Skills</div>
-          <div class="item">My Projects</div>
+          <button class="aboutLink" id="selected">About Me</button>
+          <button class="skillsLink">My Skills</button>
+          <button class="projectsLink">My Projects</button>
         </div>
       </div>
       <!-- end of navbar -->
       <div class="main">
-        <div class="stream-content">
+        <div class="main-content">
           <!-- about me -->
-          <div class="games">
+          <div class="about-me">
             <h3>About <span class="title-highlight">Me</span></h3>
-            <div class="games-carousel">
+            <div class="about-me-content">
               <div></div>
-              <div class="game">
-                <div class="game-cover">
+              <div class="images">
+                <div class="images-cover">
                     <img src="imageStorage/my_senior_photo.jpeg">
                 </div>
               </div>
@@ -44,7 +43,7 @@
           </div>
           <!-- end of about me -->
           <!-- my skills -->
-          <div class="streams">
+          <div class="my-skills">
             <h3><span class="title-highlight">My Skills</span> that I have learned</h3>
             <div class="skills">
               <ul>
@@ -65,15 +64,24 @@
           </div>
           <!-- end of my skills -->
           <!-- projects -->
-          <div class="videos">
+          <div class="projects" id="projectsId"> 
             <h3><span class="title-highlight">My Projects</span> that I have created</h3>
-            <div class="video-carousel" id="one"></div>
+            <div class="proj-description" id="cubone"></div>
+            <form class="filterForm">
+              <select id="mySelect" onchange="myFunction()">
+                <option id="defaultOpt" value="0">Pick a Filter</option>
+                <option id="nameOpt" value="1">Name</option>
+                <option id="langOpt" value="2">Language</option>
+                <option id="favOpt" value="3">Favorite</option>
+              </select>
+            </form>
+            <div class="project-content" id="one"></div>
           </div>
           <!-- end of projects -->
         </div>
       </div>
       <!-- footer -->
-      <!-- <div class="footer">
+      <div class="footer">
           <div class="bubbles">
               <div class="bubble" style="--size:5.706703465388923rem; --distance:7.823157910029162rem; --position:100.17390215056948%; --time:3.6874147277243448s; --delay:-3.476665405770417s;"></div>
               <div class="bubble" style="--size:4.2725882447287855rem; --distance:6.019723976398056rem; --position:64.38489570390445%; --time:3.3386061298016343s; --delay:-2.820441099964278s;"></div>
@@ -211,11 +219,12 @@
                   <div><b>Chashakib</b><a class="linkTag" href="#">ChogauwPhachuledTiebeftOcidIzomOrt</a></div>
                   <div><b>Athod</b><a class="linkTag" href="#">PamuzVapertNeeskOmemanen</a></div>
               </div>
-              <div><a class="image" href="https://codepen.io/z-" target="_blank" style="background-image: url(&quot;https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg&quot;)"></a>
+              <div>
+                  <a href="https://codepen.io/z-" target="_blank"><img class="footerLogo" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199011/happy.svg"></a>
                   <p class="linkTag">©2022 RJay Pickering</p>
               </div>
           </div>
-      </div> -->
+      </div>
       <!-- end of footer -->
     </div>
 </body>

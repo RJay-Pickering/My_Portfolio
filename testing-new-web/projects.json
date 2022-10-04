@@ -1,72 +1,92 @@
 [
     {
+      "favorite": 1,
       "title": "Base Camp News",
       "link": "https://github.com/RJay-Pickering/capstone_project_QS_WC_RP",
       "creator": "RJay Pickering, Will Collins, and Quinton Summerford",
       "image_url": "imageStorage/projects/BCN.jpg",
-      "description": "This was my final project for Base Camp Coding Academy, Capstone Project, that my two partners and I had a full month to come up with. We had a Front-End, Back-End, and a Full-Stack Developer. I was the Full-Stack and leader of our group. We decided on a project that was really a great idea, a News Aggregator. We decided to call it, Base Camp News. I helped the Back-End with handling the apis and printing them onto the webpage, while i helped the Front-End with styling and fixing it for multiple screen sizes. I also set up most of the html pages for both Front-End and Back-End to work on and I also did all of the stuff for the settings page except for the styling part of it."
+      "language": "Django, HTML, CSS, JavaScript",
+      "description": "This was my final project for Base Camp Coding Academy, Capstone Project, that my two partners and I had a full month to come up with. We had a Front-End, Back-End, and a Full-Stack Developer. I was the Full-Stack and leader of our group. We decided on a project that was really a great idea, a News Aggregator. We decided to call it, Base Camp News. I helped the Back-End with handling the apis and printing them onto the webpage, while I helped the Front-End with styling and fixing it for multiple screen sizes."
     },
     {
-      "title": "Base Camp ChatBot",
-      "link": "https://github.com/RJay-Pickering/JS-BOT-PROJECT-BCCA.git",
-      "creator": "RJay Pickering and Randy Trullet",
-      "image_url": "imageStorage/projects/bcca_logo.png",
-      "description": "This project is my first big project to write in JavaScript. Another classmate, Randy Trullet, worked with me in coming up with and designing a first ever chatbot for Base Camp Coding Academy named Everest. This bot took two days to build, but is already in its beta form. The only thing it has as of now, is only certain questions about BCCA that are asked all the time, as told by our director. Update: its finally up and running. It has basic answers and everything about Base Camp of 2021."
-    },
-    {
-      "title": "Missing Cats of America",
-      "link": "https://github.com/BaseCampCoding/unit-5-module-2-auth-RJay-Pickering",
-      "creator": "RJay Pickering",
-      "image_url": "imageStorage/projects/naruto-with-cat.jpeg",
-      "description": "This is my first Django project that I had made in my time at Base Camp. This project is called Missing Cats Of America, a website for posting or finding missing cats. You can add your missing cats and see others missing cats to see if you have seen them. I made this website because during the time of learning Django, my cat went missing, so I made this website for my cat."
-    },
-    {
+      "favorite": 4,
       "title": "Anime Storage",
       "link": "https://github.com/RJay-Pickering/AnimeStorage",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/animeStorage.jpeg",
+      "language": "Java, SQL",
       "description": "This is my Java and SQL project that I have made. This Project is your basic, run of the mill, CRUD app that you can add any anime into. This project is called Animoo Hub (Anime Storage) and you are able to Add your anime's into this app, Update your anime, Delete it from your list, and view any anime you have saved. What is a anime? Anime is a Japanese Cartoon that millions tend to enjoy for the plot line, or the pretty animations it has."
     },
     {
+      "favorite": 7,
+      "title": "The Hacker Man",
+      "link": "https://github.com/RJay-Pickering/hacker-game",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/Hackerman.jpeg",
+      "language": "Java",
+      "description": "This project is one of the first Java programs that I made. This project is more of funny guessing game. You are this expert hacker that just got his computer hacked and to protect his personal life, he must log in to his program on the computer to stop the hack, but he forgot his password and he needs to try and guess using his password book that he has. This project is a weird one, but fun if given a chance."
+    },
+    {
+      "favorite": 5,
       "title": "Rock, Paper, Scissors!",
       "link": "https://rjay-pickering.github.io/RockPaperScissorsGameJS/",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/RockPaperScissors.png",
+      "language": "HTML, CSS, JavaScript",
       "description": "This is another JavaScript Project that I did on my own free time. This is my own solo project that will let you play Rock, Paper, Scissors with a computer. The idea behind this is that I wanted to make a simple game with a personal favorite language. When you play the game, the option that you pick will become yellowish green and the computers option will be different from the user and become red. After every game, you will need to press the New Game button to play again, your score will of course save, but the score can only be reset when you refresh the page."
     },
     {
+      "favorite": 2,
+      "title": "Base Camp ChatBot",
+      "link": "https://github.com/RJay-Pickering/JS-BOT-PROJECT-BCCA.git",
+      "creator": "RJay Pickering and Randy Trullet",
+      "image_url": "imageStorage/projects/bcca_logo.png",
+      "language": "HTML, CSS, JavaScript",
+      "description": "This project is my first big project to write in JavaScript. Another classmate, Randy Trullet, worked with me in coming up with and designing a first ever chatbot for Base Camp Coding Academy named Everest. This bot took two days to build, but is already in its beta form. The only thing it has as of now, is only certain questions about BCCA that are asked all the time, as told by our director. Update: its finally up and running. It has basic answers and everything about Base Camp of 2021."
+    },
+    {
+      "favorite": 3,
+      "title": "Missing Cats of America",
+      "link": "https://github.com/BaseCampCoding/unit-5-module-2-auth-RJay-Pickering",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/naruto-with-cat.jpeg",
+      "language": "Django, HTML, CSS",
+      "description": "This is my first Django project that I had made in my time at Base Camp. This project is called Missing Cats Of America, a website for posting or finding missing cats. You can add your missing cats and see others missing cats to see if you have seen them. I made this website because during the time of learning Django, my cat went missing, so I made this website for my cat."
+    },
+    {
+      "favorite": 6,
       "title": "Black Ops Fundraiser",
       "link": "https://github.com/RJay-Pickering/Charity",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/BlackOps.jpeg",
+      "language": "HTML, CSS",
       "description": "This Charity website is my first Html and CSS project that I have done. This project is about a campaign to reboot Black Ops for the newer gen consoles. Ive made this project as standard and infographic that It is not the most entertaining website that I made but it is made to give you information, instead of making it eye catching or fun. On the other hand, this is really fun to make as my first Html project."
     },
     {
+      "favorite": 8,
       "title": "Pokemon Safari",
       "link": "https://github.com/RJay-Pickering/Pokemon-Safari.py",
       "creator": "RJay Pickering and Logan Coley",
       "image_url": "imageStorage/projects/safari-park.jpeg",
+      "language": "Python",
       "description": "A classmate and I were partnered for a unit project to build something in Python. We decided to make a Pokemon safari park game revolving around the third generation Pokemons. The player has random encounters with Pokemon in the wild or can go fight the gym leaders to obtain a Bronze, Silver, and Gold Medal. We also added a Legendary that you can find and catch after obtaining the Golden Medal from the battle towers. From this project, I learned teamwork and worked on my communication skills."
     },
     {
+      "favorite": 9,
+      "title": "The Static at my Door",
+      "link": "https://github.com/RJay-Pickering/TheStaticAtMyDoor",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/static.jpeg",
+      "language": "Python",
+      "description": "In my sixth week at Base Camp Coding Academy, we had another assignment to make a choose your own adventure game using what we had learned so far in Python. The story behind this game is that your sleep paralysis demon comes into your house and you must find a way to survive without it capturing you. Be extra careful when picking a option, each choice can lead to another path."
+    },
+    {
+      "favorite": 10,
       "title": "Demon Overthrow",
       "link": "https://github.com/RJay-Pickering/HealthDepleter",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/demon.jpg",
+      "language": "Python",
       "description": "In my third week at Base Camp Coding Academy, we had an assignment to make a health depleting game using what we had learned so far in Python. The story behind this game is that you are dragged into your tv by a static humanoid and wake up in a forest clearing. In front of you there are three goblins and the static humanoid in a suit sitting on a throne behind the goblins. You have to fight the goblins and defeat the boss at the end of the level. What this project has taught me is to have confidence in my work and in my writing."
-    },
-    {
-        "title": "The Hacker Man",
-        "link": "https://github.com/RJay-Pickering/hacker-game",
-        "creator": "RJay Pickering",
-        "image_url": "imageStorage/projects/Hackerman.jpeg",
-        "description": "This project is one of the first Java programs that I made. This project is more of funny guessing game. You are this expert hacker that just got his computer hacked and to protect his personal life, he must log in to his program on the computer to stop the hack, but he forgot his password and he needs to try and guess using his password book that he has. This project is a weird one, but fun if given a chance."
-    },
-    {
-        "title": "The Static at my Door",
-        "link": "https://github.com/RJay-Pickering/TheStaticAtMyDoor",
-        "creator": "RJay Pickering",
-        "image_url": "imageStorage/projects/static.jpeg",
-        "description": "In my sixth week at Base Camp Coding Academy, we had another assignment to make a choose your own adventure game using what we had learned so far in Python. The story behind this game is that your sleep paralysis demon comes into your house and you must find a way to survive without it capturing you. Be extra careful when picking a option, each choice can lead to another path."
     }
   ]

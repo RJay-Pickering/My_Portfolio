@@ -1,7 +1,5 @@
 html,
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Helvetica", sans-serif;
@@ -16,6 +14,23 @@ body {
   grid-template-rows: 50px auto;
 }
 
+.main {
+  height: 100%;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #0e0e10;
+  overflow-y: scroll;
+}
+
+.title-highlight {
+  color: #a970ff;
+}
+
+
+
+/* navbar */
 .bar {
   background-color: #18181b;
   height: 70px;
@@ -39,17 +54,47 @@ body {
   align-items: center;
 }
 
-.logo h1 {
-  content: '';
-}
-.bar .nav .item {
+.bar .nav .aboutLink {
   margin: 0 20px;
   height: 100%;
   display: flex;
   align-items: center;
+  background: none!important;
+  border: none;
+  color: rgb(211, 211, 211);
 }
 
-.bar .nav .item:hover {
+.bar .nav .aboutLink:hover {
+  color: #a970ff;
+  cursor: pointer;
+}
+
+.bar .nav .skillsLink {
+  margin: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: none!important;
+  border: none;
+  color: rgb(211, 211, 211);
+}
+
+.bar .nav .skillsLink:hover {
+  color: #a970ff;
+  cursor: pointer;
+}
+
+.bar .nav .projectsLink {
+  margin: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: none!important;
+  border: none;
+  color: rgb(211, 211, 211);
+}
+
+.bar .nav .projectsLink:hover {
   color: #a970ff;
   cursor: pointer;
 }
@@ -58,29 +103,21 @@ body {
   color: #a970ff;
   border-bottom: 2px solid #a970ff;
 }
+/* end of navbar */
 
-.main {
-  height: 100%;
+
+
+/* about me */
+.about-me {
+  margin-bottom: 8em;
 }
 
-.main .stream-content p:hover {
-  cursor:default;
-  color: #a970ff;
-  /* transform: translate(5px, -5px); */
-}
-
-.stream-content {
-  padding: 20px;
-  background-color: #0e0e10;
-  overflow-y: scroll;
-}
-
-.games h3{
+.about-me h3{
   font-size: 2em;
   text-align: center;
 }
 
-.games-carousel {
+.about-me-content {
   max-width: 100%;
   display: grid;
   height: auto;
@@ -94,140 +131,40 @@ body {
   text-align: left;
 }
 
-.games-carousel .game .game-cover {
-  transition: transform 0.1s ease;
-}
-
-.games-carousel .game .game-cover:hover {
-  transform: translate(5px, -5px);
-}
-.games-carousel .game .game-cover img {
-  height: 100%;
-  width: 100%;
-}
-
-.games-carousel .game .game-cover:hover img {
-  box-shadow: -5px 5px #a970ff;
-}
-
-.games-carousel .game .game-info .game-title,
-.stream-carousel .stream .stream-text .stream-title,
-.video-carousel .video .video-text .video-title {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-weight: 600;
-  font-size: 15px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.game-info .game-viewership,
-.stream-text .stream-host,
-.stream-text .stream-game,
-.video-text .video-host,
-.video-text .video-game {
-  font-size: 14px;
-  margin-top: 0;
-  margin-bottom: 5px;
-  color: rgb(163, 163, 163);
-}
-
-.title-highlight {
+.para:hover {
+  cursor:default;
   color: #a970ff;
+  /* transform: translate(5px, -5px); */
 }
 
-.game-categories span {
-  background-image: linear-gradient(45deg, #6441a4, #a970ff);
-  padding: 2px 0.8rem;
-  color: white;
-  border-radius: 100px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.streams h3{
-  font-size: 2em;
-  text-align: center;
-}
-
-.video-carousel {
-  max-width: 100%;
-  display: grid;
-  height: auto;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 50px;
-}
-
-.videos h3{
-  font-size: 2em;
-  text-align: center;
-}
-
-.stream-carousel .stream .stream-thumbnail,
-.video-carousel .video .video-thumbnail {
+.about-me-content .images .images-cover {
   transition: transform 0.1s ease;
 }
 
-.stream-carousel .stream .stream-thumbnail:hover,
-.video-carousel .video .video-thumbnail:hover {
+.about-me-content .images .images-cover:hover {
   transform: translate(5px, -5px);
-  cursor: pointer;
 }
 
-.stream-carousel .stream .stream-thumbnail:hover img,
-.video-carousel .video .video-thumbnail:hover img {
+.about-me-content .images .images-cover img {
+  height: 100%;
+  width: 100%;
+}
+
+.about-me-content .images .images-cover:hover img {
   box-shadow: -5px 5px #a970ff;
 }
+/* end of about me */
 
-.stream-carousel .stream .stream-thumbnail img,
-.video-carousel .video .video-thumbnail img {
-  width: 100%;
-  height: 100%;
+
+
+/* skills */
+.my-skills {
+  margin-bottom: 8em;
 }
 
-.stream-carousel .stream .stream-thumbnail span,
-.video-carousel .video .video-thumbnail span {
-  position: relative;
-  font-size: 14px;
-}
-
-.viewers {
-  background-color: rgba(0, 0, 0, 0.8);
-  bottom: 30px;
-  left: 5px;
-  padding: 5px;
-  border-radius: 2px;
-  font-size: 14px;
-  font-weight: 100;
-  color: white;
-}
-
-.stream-carousel .stream-info,
-.video-carousel .video-info {
-  display: flex;
-}
-
-.stream-carousel .stream-info .stream-text,
-.video-carousel .video-info .video-text {
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.stream-carousel .stream-info .stream-profile-avatar,
-.video-carousel .video-info .video-profile-avatar {
-  width: 50px;
-  min-width: 50px;
-  height: 50px;
-  margin-right: 10px;
-}
-
-.stream-carousel .stream-info .stream-profile-avatar img,
-.video-carousel .video-info .video-profile-avatar img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
+.my-skills h3{
+  font-size: 2em;
+  text-align: center;
 }
 
 .skills {
@@ -258,23 +195,96 @@ body {
   background-color: #a970ff;
   cursor: default;
 }
+/* end of skills */
 
 
-@media (max-width: 1305px) {
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-  }
-  .main {
-    grid-template-columns: 50px 12fr;
-  }
+
+/* projects */
+.project-content {
+  max-width: 100%;
+  display: grid;
+  height: auto;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 50px;
+  margin-bottom: 10vw;
 }
 
+.projects h3{
+  font-size: 2em;
+  text-align: center;
+}
+
+.filter-projects{
+  font-size: 1.5vw;
+}
+
+.card {
+  background-color: rgb(211, 211, 211);
+  border: 1px solid black;
+  border-radius: 25px;
+  height: fit-content;
+  min-height: 525px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card:hover {
+  color: rgb(211, 211, 211);
+  background-color: #0e0e10;
+  box-shadow: 0 0 0 5px #a970ff;
+}
+
+.apiImage {
+  height: 200px;
+  width: 250px;
+}
+
+.aLink {
+  color: black;
+  text-decoration: none;
+}
+
+.filterForm {
+  text-align: center;
+}
+
+#mySelect {
+  color: rgb(211, 211, 211);
+  background-color: transparent;
+  border-color: #a970ff;
+  text-align: center;
+  font-size: 1.3vw;
+  padding: 0.3vw;
+  margin-bottom: 5vh;
+}
+
+.projectDesc{
+  font-size: 0.8em;
+  text-align: center;
+  color: rgb(211, 211, 211);
+}
+
+.proj-description{
+  padding-bottom: 4vh;
+}
+
+.o-divider {
+  border: 0;
+  margin: 20px;
+  height: 1px;
+  background: #656D78;
+}
+/* end of projects */
+
+
+
+/* footer */
 .footer {
   z-index: 1;
   display:grid;
   position: relative;
+  bottom: 0;
+  width: 100%;
   min-height:12rem;
 }
 
@@ -324,6 +334,15 @@ p {
   background-position: center;
 }
 
+.footerLogo {
+  align-self: center;
+  width:10vh;
+  height:10vh;
+  background-size: cover;
+  background-position: center;
+  margin-left: 3vh;
+}
+
 @keyframes bubble-size {
   0%, 75% {
       width:var(--size, 4rem);
@@ -342,29 +361,27 @@ p {
       bottom:var(--distance, 10rem);
   }
 }
+/* end of footer */
 
-/* for projects */
-.card {
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 25px;
-  height: fit-content;
-  padding: 20px;
-  text-align: center;
-}
 
-.card:hover {
-  color: #a970ff;
-  background-color: #0e0e10;
-  box-shadow: -5px 5px #a970ff;
-}
 
-.apiImage {
-  height: 200px;
-  width: 250px;
+/* hiding content */
+.hiding-content{
+  display: none;
 }
+/* end of hiding content */
 
-.aLink {
-  color: black;
-  text-decoration: none;
+
+
+/* media screens */
+@media (max-width: 1305px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  .main {
+    grid-template-columns: 50px 12fr;
+  }
 }
+/* end of media screens */
