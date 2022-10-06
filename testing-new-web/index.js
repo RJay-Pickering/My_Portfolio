@@ -88,10 +88,10 @@ var skillsContent = document.getElementsByClassName("my-skills")[0];
 var projContent = document.getElementsByClassName("projects")[0];
 // end of getting content
 
-// // making webpage start off by showing about me
-// skillsContent.classList.add("hiding-content")
-// projContent.classList.add("hiding-content")
-// // end of webpage start off
+// making webpage start off by showing about me
+skillsContent.classList.add("hiding-content")
+projContent.classList.add("hiding-content")
+// end of webpage start off
 
 // about me functionality
 aboutBtn.addEventListener("click", function() {
@@ -141,8 +141,92 @@ projBtn.addEventListener("click", function() {
 });
 // end of projects functionality
 
+var languageFuction = document.getElementsByClassName("o-divider2")[0]
+languageFuction.classList.add("hiding-content")
+
+var languageBottom = document.getElementsByClassName("o-divider-under")[0]
+languageBottom.classList.add("hiding-content")
+var languageBottom2 = document.getElementsByClassName("o-divider-under")[1]
+languageBottom2.classList.add("hiding-content")
+var languageBottom3 = document.getElementsByClassName("o-divider-under")[2]
+languageBottom3.classList.add("hiding-content")
+var languageBottom4 = document.getElementsByClassName("o-divider-under")[3]
+languageBottom4.classList.add("hiding-content")
+var languageBottom5 = document.getElementsByClassName("o-divider-under")[4]
+languageBottom5.classList.add("hiding-content")
+var languageBottom6 = document.getElementsByClassName("o-divider-under")[5]
+languageBottom6.classList.add("hiding-content")
+
+var languageFuction2 = document.getElementsByClassName("o-divider3")[0]
+languageFuction2.classList.add("hiding-content")
+var languageFuction3 = document.getElementsByClassName("o-divider4")[0]
+languageFuction3.classList.add("hiding-content")
+var languageFuction4 = document.getElementsByClassName("o-divider5")[0]
+languageFuction4.classList.add("hiding-content")
+var languageFuction5 = document.getElementsByClassName("o-divider6")[0]
+languageFuction5.classList.add("hiding-content")
+// var languageFuction6 = document.getElementsByClassName("o-divider7")[0]
+// languageFuction6.classList.add("hiding-content")
+var languageFuction7 = document.getElementsByClassName("o-divider8")[0]
+languageFuction7.classList.add("hiding-content")
+// var languageFuction8 = document.getElementsByClassName("o-divider9")[0]
+// languageFuction8.classList.add("hiding-content")
+// var languageFuction9 = document.getElementsByClassName("o-divider10")[0]
+// languageFuction9.classList.add("hiding-content")
+// var languageFuction10 = document.getElementsByClassName("o-divider11")[0]
+// languageFuction10.classList.add("hiding-content")
+// var languageFuction11 = document.getElementsByClassName("o-divider12")[0]
+// languageFuction11.classList.add("hiding-content")
+const hide2 = document.getElementById("two")
+hide2.classList.add("hiding-content")
+const hide3 = document.getElementById("three")
+hide3.classList.add("hiding-content")
+const hide4 = document.getElementById("four")
+hide4.classList.add("hiding-content")
+const hide5 = document.getElementById("five")
+hide5.classList.add("hiding-content")
+const hide7 = document.getElementById("seven")
+hide7.classList.add("hiding-content")
+
+var tempPara = document.createElement("p")
+tempPara.innerText = "HTML and CSS"
+languageFuction2.appendChild(tempPara)
+
+var tempPara = document.createElement("p")
+tempPara.innerText = "Django"
+languageFuction3.appendChild(tempPara)
+
+var tempPara = document.createElement("p")
+tempPara.innerText = "javascript"
+languageFuction4.appendChild(tempPara)
+
+var tempPara = document.createElement("p")
+tempPara.innerText = "java"
+languageFuction5.appendChild(tempPara)
+
+var tempPara = document.createElement("p")
+tempPara.innerText = "sql"
+languageFuction7.appendChild(tempPara)
+
 // this function deals with the filter in the projects section
 function myFunction() {
+  languageFuction.classList.add("hiding-content")
+  languageFuction2.classList.add("hiding-content")
+  languageFuction3.classList.add("hiding-content")
+  languageFuction4.classList.add("hiding-content")
+  languageFuction5.classList.add("hiding-content")
+  languageFuction7.classList.add("hiding-content")
+  languageBottom.classList.add("hiding-content")
+  languageBottom2.classList.add("hiding-content")
+  languageBottom3.classList.add("hiding-content")
+  languageBottom4.classList.add("hiding-content")
+  languageBottom5.classList.add("hiding-content")
+  languageBottom6.classList.add("hiding-content")
+  hide2.classList.add("hiding-content")
+  hide3.classList.add("hiding-content")
+  hide4.classList.add("hiding-content")
+  hide5.classList.add("hiding-content")
+  hide7.classList.add("hiding-content")
   var projFilter = document.getElementById("mySelect");
   var filterType = projFilter.selectedIndex;
   //search by name
@@ -1708,19 +1792,29 @@ function myFunction() {
   //------------------------------------------------------
   //please update language when learning and uploading a new project with said language
   else if (projFilter.options[filterType].text == "Language") {
-    // creating language divs
-    const two = document.createElement("div");
-    const three = document.createElement("div");
-    const four = document.createElement("div");
-    const five = document.createElement("div");
-    const six = document.createElement("div");
-    const seven = document.createElement("div");
-    const eight = document.createElement("div");
-    const nine = document.createElement("div");
-    const ten = document.createElement("div");
-    const eleven = document.createElement("div");
-    const twelve = document.createElement("div");
-    // end of creating divs
+    languageFuction.classList.remove("hiding-content")
+    languageFuction2.classList.remove("hiding-content")
+    languageFuction3.classList.remove("hiding-content")
+    languageFuction4.classList.remove("hiding-content")
+    languageFuction5.classList.remove("hiding-content")
+    // languageFuction6.classList.remove("hiding-content")
+    languageFuction7.classList.remove("hiding-content")
+    // languageFuction8.classList.remove("hiding-content")
+    // languageFuction9.classList.remove("hiding-content")
+    // languageFuction10.classList.remove("hiding-content")
+    // languageFuction11.classList.remove("hiding-content")
+    hide2.classList.remove("hiding-content")
+    hide3.classList.remove("hiding-content")
+    hide4.classList.remove("hiding-content")
+    hide5.classList.remove("hiding-content")
+    hide7.classList.remove("hiding-content")
+    languageBottom.classList.remove("hiding-content")
+    languageBottom2.classList.remove("hiding-content")
+    languageBottom3.classList.remove("hiding-content")
+    languageBottom4.classList.remove("hiding-content")
+    languageBottom5.classList.remove("hiding-content")
+    languageBottom6.classList.remove("hiding-content")
+
     console.log("language 2.0");
     fetch(
       `projects.json`
@@ -1741,9 +1835,9 @@ function myFunction() {
     
         const one = document.getElementById("one");
         const mainProj = document.getElementById("projectsId")
-        const dividerSection = document.createElement("hr")
-        dividerSection.classList.add("o-divider")
+
         one.replaceChildren()
+        
         // python
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
@@ -1808,7 +1902,6 @@ function myFunction() {
         // end of python
 
         // divider
-        mainProj.appendChild(dividerSection)
         console.log(mainProj)
         // end of divider
 
@@ -1868,10 +1961,7 @@ function myFunction() {
             elements.appendChild(creators);
             elements.appendChild(lang)
             aLink.appendChild(elements);
-            two.classList.add("project-content")
-            two.setAttribute('id','two');
-            two.appendChild(aLink);
-            mainProj.appendChild(two)
+            hide2.appendChild(aLink)
             //end of adding everything together
             
           }
@@ -1879,8 +1969,7 @@ function myFunction() {
         //end of html and css
 
         // divider
-        mainProj.appendChild(two)
-        mainProj.appendChild(dividerSection)
+        console.log(mainProj)
         // end of divider
 
         // django
@@ -1939,17 +2028,13 @@ function myFunction() {
             elements.appendChild(creators);
             elements.appendChild(lang)
             aLink.appendChild(elements);
-            three.classList.add("project-content")
-            three.appendChild(aLink);
-            three.setAttribute('id','three');
-            mainProj.appendChild(three)
+            hide3.appendChild(aLink)
             //end of adding everything together
           }
         }
         //end of django
 
         // divider
-        mainProj.appendChild(dividerSection)
         console.log(mainProj)
         // end of divider
 
@@ -2008,18 +2093,14 @@ function myFunction() {
             elements.appendChild(desc);
             elements.appendChild(creators);
             elements.appendChild(lang)
-            aLink.appendChild(elements);
-            four.appendChild(aLink);
-            four.classList.add("project-content")
-            four.setAttribute('id','four');
-            mainProj.appendChild(four)
+            aLink.appendChild(elements)
+            hide4.appendChild(aLink)
             //end of adding everything together
           }
         }
         //end of javascript
 
         // divider
-        mainProj.appendChild(dividerSection)
         console.log(mainProj)
         // end of divider
 
@@ -2080,20 +2161,23 @@ function myFunction() {
               elements.appendChild(creators);
               elements.appendChild(lang)
               aLink.appendChild(elements);
-              five.appendChild(aLink);
-              five.classList.add("project-content")
-              five.setAttribute('id','five');
-              mainProj.appendChild(five)
+              hide5.appendChild(aLink)
               //end of adding everything together
             }
           }
         }
         //end of java
 
-        // divider
-        mainProj.appendChild(dividerSection)
-        console.log(mainProj)
-        // end of divider
+        // uncomment when you add a project
+
+        // // divider
+        // var tempPara = document.createElement("p")
+        // tempPara.innerText = "Spring"
+        // languageFuction6.appendChild(tempPara)
+        // console.log(mainProj)
+        // // end of divider
+
+        // end comment
 
         // Spring
         for (let i = 0; i < data.length; i++) {
@@ -2161,7 +2245,6 @@ function myFunction() {
         //end of Spring
 
         // divider
-        mainProj.appendChild(dividerSection)
         console.log(mainProj)
         // end of divider
 
@@ -2221,19 +2304,22 @@ function myFunction() {
             elements.appendChild(creators);
             elements.appendChild(lang)
             aLink.appendChild(elements);
-            seven.appendChild(aLink);
-            seven.classList.add("project-content")
-            seven.setAttribute('id','seven');
-            mainProj.appendChild(seven)
+            hide7.appendChild(aLink)
             //end of adding everything together
           }
         }
         //end of sql
 
-        // divider
-        mainProj.appendChild(dividerSection)
-        console.log(mainProj)
-        // end of divider
+        // uncomment when you add a project
+
+        // // divider
+        // var tempPara = document.createElement("p")
+        // tempPara.innerText = "C++"
+        // languageFuction8.appendChild(tempPara)
+        // console.log(mainProj)
+        // // end of divider
+
+        // end comment
 
         // C++
         for (let i = 0; i < data.length; i++) {
