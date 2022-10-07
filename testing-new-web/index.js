@@ -26,7 +26,7 @@ fetch(
           //description of the projects
           const desc = document.createElement("p");
           desc.innerText = project.description;
-          desc.style.fontSize = "15px";
+          desc.style.fontSize = "2.5vh";
           desc.style.paddingTop = "15px"
           desc.style.paddingBottom = "15px"
           //end of descriptions
@@ -34,7 +34,7 @@ fetch(
           //creators of the project
           const creators = document.createElement("p");
           creators.innerText = `Created By: ${project.creator}`;
-          creators.style.fontSize = "15px";
+          creators.style.fontSize = "2.5vh";
           creators.style.paddingBottom = "15px"
           //end of creators
 
@@ -47,7 +47,7 @@ fetch(
           //title of the card
           const title = document.createElement("p");
           title.innerText = project.title;
-          title.style.fontSize = "20px";
+          title.style.fontSize = "4vh";
           title.style.paddingBottom = "15px"
           //end of title
 
@@ -264,7 +264,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -272,7 +272,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -285,7 +285,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -323,7 +323,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -331,7 +331,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -344,7 +344,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -382,7 +382,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -390,7 +390,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -403,7 +403,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -441,7 +441,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -449,7 +449,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -462,7 +462,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -500,7 +500,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -508,7 +508,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -521,7 +521,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -559,7 +559,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -567,7 +567,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -580,7 +580,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -618,7 +618,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -626,7 +626,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -639,7 +639,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -677,7 +677,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -685,7 +685,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -698,7 +698,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -736,7 +736,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -744,7 +744,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -757,7 +757,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -795,7 +795,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -803,7 +803,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -816,7 +816,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -854,7 +854,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -862,7 +862,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -875,7 +875,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -913,7 +913,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -921,7 +921,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -934,7 +934,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -972,7 +972,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -980,7 +980,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -993,7 +993,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1031,7 +1031,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1039,7 +1039,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1052,7 +1052,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1090,7 +1090,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1098,7 +1098,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1111,7 +1111,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1149,7 +1149,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1157,7 +1157,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1170,7 +1170,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1208,7 +1208,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1216,7 +1216,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1229,7 +1229,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1267,7 +1267,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1275,7 +1275,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1288,7 +1288,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1326,7 +1326,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1334,7 +1334,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1347,7 +1347,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1385,7 +1385,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1393,7 +1393,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1406,7 +1406,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1444,7 +1444,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1452,7 +1452,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1465,7 +1465,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1503,7 +1503,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1511,7 +1511,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1524,7 +1524,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1562,7 +1562,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1570,7 +1570,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1583,7 +1583,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1621,7 +1621,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1629,7 +1629,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1642,7 +1642,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1680,7 +1680,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1688,7 +1688,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1701,7 +1701,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1739,7 +1739,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1747,7 +1747,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -1760,7 +1760,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
@@ -1852,7 +1852,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1860,7 +1860,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -1873,7 +1873,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -1919,7 +1919,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1927,7 +1927,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -1940,7 +1940,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -1986,7 +1986,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -1994,7 +1994,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2007,7 +2007,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2052,7 +2052,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2060,7 +2060,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2073,7 +2073,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2119,7 +2119,7 @@ function myFunction() {
               //description of the elements
               const desc = document.createElement("p");
               desc.innerText = element.description;
-              desc.style.fontSize = "15px";
+              desc.style.fontSize = "2.5vh";
               desc.style.paddingTop = "15px"
               desc.style.paddingBottom = "15px"
               //end of descriptions
@@ -2127,7 +2127,7 @@ function myFunction() {
               //creators of the element
               const creators = document.createElement("p");
               creators.innerText = `Created By: ${element.creator}`;
-              creators.style.fontSize = "15px";
+              creators.style.fontSize = "2.5vh";
               creators.style.paddingBottom = "15px"
               //end of creators
       
@@ -2140,7 +2140,7 @@ function myFunction() {
               //title of the card
               const title = document.createElement("p");
               title.innerText = element.title;
-              title.style.fontSize = "20px";
+              title.style.fontSize = "4vh";
               title.style.paddingBottom = "15px"
               //end of title
       
@@ -2193,7 +2193,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2201,7 +2201,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2214,7 +2214,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2262,7 +2262,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2270,7 +2270,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2283,7 +2283,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2335,7 +2335,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2343,7 +2343,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2356,7 +2356,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2427,7 +2427,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2435,7 +2435,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2448,7 +2448,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2490,7 +2490,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2498,7 +2498,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2511,7 +2511,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2553,7 +2553,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2561,7 +2561,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2574,7 +2574,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2616,7 +2616,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2624,7 +2624,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2637,7 +2637,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2679,7 +2679,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2687,7 +2687,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2700,7 +2700,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2742,7 +2742,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2750,7 +2750,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2763,7 +2763,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2805,7 +2805,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2813,7 +2813,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2826,7 +2826,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2868,7 +2868,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2876,7 +2876,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2889,7 +2889,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2931,7 +2931,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -2939,7 +2939,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -2952,7 +2952,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -2994,7 +2994,7 @@ function myFunction() {
             //description of the elements
             const desc = document.createElement("p");
             desc.innerText = element.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -3002,7 +3002,7 @@ function myFunction() {
             //creators of the element
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
     
@@ -3015,7 +3015,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = element.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
     
@@ -3080,7 +3080,7 @@ function myFunction() {
             //description of the projects
             const desc = document.createElement("p");
             desc.innerText = project.description;
-            desc.style.fontSize = "15px";
+            desc.style.fontSize = "2.5vh";
             desc.style.paddingTop = "15px"
             desc.style.paddingBottom = "15px"
             //end of descriptions
@@ -3088,7 +3088,7 @@ function myFunction() {
             //creators of the project
             const creators = document.createElement("p");
             creators.innerText = `Created By: ${project.creator}`;
-            creators.style.fontSize = "15px";
+            creators.style.fontSize = "2.5vh";
             creators.style.paddingBottom = "15px"
             //end of creators
 
@@ -3101,7 +3101,7 @@ function myFunction() {
             //title of the card
             const title = document.createElement("p");
             title.innerText = project.title;
-            title.style.fontSize = "20px";
+            title.style.fontSize = "4vh";
             title.style.paddingBottom = "15px"
             //end of title
 
