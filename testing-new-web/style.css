@@ -280,24 +280,17 @@ body {
   padding-bottom: 4vh;
 }
 
-.o-divider p{
-  font-size: 10vh;
-  padding-top: 4vh;
-  color: rgb(37, 150, 190);
-  text-transform: uppercase;
-}
-
 .o-divider2 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider2 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -306,14 +299,14 @@ body {
 .o-divider3 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider3 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -322,14 +315,14 @@ body {
 .o-divider4 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider4 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -338,14 +331,14 @@ body {
 .o-divider5 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider5 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -354,14 +347,14 @@ body {
 .o-divider6 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider6 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -370,14 +363,14 @@ body {
 .o-divider7 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider7 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -386,14 +379,14 @@ body {
 .o-divider8 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider8 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -402,14 +395,14 @@ body {
 .o-divider9 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider9 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -418,14 +411,14 @@ body {
 .o-divider10 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider10 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -434,14 +427,14 @@ body {
 .o-divider11 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider11 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -450,14 +443,14 @@ body {
 .o-divider12 {
   border: 0;
   margin: 20px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   height: 1px;
   background: #656D78;
   text-align: center;
 }
 
 .o-divider12 p{
-  font-size: 10vh;
+  font-size: 6vh;
   padding-top: 4vh;
   color: rgb(37, 150, 190);
   text-transform: uppercase;
@@ -594,7 +587,13 @@ body {
   }
 }
 
-@media screen and (max-width: 10px){
-  
+@media screen and (max-width: 557px){
+  .closeOnSmall{
+    display: none;
+  }
+
+  .logo h1{
+    margin-right: 25vw;
+  }
 }
 /* end of media screens */
