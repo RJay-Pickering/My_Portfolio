@@ -189,7 +189,7 @@ const hide7 = document.getElementById("seven")
 hide7.classList.add("hiding-content")
 
 var tempPara = document.createElement("p")
-tempPara.innerText = "HTML and CSS"
+tempPara.innerText = "HTML / CSS"
 languageFuction2.appendChild(tempPara)
 
 var tempPara = document.createElement("p")

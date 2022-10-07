@@ -181,8 +181,8 @@ body {
   text-align: center;
   align-items: center;
 	padding: 15px;
-  margin-left: 22vw;
-  margin-right: 22vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .skills ul {
@@ -201,7 +201,7 @@ body {
 }
 
 .skills ul li img{
-	width: 5vw;
+	width: 5vh;
 }
 
 .skills ul li:hover {
@@ -280,16 +280,6 @@ body {
   padding-bottom: 4vh;
 }
 
-.o-divider {
-  border: 0;
-  margin: 20px;
-  margin-top: -10vh;
-  margin-bottom: 10vw;
-  height: 1px;
-  background: #656D78;
-  text-align: center;
-}
-
 .o-divider p{
   font-size: 10vh;
   padding-top: 4vh;
@@ -300,7 +290,7 @@ body {
 .o-divider2 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -316,7 +306,7 @@ body {
 .o-divider3 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -332,7 +322,7 @@ body {
 .o-divider4 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -348,7 +338,7 @@ body {
 .o-divider5 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -364,7 +354,7 @@ body {
 .o-divider6 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -380,7 +370,7 @@ body {
 .o-divider7 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -396,7 +386,7 @@ body {
 .o-divider8 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -412,7 +402,7 @@ body {
 .o-divider9 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -428,7 +418,7 @@ body {
 .o-divider10 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -444,7 +434,7 @@ body {
 .o-divider11 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -460,7 +450,7 @@ body {
 .o-divider12 {
   border: 0;
   margin: 20px;
-  margin-bottom: 10vw;
+  margin-bottom: 20vh;
   height: 1px;
   background: #656D78;
   text-align: center;
@@ -476,7 +466,7 @@ body {
 .o-divider-under {
   border: 0;
   margin: 20px;
-  margin-bottom: 5vw;
+  margin-bottom: 10vh;
   height: 1px;
   background: #656D78;
   text-align: center;
