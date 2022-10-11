@@ -138,7 +138,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 3.15vh;
-  padding-left: 1vw;
+  margin-left: 26vh;
+  margin-right: 26vh;
 }
 
 .para:hover {
@@ -198,10 +199,12 @@ body {
 	font-size:  3.15vh;
 	margin: 0 7px 7px 0;
 	padding: 7px;
+  width: 20vh;
 }
 
 .skills ul li img{
 	width: 5vh;
+  padding-top: 3.5vh;
 }
 
 .skills ul li:hover {
