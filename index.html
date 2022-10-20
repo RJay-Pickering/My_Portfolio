@@ -1,52 +1,173 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>RJays "About Me"</title>
-    <link href="portfolio.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Special+Elite&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="images/portfolio-logo.png"
-    />
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJay Pickering</title>
+    <link rel="shortcut icon" type="image/png" href="imageStorage/portfolio-logo.png"/>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <script src="index.js" defer></script>
+    <script src="pro.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
     <div class="container">
-      <h1 class="my_name">RJay Pickering</h1>
+      <!-- navbar -->
+      <div class="bar">
+        <div class="nav">
+          <div class="logo">
+            <h1>RJay <span class="closeOnSmall">Pickering</span></h1>
+          </div>
+          <button class="aboutLink" id="selected">About Me</button>
+          <button class="skillsLink">My Skills</button>
+          <button class="projectsLink">My Projects</button>
+        </div>
+      </div>
+      <!-- end of navbar -->
+      <div class="main">
+        <div class="main-content">
+          <!-- about me -->
+          <div class="about-me">
+            <h3>About <span class="title-highlight">Me</span></h3>
+            <div class="about-me-content">
+              <div class="images">
+                <div class="images-cover">
+                    <img src="imageStorage/my_senior_photo.jpeg">
+                </div>
+              </div>
+              <p class="para">Welcome to my portfolio! I am a graduate from South Pontotoc High School(2021) and Base Camp Coding Academy(2022). BCCA is a non-profit, intensive, year-long coding school training both High School Graduates and adults(ages: 22+) to be software developers. This program also teaches the students how to be professional in the work place. I am currently working as a assistant technical director for BCCA and I also work on the family farm, Pickering Hereford Hogs. My hobbies include coding websites, going to the gym, spending time with friends and family, and writing short stories.</p>
+            </div>
+          </div>
+          <!-- end of about me -->
+          <!-- my skills -->
+          <div class="my-skills">
+            <h3><span class="title-highlight">My Skills</span> that I have learned</h3>
+            <div class="skills">
+              <ul>
+                <li>
+                  <img src="imageStorage/skills/python.png">
+                  <p>Python</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/html-5.png">
+                  <p>HTML</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/css-3.png">
+                  <p>CSS</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/git.png">
+                  <p>Git</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/github.png">
+                  <p>Github</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/django.png">
+                  <p>Django</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/js.png">
+                  <p>JavaScript</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/java.png">
+                  <p>Java</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/postgre.png">
+                  <p>SQL</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/spring.png">
+                  <p>Spring</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/bootstrap.png">
+                  <p>Bootstrap</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/c-.png">
+                  <p>C++</p>
+                </li>
+                <li>
+                  <img src="imageStorage/skills/ruby.png">
+                  <p>Ruby</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- end of my skills -->
+          <!-- projects -->
+          <div class="projects" id="projectsId"> 
+            <h3><span class="title-highlight">My Projects</span> that I have created</h3>
+            <div class="proj-description" id="cubone"></div>
+            <form class="filterForm">
+              <select id="mySelect" onchange="myFunction()">
+                <option id="defaultOpt" value="0">Pick a Filter</option>
+                <option id="nameOpt" value="1">Name</option>
+                <option id="langOpt" value="2">Language</option>
+                <option id="favOpt" value="3">Favorite</option>
+              </select>
+            </form>
+            <div class="o-divider2">
+              <p>python</p>
+            </div>
+            <div class="o-divider-under"></div>
+            <div class="project-content" id="one"></div>
+            <div class="o-divider3"></div>
+            <div class="o-divider-under"></div>
+            <div class="project-content" id="two"></div>
+            <div class="o-divider4"></div>
+            <div class="o-divider-under"></div>
+            <div class="project-content" id="three"></div>
+            <div class="o-divider5"></div>
+            <div class="o-divider-under"></div>
+            <div class="project-content" id="four"></div>
+            <div class="o-divider6"></div>
+            <div class="o-divider-under"></div>
+            <div class="project-content" id="five"></div>
+            <!-- <div class="o-divider7"></div>
+            <div class="o-divider-under"></div> -->
+            <div class="o-divider8"></div>
+            <div class="o-divider-under"></div>
+            <div class="project-content" id="seven"></div>
+            <!-- <div class="o-divider9"></div>
+            <div class="o-divider-under"></div>
+            <div class="o-divider10"></div>
+            <div class="o-divider-under"></div>
+            <div class="o-divider11"></div>
+            <div class="o-divider-under"></div>
+            <div class="o-divider12"></div>
+            <div class="o-divider-under"></div> -->
+          </div>
+          <!-- end of projects -->
+        </div>
+      </div>
+      <!-- footer -->
+      <footer class="footer">
+        <h2>RJay Pickering</h2>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+          <li><a target="_blank" href="https://www.linkedin.com/in/rjay-pickering-268956216/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a target="_blank" href="mailto:rjaypickering@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+          <li><a target="_blank" href="https://github.com/RJay-Pickering"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li><a target="_blank" href="https://www.instagram.com/zours.js/"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <p style="color: #fff" >ⓒ2022 RJay Pickering</p>
+      </footer>
+      <!-- end of footer -->
     </div>
-    <!--container-->
-    <div class="navbar">
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-    </div>
-    <div class="main">
-      <img class="img-memory" src="images/my_senior_photo.jpeg" />
-      <h2 class="nav-header">About Me</h2>
-      <p class="paragraph">
-        Welcome to my portfolio! I am a graduate from South Pontotoc High School(2021) and Base Camp Coding Academy(2022). BCCA is a non-profit, intensive, year-long coding school training both High School Graduates and adults(ages: 22+) to be software developers and teach the students how to be professional in the work place. I am currently working as a assistant technical director for BCCA and I also work on the family farm, Pickering Hereford Hogs. My hobbies include playing video games, spending time with friends and family, and writing short stories.
-      </p>
-    </div>
-    <footer class="footer">
-      <h2 class="the_head">Ways to contact</h2>
-      <p class="the_middle">
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/rjay-pickering-268956216/"
-          ><img class="linkedin" src="images/linkedin-logo.png"
-        /></a>
-        <a target="_blank" href="mailto:rjaypickering@gmail.com"
-          ><img class="gmail" src="images/gmail.png"
-        /></a>
-        <a target="_blank" href="https://github.com/RJay-Pickering"
-          ><img class="github" src="images/github.png"
-        /></a>
-      </p>
-    </footer>
-  </body>
+</body>
 </html>
