@@ -29,7 +29,7 @@
     {
       "favorite": 5,
       "title": "Rock, Paper, Scissors!",
-      "link": "https://rjay-pickering.github.io/RockPaperScissorsGameJS/",
+      "link": "https://github.com/RJay-Pickering/RockPaperScissorsGameJS",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/RockPaperScissors.png",
       "language": "HTML, CSS, JavaScript",
@@ -47,7 +47,7 @@
     {
       "favorite": 3,
       "title": "Missing Cats of America",
-      "link": "https://github.com/BaseCampCoding/unit-5-module-2-auth-RJay-Pickering",
+      "link": "https://github.com/RJay-Pickering/Missing-Cats-of-America",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/naruto-with-cat.jpeg",
       "language": "Django, HTML, CSS",
