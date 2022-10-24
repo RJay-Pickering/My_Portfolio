@@ -584,12 +584,17 @@ body {
 }
 
 @media screen and (max-width: 557px){
-  .closeOnSmall{
+  .closeOnSmall {
     display: none;
   }
 
-  .logo h1{
+  .logo h1 {
     margin-right: 25vw;
+  }
+
+  .para {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 /* end of media screens */
