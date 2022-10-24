@@ -156,6 +156,8 @@ var languageBottom5 = document.getElementsByClassName("o-divider-under")[4]
 languageBottom5.classList.add("hiding-content")
 var languageBottom6 = document.getElementsByClassName("o-divider-under")[5]
 languageBottom6.classList.add("hiding-content")
+var languageBottom7 = document.getElementsByClassName("o-divider-under")[6]
+languageBottom7.classList.add("hiding-content")
 
 var languageFuction2 = document.getElementsByClassName("o-divider3")[0]
 languageFuction2.classList.add("hiding-content")
@@ -171,8 +173,8 @@ var languageFuction7 = document.getElementsByClassName("o-divider8")[0]
 languageFuction7.classList.add("hiding-content")
 // var languageFuction8 = document.getElementsByClassName("o-divider9")[0]
 // languageFuction8.classList.add("hiding-content")
-// var languageFuction9 = document.getElementsByClassName("o-divider10")[0]
-// languageFuction9.classList.add("hiding-content")
+var languageFuction9 = document.getElementsByClassName("o-divider10")[0]
+languageFuction9.classList.add("hiding-content")
 // var languageFuction10 = document.getElementsByClassName("o-divider11")[0]
 // languageFuction10.classList.add("hiding-content")
 // var languageFuction11 = document.getElementsByClassName("o-divider12")[0]
@@ -187,6 +189,10 @@ const hide5 = document.getElementById("five")
 hide5.classList.add("hiding-content")
 const hide7 = document.getElementById("seven")
 hide7.classList.add("hiding-content")
+// const hide8 = document.getElementById("eight")
+// hide8.classList.add("hiding-content")
+const hide9 = document.getElementById("nine")
+hide9.classList.add("hiding-content")
 
 var tempPara = document.createElement("p")
 tempPara.innerText = "HTML / CSS"
@@ -197,16 +203,20 @@ tempPara.innerText = "Django"
 languageFuction3.appendChild(tempPara)
 
 var tempPara = document.createElement("p")
-tempPara.innerText = "javascript"
+tempPara.innerText = "JavaScript"
 languageFuction4.appendChild(tempPara)
 
 var tempPara = document.createElement("p")
-tempPara.innerText = "java"
+tempPara.innerText = "Java"
 languageFuction5.appendChild(tempPara)
 
 var tempPara = document.createElement("p")
-tempPara.innerText = "sql"
+tempPara.innerText = "SQL"
 languageFuction7.appendChild(tempPara)
+
+var tempPara = document.createElement("p")
+tempPara.innerText = "Ruby"
+languageFuction9.appendChild(tempPara)
 
 // this function deals with the filter in the projects section
 function myFunction() {
@@ -222,11 +232,14 @@ function myFunction() {
   languageBottom4.classList.add("hiding-content")
   languageBottom5.classList.add("hiding-content")
   languageBottom6.classList.add("hiding-content")
+  languageBottom7.classList.add("hiding-content")
+  languageFuction9.classList.add("hiding-content")
   hide2.classList.add("hiding-content")
   hide3.classList.add("hiding-content")
   hide4.classList.add("hiding-content")
   hide5.classList.add("hiding-content")
   hide7.classList.add("hiding-content")
+  hide9.classList.add("hiding-content")
   var projFilter = document.getElementById("mySelect");
   var filterType = projFilter.selectedIndex;
   //search by name
@@ -1800,7 +1813,7 @@ function myFunction() {
     // languageFuction6.classList.remove("hiding-content")
     languageFuction7.classList.remove("hiding-content")
     // languageFuction8.classList.remove("hiding-content")
-    // languageFuction9.classList.remove("hiding-content")
+    languageFuction9.classList.remove("hiding-content")
     // languageFuction10.classList.remove("hiding-content")
     // languageFuction11.classList.remove("hiding-content")
     hide2.classList.remove("hiding-content")
@@ -1808,12 +1821,14 @@ function myFunction() {
     hide4.classList.remove("hiding-content")
     hide5.classList.remove("hiding-content")
     hide7.classList.remove("hiding-content")
+    hide9.classList.remove("hiding-content")
     languageBottom.classList.remove("hiding-content")
     languageBottom2.classList.remove("hiding-content")
     languageBottom3.classList.remove("hiding-content")
     languageBottom4.classList.remove("hiding-content")
     languageBottom5.classList.remove("hiding-content")
     languageBottom6.classList.remove("hiding-content")
+    languageBottom7.classList.remove("hiding-content")
 
     console.log("language 2.0");
     fetch(
@@ -2386,6 +2401,72 @@ function myFunction() {
           }
         }
         //end of C++
+
+        // divider
+        console.log(mainProj)
+        // end of divider
+
+        // Ruby
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.language.includes("Ruby")) {
+            //the link that links every element to a repository
+            const aLink = document.createElement("a");
+            aLink.href = `${element.link}`;
+            aLink.target = "_blank";
+            aLink.classList.add("aLink");
+            //end of links
+    
+            //description of the elements
+            const desc = document.createElement("p");
+            desc.innerText = element.description;
+            desc.style.fontSize = "2.5vh";
+            desc.style.paddingTop = "15px"
+            desc.style.paddingBottom = "15px"
+            //end of descriptions
+    
+            //creators of the element
+            const creators = document.createElement("p");
+            creators.innerText = `Created By: ${element.creator}`;
+            creators.style.fontSize = "2.5vh";
+            creators.style.paddingBottom = "15px"
+            //end of creators
+    
+            //cards image
+            const image = document.createElement("img");
+            image.src = element.image_url;
+            image.classList.add("apiImage");
+            //end of image
+    
+            //title of the card
+            const title = document.createElement("p");
+            title.innerText = element.title;
+            title.style.fontSize = "4vh";
+            title.style.paddingBottom = "15px"
+            //end of title
+    
+            //coding language
+            const lang = document.createElement("p");
+            lang.innerText = `Language: ${element.language}`
+            //end of language
+    
+            //creating the element to have everything be put together
+            const elements = document.createElement("div");
+            elements.classList.add("card");
+            // end of elements
+    
+            //adding everything together
+            elements.appendChild(title);
+            elements.appendChild(image);
+            elements.appendChild(desc);
+            elements.appendChild(creators);
+            elements.appendChild(lang)
+            aLink.appendChild(elements);
+            hide9.appendChild(aLink)
+            //end of adding everything together
+          }
+        }
+        //end of Ruby
       });
     // end of fetch
   } 

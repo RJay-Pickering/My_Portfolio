@@ -1,5 +1,14 @@
 [
     {
+      "favorite": 5,
+      "title": "Ruby University",
+      "link": "https://github.com/RJay-Pickering/Ruby_University",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/ruby-university.png",
+      "language": "Ruby",
+      "description": "This is a fake University registration program that was made using basic Ruby. I made this project while I had some downtime so I could use this to practice on writing in Ruby. The user will chat to 'Ruby Bot' and will register you into a fake university. The 'Bot' will decide if you are acceptable for an interview or not, based on your answers or choices. This code will need to be downloaded before this can be used!"
+    },
+    {
       "favorite": 1,
       "title": "Base Camp News",
       "link": "https://github.com/RJay-Pickering/capstone_project_QS_WC_RP",
@@ -18,7 +27,7 @@
       "description": "This is my Java and SQL project that I have made. This Project is your basic, run of the mill, CRUD app that you can add any anime into. This project is called Animoo Hub (Anime Storage) and you are able to Add your anime's into this app, Update your anime, Delete it from your list, and view any anime you have saved. What is a anime? Anime is a Japanese Cartoon that millions tend to enjoy for the plot line, or the pretty animations it has."
     },
     {
-      "favorite": 7,
+      "favorite": 8,
       "title": "The Hacker Man",
       "link": "https://github.com/RJay-Pickering/hacker-game",
       "creator": "RJay Pickering",
@@ -27,7 +36,7 @@
       "description": "This project is one of the first Java programs that I made. This project is more of funny guessing game. You are this expert hacker that just got his computer hacked and to protect his personal life, he must log in to his program on the computer to stop the hack, but he forgot his password and he needs to try and guess using his password book that he has. This project is a weird one, but fun if given a chance."
     },
     {
-      "favorite": 5,
+      "favorite": 7,
       "title": "Rock, Paper, Scissors!",
       "link": "https://github.com/RJay-Pickering/RockPaperScissorsGameJS",
       "creator": "RJay Pickering",
@@ -63,7 +72,7 @@
       "description": "This Charity website is my first Html and CSS project that I have done. This project is about a campaign to reboot Black Ops for the newer gen consoles. Ive made this project as standard and infographic that It is not the most entertaining website that I made but it is made to give you information, instead of making it eye catching or fun. On the other hand, this is really fun to make as my first Html project."
     },
     {
-      "favorite": 8,
+      "favorite": 9,
       "title": "Pokemon Safari",
       "link": "https://github.com/RJay-Pickering/Pokemon-Safari.py",
       "creator": "RJay Pickering and Logan Coley",
@@ -72,7 +81,7 @@
       "description": "A classmate and I were partnered for a unit project to build something in Python. We decided to make a Pokemon safari park game revolving around the third generation Pokemons. The player has random encounters with Pokemon in the wild or can go fight the gym leaders to obtain a Bronze, Silver, and Gold Medal. We also added a Legendary that you can find and catch after obtaining the Golden Medal from the battle towers. From this project, I learned teamwork and worked on my communication skills."
     },
     {
-      "favorite": 9,
+      "favorite": 10,
       "title": "The Static at my Door",
       "link": "https://github.com/RJay-Pickering/TheStaticAtMyDoor",
       "creator": "RJay Pickering",
@@ -81,7 +90,7 @@
       "description": "In my sixth week at Base Camp Coding Academy, we had another assignment to make a choose your own adventure game using what we had learned so far in Python. The story behind this game is that your sleep paralysis demon comes into your house and you must find a way to survive without it capturing you. Be extra careful when picking a option, each choice can lead to another path."
     },
     {
-      "favorite": 10,
+      "favorite": 11,
       "title": "Demon Overthrow",
       "link": "https://github.com/RJay-Pickering/HealthDepleter",
       "creator": "RJay Pickering",
