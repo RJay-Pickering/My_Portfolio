@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pokemon Safari</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="icon" type="image/jpg" href="../imageStorage/projects/safari-park.jpeg">
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="https://www.online-python.com/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://www.online-python.com/assets/dist/css/ide.css?v=a1">
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <!-- jQuery 3 -->
+    <script src="https://www.online-python.com/assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="https://www.online-python.com/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://www.online-python.com/assets/dist/js/ide.js?v=a1"></script>
+
+    <!-- Ace Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-settings_menu.min.js" type="text/javascript" charset="utf-8"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-keybinding_menu.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- Split JS -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.6.2/split.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+<body>
+    <div>
+        <div class="container" id="container">
+            <div id="mi" class="split" style="height: auto;">
+
+                <!-- editor -->
+                <ul class="nav nav-tabs" role="tablist" style="display:none;">
+                    <li class="active" id="editor-1"><a data-toggle="tab">main.py</a></li>
+                    <li id="new_file_btn"><button type="button" class="btn btn-default btn-sm add-editor" id="create_tab" data-title="New File"><i class="fas fa-plus"></i></button></li>
+                </ul>
+                
+                <div id="editor" style="display:none;"></div>
+
+                <div class="boxed" id="editor_footer"></div>
+                <!-- ------ -->
+
+                <div class="control-bar">
+                    <div id="control-btn">
+                    <button type="button" class="btn btn-success btn-sm" id="run-btn" onclick="run_python()" data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="F8"><i class="fa fa-play"></i>&ensp;<strong>Run</strong></button>
+                    </div>
+                    <input class="textbox" type="text" id="input_arguments" placeholder=" Command Line Arguments">
+                    <a type="button" class="btn btn-default btn-sm" id="share-btn" data-toggle="popover" data-placement="right" data-trigger="hover" href="https://github.com/RJay-Pickering/Pokemon-Safari.py" target="_blank">
+                        <i class="fa fa-share"></i>&ensp;
+                        <strong>GitHub</strong>
+                    </a>
+                </div>
+
+            </div>
+
+            <div id="d" class="split" style="height: 100%;">
+                <div class="boxed1" id="output_header">
+                    <div id="hint-section"></div>
+                    <div id="output-status"></div>
+                </div>
+
+                <div id="terminal">
+                    <div id="progress-status"></div>
+                    <div class="boxed2" id="output"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Save Result modal -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="downloadResult">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">File Name:</label>
+                            <input type="text" class="form-control" id="download_file_name" value="main_output.txt">
+                        </div>
+                    </form>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" onclick="download_output()" data-dismiss="modal">Download</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
+
+
+        <script type="text/javascript">
+            ace.require("ace/ext/language_tools");
+            var editor = ace.edit("editor");
+            ace.require('ace/ext/settings_menu').init(editor);
+            var editor_cnt = 1, editor_index = 1, active_editor = 1, editor_session = [];
+            var request, init_ts, open_file_name;
+            var lang = 'python3';
+            default_content = "\
+from dataclasses import dataclass\n\
+from typing import List, Dict\n\
+import random\n\
+\n\
+\n\
+@dataclass\n\
+class Pokemon:\n\
+    name: str\n\
+    types: str\n\
+    health: int\n\
+    health_cap: int\n\
+    exp: int\n\
+    fainted: bool\n\
+    moves: List[str]\n\
+    damage: List[int]\n\
+    \n\
+    \n\
+@dataclass\n\
+class Player:\n\
+    name: str\n\
+    party: List[Pokemon]\n\
+    money: int\n\
+    items: List[str]\n\
+    \n\
+    \n\
+@dataclass\n\
+class Area:\n\
+    name: str\n\
+    description: str\n\
+    connections: List[str]\n\
+    \n\
+    \n\
+@dataclass\n\
+class Trainer:\n\
+    name: str\n\
+    party: List[Pokemon]\n\
+    \n\
+    \n\
+AREA: Dict[str, Area] = {\n\
+    'Safari Counter':\n\
+    Area('Safari Counter', 'This the Safari Counter where you can buy items',\n\
+         ['Battle Counter', 'Grasslands', 'PC']),\n\
+    'Battle Counter':\n\
+    Area(\n\
+        'Battle Counter',\n\
+        'This is the Battle Counter where you can prove your strength against other trainers.',\n\
+        ['Safari Counter', 'Grasslands', 'PC']),\n\
+    'PC':\n\
+    Area(\n\
+        'PC',\n\
+        'This is the PC where you can store Pokemon so can catch them all and have a place to store them.',\n\
+        ['Safari Counter', 'Grasslands', 'Battle Counter']),\n\
+    'Grasslands':\n\
+    Area('Grasslands',\n\
+         'A wide open space of grass and open fields lay before you',\n\
+         ['Safari Counter', 'Prairie', 'Pampas']),\n\
+    'Prairie':\n\
+    Area('Prairie',\n\
+         'A wide open space of grass and open fields lay before you',\n\
+         ['Grasslands', 'Pampas', 'Savanna']),\n\
+    'Pampas':\n\
+    Area('Pampas',\n\
+         'A wide open space of grass and open fields lay before you',\n\
+         ['Grasslands', 'Prairie', 'Savanna']),\n\
+    'Savanna':\n\
+    Area(\n\
+        'Savanna',\n\
+        'A wide open space of grass and open fields lay before you, you see trees close by',\n\
+        ['Pampas', 'Prairie', 'The Forest Opening']),\n\
+    'The Forest Opening':\n\
+    Area(\n\
+        'The Forest Opening',\n\
+        'The grass starts to become thin and the sun starts to be blocked out by some tree limbs.',\n\
+        ['Temperate', 'Savanna']),\n\
+    'Temperate':\n\
+    Area(\n\
+        'Temperate',\n\
+        'This is an region with high levels of precipitation, humidity, and a variety of deciduous trees that lose their leaves during the cold winters.',\n\
+        ['The Forest Opening', 'Boreal']),\n\
+    'Boreal':\n\
+    Area(\n\
+        'Boreal',\n\
+        'This part of the forest has very cold temperatures. It is mostly made up of cold tolerant coniferous species of Pokemon.',\n\
+        ['Temperate', 'Tropical']),\n\
+    'Tropical':\n\
+    Area(\n\
+        'Tropical',\n\
+        'You feel the humidity rising and feel cool rain fall hitting you from the trees. The sound of an near by water fall is heard in the distance',\n\
+        ['Boreal', 'Kyoger Falls']),\n\
+    'Kyoger Falls':\n\
+    Area(\n\
+        'Kyoger Falls',\n\
+        'You continue through the Forest and reach the waterfall. Its name comes from its creator, Kyoger the legendary Pokemon of water. In 2003, Kyoger awoken to battle Groundon, during his awakening this river was born.',\n\
+        ['Tropical', 'Useless River']),\n\
+    'Useless River':\n\
+    Area('Useless River', 'Home to useless Pokemon',\n\
+         ['Kyoger Falls', 'Great Pond']),\n\
+    'Great Pond':\n\
+    Area(\n\
+        'Great Pond',\n\
+        'This is a huge pond filled with a lot of water pokemon. Be careful touching the water, Electric pokemon loves to play here!',\n\
+        ['Useless River', 'Poke Beach']),\n\
+    'Poke Beach':\n\
+    Area(\n\
+        'Poke Beach',\n\
+        'You walk on the other side of the pond and see a beach filled with peaceful trainers and sandy pokemon. ahead of the Beach is just more sand.',\n\
+        ['Great Pond', 'Dust Bowl']),\n\
+    'Dust Bowl':\n\
+    Area(\n\
+        'Dust Bowl',\n\
+        'A sandy area with light dust storms brew up from dragon Pokemon`s, and humidity from the fire Pokemon`s.',\n\
+        ['Poke Beach', 'Addax']),\n\
+    'Addax':\n\
+    Area(\n\
+        'Addax',\n\
+        'A pure white sandy area which is named after and extinct Pokemon. Most people refer this area as the `holy lands`',\n\
+        ['Dust Bowl', 'Base']),\n\
+    'Base':\n\
+    Area(\n\
+        'Base',\n\
+        'You get out of the dessert and reached the base of the mountain. There is an elevator near by to reach the peak of the mountain.',\n\
+        ['Addax', 'Regice Line', 'Peak']),\n\
+    'Regice Line':\n\
+    Area(\n\
+        'Regice Line',\n\
+        'The snow line of the mountain got its name from the Ice Legendary Pokemon named Regice. This area is his domain and filled with Pokemon. Don`t worry about it attacking you, It is mainly in hiding.',\n\
+        ['Base', 'Peak']),\n\
+    'Peak':\n\
+    Area(\n\
+        'Peak',\n\
+        'You are on top of the Mountain! There are an elevator and an erie house. The elevator leads to the Base of the mountain, and the house... Is spooky!',\n\
+        ['Base', 'Haunted House']),\n\
+    'Haunted House':\n\
+    Area(\n\
+        'Haunted House',\n\
+        'Thunder strikes around the house, Clouds on top of the mountain began to turn black. You hear whispers and creaking from the house. The door to the house opens like its inviting you in!',\n\
+        ['Peak', 'Lobby']),\n\
+    'Lobby':\n\
+    Area(\n\
+        'Lobby',\n\
+        'It looks just like an abandoned house, but there are weathered Mannequins and a box sitting in the middle of the room. You can also go upstairs!',\n\
+        ['Haunted House', 'Box', 'Upstairs']),\n\
+    'Box':\n\
+    Area(\n\
+        'Box',\n\
+        'In the middle of the lobby, a two foot wide and three feet tall black box sits there. The box is stripped with red... definitely not blood... The box has six Mannequin arms and six Mannequin legs attached to the box. In the middle of the box, there is a circle cut out of the box. On each side of the circle, three golden arrows point to the box! Maybe you can put something in this circle!',\n\
+        ['Open', 'Lobby']),\n\
+    'Open':\n\
+    Area(\n\
+        'Box',\n\
+        'In the middle of the lobby, a two foot wide and three feet tall black box sits there. The box is stripped with red... definitely not blood... The box has six Mannequin arms and six Mannequin legs attached to the box. In the middle of the box, there is a circle cut out of the box. On each side of the circle, three golden arrows point to the box! Maybe you can put something in this circle!',\n\
+        ['Open', 'Lobby']),\n\
+    'Upstairs':\n\
+    Area(\n\
+        'Upstairs', '''You go upstairs and to your surprise...\n\
+Its you! But something is behind you in the photo. You look closer to the photo and see a silhouette of a man behind you. It looks like the guy will never give you up, never gonna let you down, never gonna run around and desert you! You turn your attention away from the photo and to the end of the room where a ladder is leading you to the Attic!''',\n\
+        ['Lobby', 'Attic']),\n\
+    'Attic':\n\
+    Area(\n\
+        'Attic',\n\
+        'You go into the attic and find... Nothing but more Mannequins and empty boxes...',\n\
+        ['Upstairs'])\n\
+}\n\
+\n\
+Grasslands = [\n\
+    Pokemon('Oddish', 'Grass', 29, 29, 0, False, ['Razor Leaf', 'Tackle'],\n\
+            [random.randint(15, 20),\n\
+             random.randint(10, 20)]),\n\
+    Pokemon('Tailow', 'Normal', 20, 20, 0, False, ['Peck', 'Wing Attack'],\n\
+            [random.randint(15, 25),\n\
+             random.randint(30, 35)]),\n\
+    Pokemon('Bellsprout', 'Grass', 30, 30, 0, False, ['Acid', 'Bullet Speed'],\n\
+            [random.randint(15, 25),\n\
+             random.randint(10, 20)]),\n\
+    Pokemon('Pidgey', 'Flying', 20, 20, 0, False, ['Areal Ace', 'Air Cutter'],\n\
+            [random.randint(40, 50),\n\
+             random.randint(45, 55)])\n\
+]\n\
+\n\
+Forest = [\n\
+    Pokemon('Weedle', 'Bug', 25, 25, 0, False, ['Poison Sting', 'Tackle'],\n\
+            [random.randint(25, 35),\n\
+             random.randint(10, 20)]),\n\
+    Pokemon('Wurmple', 'Bug', 30, 30, 0, False, ['Poison Sting', 'Tackle'],\n\
+            [random.randint(15, 25),\n\
+             random.randint(10, 20)]),\n\
+    Pokemon('Phantump', 'Ghost', 35, 35, 0, False,\n\
+            ['Shadow Ball', 'Shadow Claw'],\n\
+            [random.randint(20, 25),\n\
+             random.randint(25, 30)]),\n\
+    Pokemon('Ekans', 'Poison', 30, 30, 0, False, ['Acid', 'Beat Up'],\n\
+            [random.randint(30, 40),\n\
+             random.randint(10, 20)])\n\
+]\n\
+\n\
+River = [\n\
+    Pokemon('Electrike', 'Electric', 35, 35, 0, False, ['Tackle', 'Shockwave'],\n\
+            [random.randint(10, 20),\n\
+             random.randint(20, 30)]),\n\
+    Pokemon('Magikarp', 'Water', 15, 15, 0, False, ['Splash', 'Better Splash'],\n\
+            [0, 0]),\n\
+    Pokemon('Spheal', 'Water', 35, 35, 0, False, ['Rollout', 'Water Gun'],\n\
+            [random.randint(20, 30),\n\
+             random.randint(25, 35)]),\n\
+    Pokemon('Dratini', 'Dragon', 40, 40, 0, False, ['Dragon Rage', 'Spark'],\n\
+            [random.randint(15, 20),\n\
+             random.randint(25, 30)])\n\
+]\n\
+\n\
+Dessert = [\n\
+    Pokemon('Cubone', 'Ground', 20, 20, 0, False, ['Mud-Slap', 'Boomerang'],\n\
+            [random.randint(15, 25)]),\n\
+    Pokemon('Onix', 'Rock', 35, 35, 0, False, ['Tackle', 'Sand Tomb'],\n\
+            [random.randint(10, 20),\n\
+             random.randint(35, 45)]),\n\
+    Pokemon('Gible', 'Dragon', 30, 30, 0, False, ['Sand Tomb', 'Tackle'],\n\
+            [random.randint(25, 35),\n\
+             random.randint(10, 20)]),\n\
+    Pokemon('Ponyta', 'Fire', 35, 35, 0, False, ['Tackle', 'Tail Whip'],\n\
+            [random.randint(10, 20),\n\
+             random.randint(25, 35)])\n\
+]\n\
+\n\
+Mountain = [\n\
+    Pokemon('Machop', 'Fighting', 45, 45, 0, False, ['Revenge', 'Low Sweep'],\n\
+            [random.randint(45, 50)]),\n\
+    Pokemon('Beldum', 'Steel', 35, 35, 0, False, ['Iron Head', 'Tackle'],\n\
+            [random.randint(45, 55),\n\
+             random.randint(10, 20)]),\n\
+    Pokemon('Vanillite', 'Ice', 30, 30, 0, False, ['Icy Wind', 'Avalanche'],\n\
+            [random.randint(45, 55),\n\
+             random.randint(50, 60)]),\n\
+    Pokemon('Mankey', 'Fighting', 40, 40, 0, False, ['Scratch', 'Karate Chop'],\n\
+            [random.randint(30, 40),\n\
+             random.randint(40, 50)])\n\
+]\n\
+\n\
+Haunted_house = [\n\
+    Pokemon('Duskull', 'Ghost', 20, 20, 0, False, ['Astonish', 'Pursuit'],\n\
+            [random.randint(20, 30),\n\
+             random.randint(30, 40)]),\n\
+    Pokemon('Pinsir', 'Bug', 60, 60, 0, False, ['Body Slam', 'Brick Break'],\n\
+            [random.randint(50, 60),\n\
+             random.randint(60, 70)]),\n\
+    Pokemon('Ralts', 'Psychic', 30, 30, 0, False, ['Body Slam', 'Double Edge'],\n\
+            [random.randint(50, 60),\n\
+             random.randint(60, 70)]),\n\
+    Pokemon('Absol', 'Dark', 65, 65, 0, False, ['Bite', 'Cut'],\n\
+            [random.randint(50, 60),\n\
+             random.randint(40, 50)])\n\
+]\n\
+\n\
+\n\
+def encounter(player: Player, location: Dict[str, Area]) -> None:\n\
+    if location == AREA['Grasslands'] or location == AREA[\n\
+            'Prairie'] or location == AREA['Pampas'] or location == AREA[\n\
+                'Savanna']:\n\
+        start = random.randint(1, 4)\n\
+        if start == 1:\n\
+            pass\n\
+        elif start == 2 or start == 3 or start == 4:\n\
+            wild_poke = catch(player, location)\n\
+            print(f'The wild {wild_poke.name} appears.')\n\
+            encounter_options(player, wild_poke)\n\
+    if location == AREA['PC']:\n\
+        PC_actions(player, location)\n\
+    elif location == AREA['Battle Counter']:\n\
+        battlecounter_options(player, location)\n\
+    if location == AREA['The Forest Opening'] or location == AREA[\n\
+            'Temperate'] or location == AREA['Boreal'] or location == AREA[\n\
+                'Tropical']:\n\
+        start = random.randint(1, 4)\n\
+        if start == 1:\n\
+            pass\n\
+        elif start == 2 or start == 3 or start == 4:\n\
+            wild_poke = catch(player, location)\n\
+            print(f'The wild {wild_poke.name} appears.')\n\
+            encounter_options(player, wild_poke)\n\
+    if location == AREA['Kyoger Falls'] or location == AREA[\n\
+            'Useless River'] or location == AREA['Great Pond']:\n\
+        start = random.randint(1, 4)\n\
+        if start == 1:\n\
+            pass\n\
+        elif start == 2 or start == 3 or start == 4:\n\
+            wild_poke = catch(player, location)\n\
+            print(f'The wild {wild_poke.name} appears.')\n\
+            encounter_options(player, wild_poke)\n\
+    if location == AREA['Poke Beach'] or location == AREA[\n\
+            'Dust Bowl'] or location == AREA['Addax']:\n\
+        start = random.randint(1, 4)\n\
+        if start == 1:\n\
+            pass\n\
+        elif start == 2 or start == 3 or start == 4:\n\
+            wild_poke = catch(player, location)\n\
+            print(f'The wild {wild_poke.name} appears.')\n\
+            encounter_options(player, wild_poke)\n\
+    if location == AREA['Base'] or location == AREA[\n\
+            'Regice Line'] or location == AREA['Peak']:\n\
+        start = random.randint(1, 4)\n\
+        if start == 1:\n\
+            pass\n\
+        elif start == 2 or start == 3 or start == 4:\n\
+            wild_poke = catch(player, location)\n\
+            print(f'The wild {wild_poke.name} appears.')\n\
+            encounter_options(player, wild_poke)\n\
+    if location == AREA['Haunted House'] or location == AREA[\n\
+            'Lobby'] or location == AREA['Upstairs'] or location == AREA[\n\
+                'Attic']:\n\
+        start = random.randint(1, 4)\n\
+        if start == 1:\n\
+            pass\n\
+        elif start == 2 or start == 3 or start == 4:\n\
+            wild_poke = catch(player, location)\n\
+            print(f'The wild {wild_poke.name} appears.')\n\
+            encounter_options(player, wild_poke)\n\
+    if location == AREA['Box'] or location == AREA['Open']:\n\
+        if 'Gold Medal' in player.items:\n\
+            print('Huh? your Golden Medal is vigorously shacking the closer you get to the box, when you get a closer look, there is a spot for the Medal. Will you insert the Medal into the slot of the box?')\n\
+            insert_option = input('> ')\n\
+            if insert_option == 'yes':\n\
+                Giratina(player, location)\n\
+            elif insert_option == 'no':\n\
+                print('Oh well, its probably not that important')\n\
+            else:\n\
+                print('Please type yes or no')\n\
+    if location == AREA['Safari Counter']:\n\
+        store(player)\n\
+        \n\
+        \n\
+def Giratina(player: Player, location: Dict[str, Area]) -> None:\n\
+    print('The box opens up and sucked you inside. All you could see was just blue and purple everywhere. You realize that the fairy tail of the Distortion World was true. Then, an humongous looking Pokemon appears out of thin air. It is the legendary Pokemon named Giratina, and it does NOT look happy!')\n\
+    Distortion = Pokemon('Giratina', 'Ghost', 300, 300, 0, False,\n\
+                         ['Shadow Force', 'Hex'],\n\
+                         [random.randint(60, 70),\n\
+                          random.randint(90, 100)])\n\
+    print(f'{Distortion.name} wants to battle!')\n\
+    in_battle = player.party[0]\n\
+    print(f'{player.name} sends out {in_battle.name}')\n\
+    battle(Distortion, player, location)\n\
+    if Distortion.fainted == True:\n\
+        print('Congratulations! You have a chance to Catch this Pokemon!')\n\
+        player.items.remove('Gold Medal')\n\
+        catch_giratina(player, Distortion)\n\
+        \n\
+        \n\
+def catch_giratina(player: Player, Distortion: Pokemon) -> None:\n\
+    attempt = random.randint(2, 10)\n\
+    while True:\n\
+        attempts = 0\n\
+        if attempts < attempt:\n\
+            print('What will you do?')\n\
+            print('Catch')\n\
+            print('Run')\n\
+            action = input('> ')\n\
+            if action == 'Run':\n\
+                if 'Pokeball' not in player.items and 'Greatball' not in player.items and 'Ultraball' not in player.items and 'Masterball' not in player.items:\n\
+                    print('Too bad that you was not prepared for this...')\n\
+                    break\n\
+                print('You cannot run away from a Legendary unless you run out of Pokeball`s!')\n\
+            elif action == 'Catch':\n\
+                print(player.items)\n\
+                print('Which Pokeball will you use? ')\n\
+                pokeball = input('> ')\n\
+                if pokeball == 'Pokeball' and 'Pokeball' in player.items:\n\
+                    player.items.remove('Pokeball')\n\
+                    catch_rate = random.randint(1, 100)\n\
+                    if catch_rate in range(1, 10):\n\
+                        player.party.append(Distortion)\n\
+                        print(f'You caught the wild {Distortion.name}')\n\
+                        break\n\
+                    else:\n\
+                        attempts = attempts + 1\n\
+                        print(f'The wild {Distortion.name} broke out')\n\
+                elif pokeball == 'Greatball' and 'Greatball' in player.items:\n\
+                    player.items.remove('Greatball')\n\
+                    catch_rate = random.randint(1, 100)\n\
+                    if catch_rate in range(1, 30):\n\
+                        player.party.append(Distortion)\n\
+                        print(f'You caught the wild {Distortion.name}')\n\
+                        break\n\
+                    else:\n\
+                        attempts = attempts + 1\n\
+                        print(f'The wild {Distortion.name} broke out')\n\
+                        \n\
+                elif pokeball == 'Ultraball' and 'Ultraball' in player.items:\n\
+                    player.items.remove('Ultraball')\n\
+                    catch_rate = random.randint(1, 100)\n\
+                    if catch_rate in range(1, 50):\n\
+                        player.party.append(Distortion)\n\
+                        print(f'You caught the wild {Distortion.name}')\n\
+                        break\n\
+                    else:\n\
+                        attempts = attempts + 1\n\
+                        print(f'The wild {Distortion.name} broke out')\n\
+                elif pokeball == 'Masterball' and 'Masterball' in player.items:\n\
+                    player.remove('Masterball')\n\
+                    player.party.append(Distortion)\n\
+                    print(f'You caught the wild {Distortion.name}')\n\
+                    break\n\
+                else:\n\
+                    print('Please input a real pokeball!')\n\
+            else:\n\
+                print('You have no time to be dumb, please catch it before you loose it!')\n\
+        else:\n\
+            print(f'The {Distortion.name} ran away!')\n\
+            break\n\
+            \n\
+            \n\
+def encounter_options(player: Player, wild_poke: Pokemon) -> None:\n\
+    if len(player.party) < 5:\n\
+        while True:\n\
+            attempts = 0\n\
+            if attempts < 5:\n\
+                print('What will you do?')\n\
+                print('Catch')\n\
+                print('Run')\n\
+                action = input('> ')\n\
+                if action == 'Run':\n\
+                    print('You got away safely?')\n\
+                    break\n\
+                elif action == 'Catch':\n\
+                    print(player.items)\n\
+                    print('Which Pokeball will you use? ')\n\
+                    pokeball = input('> ')\n\
+                    if pokeball == 'Pokeball' and 'Pokeball' in player.items:\n\
+                        player.items.remove('Pokeball')\n\
+                        catch_rate = random.randint(1, 100)\n\
+                        if catch_rate in range(1, 40):\n\
+                            player.party.append(wild_poke)\n\
+                            print(f'You caught the wild {wild_poke.name}')\n\
+                            break\n\
+                        else:\n\
+                            attempts = attempts + 1\n\
+                            print(f'The wild {wild_poke.name} broke out')\n\
+                    elif pokeball == 'Greatball' and 'Greatball' in player.items:\n\
+                        player.items.remove('Greatball')\n\
+                        catch_rate = random.randint(1, 100)\n\
+                        if catch_rate in range(1, 50):\n\
+                            player.party.append(wild_poke)\n\
+                            print(f'You caught the wild {wild_poke.name}')\n\
+                            break\n\
+                        else:\n\
+                            attempts = attempts + 1\n\
+                            print(f'The wild {wild_poke.name} broke out')\n\
+                            \n\
+                    elif pokeball == 'Ultraball' and 'Ultraball' in player.items:\n\
+                        player.items.remove('Ultraball')\n\
+                        catch_rate = random.randint(1, 100)\n\
+                        if catch_rate in range(1, 70):\n\
+                            player.party.append(wild_poke)\n\
+                            print(f'You caught the wild {wild_poke.name}')\n\
+                            break\n\
+                        else:\n\
+                            attempts = attempts + 1\n\
+                            print(f'The wild {wild_poke.name} broke out')\n\
+                    elif pokeball == 'Masterball' and 'Masterball' in player.items:\n\
+                        player.items.remove('Masterball')\n\
+                        player.party.append(wild_poke)\n\
+                        print(f'You caught the wild {wild_poke.name}')\n\
+                        break\n\
+                    else:\n\
+                        print('Please input a real pokeball!')\n\
+                else:\n\
+                    print(\n\
+                        'You have no time to be dumb, please run away or catch it!'\n\
+                    )\n\
+            else:\n\
+                print(f'The {wild_poke.name} ran away!')\n\
+                break\n\
+    else:\n\
+        print(f'A wild {wild_poke.name} appeared but you had no space for it and ran!')\n\
+        \n\
+        \n\
+def catch(player: Player, location: Dict[str, Area]) -> Pokemon:\n\
+    if location == AREA['Grasslands'] or location == AREA[\n\
+            'Prairie'] or location == AREA['Pampas'] or location == AREA[\n\
+                'Savanna']:\n\
+        num = random.randint(0, 3)\n\
+        wild_poke = Grasslands[num]\n\
+        return wild_poke\n\
+    elif location == AREA['The Forest Opening'] or location == AREA[\n\
+            'Temperate'] or location == AREA['Boreal'] or location == AREA[\n\
+                'Tropical']:\n\
+        num = random.randint(0, 3)\n\
+        wild_poke = Forest[num]\n\
+        return wild_poke\n\
+    elif location == AREA['Kyoger Falls'] or location == AREA[\n\
+            'Useless River'] or location == AREA['Great Pond']:\n\
+        num = random.randint(0, 3)\n\
+        wild_poke = River[num]\n\
+        return wild_poke\n\
+    elif location == AREA['Poke Beach'] or location == AREA[\n\
+            'Dust Bowl'] or location == AREA['Addax']:\n\
+        num = random.randint(0, 3)\n\
+        wild_poke = Dessert[num]\n\
+        return wild_poke\n\
+    elif location == AREA['Base'] or location == AREA[\n\
+            'Regice Line'] or location == AREA['Peak']:\n\
+        num = random.randint(0, 3)\n\
+        wild_poke = Mountain[num]\n\
+        return wild_poke\n\
+    elif location == AREA['Haunted House'] or location == AREA[\n\
+            'Lobby'] or location == AREA['Upstairs'] or location == AREA[\n\
+                'Attic']:\n\
+        num = random.randint(0, 3)\n\
+        wild_poke = Haunted_house[num]\n\
+        return wild_poke\n\
+    elif location == Area['Safari Counter']:\n\
+        store(player)\n\
+        \n\
+        \n\
+def PC_actions(player: Player, location: Dict[str, Area]) -> None:\n\
+    PC_list: List[Pokemon] = []\n\
+    while True:\n\
+        if location == AREA['PC']:\n\
+            print('Do you want to use the PC? Y/N')\n\
+            action = input('> ')\n\
+            if action == 'N':\n\
+                print('Have a Good Day!')\n\
+                break\n\
+            elif action == 'Y':\n\
+                print('What will you like to do?')\n\
+                print('Deposit, Withdraw, or Heal')\n\
+                action = input('> ')\n\
+                if action == 'Deposit' and len(player.party) >= 2:\n\
+                    print('Which Pokemon would you like to Deposit?')\n\
+                    for pokemon in player.party:\n\
+                        print(pokemon.name)\n\
+                        action = input('> ')\n\
+                    for pokemon in player.party:\n\
+                        if action == pokemon.name:\n\
+                            PC_list.append(pokemon)\n\
+                            player.party.remove(pokemon)\n\
+                elif action == 'Withdraw' and len(player.party) <= 5:\n\
+                    for pokemon in PC_list:\n\
+                        print(pokemon.name)\n\
+                    print('Which Pokemon would you like to Withdraw?')\n\
+                    action = input('> ')\n\
+                    for pokemon in PC_list:\n\
+                        if action == pokemon.name:\n\
+                            player.party.append(pokemon)\n\
+                elif action == 'Heal':\n\
+                    heal(player)\n\
+                else:\n\
+                    print('Please select a valid option')\n\
+                    \n\
+                    \n\
+def heal(player: Player) -> None:\n\
+    for pokemon in player.party:\n\
+        pokemon.fainted = False\n\
+        pokemon.health = pokemon.health_cap\n\
+        \n\
+        \n\
+def store(player: Player) -> None:\n\
+    while True:\n\
+        print('What would you like to buy? or q to quit?')\n\
+        print('Pokeball')\n\
+        print('Greatball')\n\
+        print('Ultraball')\n\
+        print('Masterball')\n\
+        action = input('> ')\n\
+        if action == 'Pokeball' and player.money >= 100:\n\
+            print('You got a Pokeball')\n\
+            player.items.append('Pokeball')\n\
+        elif action == 'Greatball' and player.money >= 300:\n\
+            print('You got a Greatball')\n\
+            player.items.append('Greatball')\n\
+        elif action == 'Ultraball' and player.money >= 500:\n\
+            print('You got a Ultraball')\n\
+            player.items.append('Ultraball')\n\
+        elif action == 'Masterball' and player.money >= 1500:\n\
+            if 'Gold Medal' in player.items:\n\
+                print('You got a Masterball')\n\
+                player.items.append('Masterball')\n\
+            else:\n\
+                print('You do not have a Golden Medal yet!')\n\
+        elif action == 'q':\n\
+            break\n\
+        else:\n\
+            print('Please select a valid Pokeball or get more money.')\n\
+            \n\
+            \n\
+def battlecounter_options(player: Player, location: Dict[str, Area]):\n\
+    while True:\n\
+        print('Welcome to the Battle Counter! What Tower would you like to battle? or press q to quit.')\n\
+        print('Bronze')\n\
+        print('Silver')\n\
+        print('Gold')\n\
+        action = input('> ')\n\
+        if action == 'Bronze':\n\
+            bronze_tower(player, location)\n\
+            break\n\
+        elif action == 'Silver' and 'Bronze Medal' in player.items:\n\
+            silver_tower(player, location)\n\
+            break\n\
+        elif action == 'Gold' and 'Silver Medal' in player.items:\n\
+            gold_tower(player, location)\n\
+            break\n\
+        elif action == 'q':\n\
+            break\n\
+        else:\n\
+            print('Give a valid action')\n\
+            \n\
+            \n\
+def bronze_tower(player: Player, location: Dict[str, Area]) -> None:\n\
+    print('This is the Bronze Tower you will have fight The Bronze Champion, Jacen`s Pokemon.')\n\
+    while True:\n\
+        if Grasslands[2].fainted == False:\n\
+            losers = battle(Grasslands[2], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Forest[3].fainted == False:\n\
+            losers = battle(Forest[3], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Grasslands[0].fainted == False:\n\
+            losers = battle(Grasslands[0], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Mountain[3].fainted == False:\n\
+            losers = battle(Mountain[3], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Haunted_house[1].fainted == False:\n\
+            battle(Haunted_house[0], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+            heal_all()\n\
+            print('Bronze Champion Jacen has been defeated!')\n\
+            player.money += (1000)\n\
+            player.items.append('Bronze Medal')\n\
+            print('For your outstanding battle skills you obtained the Bronze Medal')\n\
+            break\n\
+            \n\
+            \n\
+def silver_tower(player: Player, location: Dict[str, Area]) -> None:\n\
+    print('This is the Silver Tower you will have fight The Silver Champion, Randy`s Pokemon.')\n\
+    while True:\n\
+        if Grasslands[3].fainted == False:\n\
+            losers = battle(Grasslands[3], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Forest[0].fainted == False:\n\
+            losers = battle(Forest[0], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Grasslands[1].fainted == False:\n\
+            losers = battle(Grasslands[1], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Dessert[3].fainted == False:\n\
+            losers = battle(Dessert[3], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Haunted_house[2].fainted == False:\n\
+            losers = battle(Haunted_house[2], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        else:\n\
+            heal_all()\n\
+            print('Silver Champion Randy has been defeated!')\n\
+            player.money += (1000)\n\
+            player.items.append('Silver Medal')\n\
+            print('For your outstanding battle skills you obtained the Silver Medal')\n\
+            break\n\
+            \n\
+            \n\
+def gold_tower(player: Player, location: Dict[str, Area]) -> None:\n\
+    print('This is the Gold Tower you will have fight The Gold Champion, Dylan Shipton`s Pokemon.')\n\
+    while True:\n\
+        if Dessert[2].fainted == False:\n\
+            losers = battle(Dessert[2], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Mountain[3].fainted == False:\n\
+            losers = battle(Mountain[3], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Haunted_house[0].fainted == False:\n\
+            losers = battle(Haunted_house[0], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Mountain[3].fainted == False:\n\
+            losers = battle(Mountain[3], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        if Dessert[0].fainted == False:\n\
+            losers = battle(Dessert[0], player, location)\n\
+            if losers == 1:\n\
+                break\n\
+        else:\n\
+            heal_all()\n\
+            print('Silver Champion Dylan Shipton has been defeated!')\n\
+            player.money += (1000)\n\
+            player.items.append('Gold Medal')\n\
+            print(\n\
+                'For your outstanding battle skills you obtained the Gold Medal'\n\
+            )\n\
+            print('You can now record your Victory in the hall of Champions')\n\
+            champion(player)\n\
+            break\n\
+            \n\
+            \n\
+def battle(pokemon: Pokemon, player: Player, location: Dict[str, Area]):\n\
+    print(f'They send out {pokemon.name}!')\n\
+    if player.party[0].fainted == True:\n\
+        if player.party[1].fainted == True:\n\
+            if player.party[2].fainted == True:\n\
+                if player.party[3].fainted == True:\n\
+                    in_battle = player.party[4]\n\
+                else:\n\
+                    in_battle = player.party[3]\n\
+            else:\n\
+                in_battle = player.party[2]\n\
+        else:\n\
+            in_battle = player.party[1]\n\
+    else:\n\
+        in_battle = player.party[0]\n\
+    print(f'{player.name} sends out {in_battle.name}')\n\
+    while True:\n\
+        if in_battle.health > 0:\n\
+            print(f'{pokemon.name}: {pokemon.health_cap}/{pokemon.health}')\n\
+            print(f'{in_battle.name}: {in_battle.health_cap}/{in_battle.health}')\n\
+            for move in in_battle.moves:\n\
+                print(move)\n\
+            print('What move will you use?')\n\
+            action = input('> ')\n\
+            if action in in_battle.moves:\n\
+                attack = in_battle.moves.index(action)\n\
+                print(f'{in_battle.name} used {action}')\n\
+                pokemon.health = pokemon.health - in_battle.damage[attack]\n\
+                if pokemon.health > 0:\n\
+                    trainer_choice = random.randint(1, len(in_battle.moves))\n\
+                    trainer_choice = trainer_choice - 1\n\
+                    print(f'{pokemon.name} used {pokemon.moves[trainer_choice]}')\n\
+                    in_battle.health = in_battle.health - pokemon.damage[\n\
+                        trainer_choice]\n\
+                    if in_battle.health <= 0:\n\
+                        in_battle.fainted = True\n\
+                        in_battle.health = 0\n\
+                        print(f'{in_battle.name} fainted!')\n\
+                else:\n\
+                    pokemon.fainted = True\n\
+                    pokemon.health = 0\n\
+                    print(f'{pokemon.name} fainted!')\n\
+                    break\n\
+            else:\n\
+                print('You can`t use that move')\n\
+        if in_battle.health <= 0:\n\
+            losers = 0\n\
+            for the_party in player.party:\n\
+                if the_party.fainted:\n\
+                    losers += 1\n\
+            if losers == len(player.party):\n\
+                white_out(location, player)\n\
+                return losers\n\
+                break\n\
+            in_battle.fainted == True\n\
+            in_battle = switch(in_battle, player)\n\
+            \n\
+            \n\
+def switch(in_battle: Pokemon, player: Player) -> Pokemon:\n\
+    while True:\n\
+        print('Which pokemon would you like to use?')\n\
+        for pokemon in player.party:\n\
+            if pokemon.fainted == False:\n\
+                print(pokemon.name)\n\
+        switch = input('> ')\n\
+        if switch == pokemon.name:\n\
+            in_battle = pokemon\n\
+            return in_battle\n\
+        else:\n\
+            print('Please give a valid pokemon')\n\
+            \n\
+            \n\
+def white_out(location: Dict[str, Area], player: Player) -> None:\n\
+    print('You lost....You whited out!')\n\
+    for pokemon in player.party:\n\
+        if pokemon.health <= 0:\n\
+            pokemon.health = pokemon.health_cap\n\
+        if pokemon.fainted == True:\n\
+            pokemon.fainted = False\n\
+    heal_all()\n\
+    while True:\n\
+        print('Do you want to go back, or quit?')\n\
+        restart = input('> ')\n\
+        if restart == 'yes':\n\
+            location = AREA['Safari Counter']\n\
+            return location\n\
+        elif restart == 'quit':\n\
+            quit()\n\
+        else:\n\
+            print('Give a valid Input')\n\
+            \n\
+            \n\
+def champion(player: Pokemon) -> None:\n\
+    try:\n\
+        with open('champion.txt', 'r') as x:\n\
+            champions = x.readlines()\n\
+            amount = len(champions)\n\
+        with open('champion.txt', 'r') as x:\n\
+            print(f'There have been a total of {amount} champions.')\n\
+            print(f'{champions[-1]} was the last the Champion')\n\
+        with open('champion.txt', 'a') as x:\n\
+            print('Your name will be wrote down in the Hall Of Champions')\n\
+            x.write(f'{player.name}')\n\
+            x.close()\n\
+            \n\
+    except FileNotFoundError:\n\
+        print('You are the first champion of the Gold Tower!')\n\
+        with open('champion.txt', 'a') as x:\n\
+            print('Your name will be wrote down in the Hall Of Champions')\n\
+            x.write(f'{player.name}')\n\
+            x.close()\n\
+            \n\
+            \n\
+def area_movement(player: Player, location: Dict[str, Area]) -> str:\n\
+    while True:\n\
+        destination = input('> ')\n\
+        if destination in AREA:\n\
+            if destination in location.connections:\n\
+                location = AREA[destination]\n\
+                return location\n\
+            else:\n\
+                print(f'You cannot go to {destination}!')\n\
+        else:\n\
+            print(f'You cannot go to {destination}!')\n\
+            \n\
+            \n\
+def pick_starter(player: Player) -> None:\n\
+    while True:\n\
+        print(f'Hello, {player.name} welcome to the newly opened Safari Park, please select a starter.')\n\
+        print('Treecko, Mudkip or Torchic?')\n\
+        starter = input('> ')\n\
+        if starter == 'Treecko':\n\
+            player.party.append(\n\
+                Pokemon('Treecko', 'Grass', 35, 35, 0, False,\n\
+                        ['Pound', 'Absorb'],\n\
+                        [random.randint(15, 20),\n\
+                         random.randint(25, 26)]))\n\
+            print('You got the grass type Pokemon Treecko!')\n\
+            break\n\
+        elif starter == 'Mudkip':\n\
+            player.party.append(\n\
+                Pokemon('Mudkip', 'Water', 45, 45, 0, False,\n\
+                        ['Tackle', 'Water Gun'],\n\
+                        [random.randint(10, 20),\n\
+                         random.randint(25, 30)]))\n\
+            print('You got the water type Pokemon Mudkip!')\n\
+            break\n\
+        elif starter == 'Torchic':\n\
+            player.party.append(\n\
+                Pokemon('Torchic', 'Fire', 30, 30, 0, False,\n\
+                        ['Scratch', 'Ember'],\n\
+                        [random.randint(15, 20),\n\
+                         random.randint(10, 26)]))\n\
+            print('You got the fire type Pokemon Torchic!')\n\
+            break\n\
+        else:\n\
+            player.party.append(\n\
+                Pokemon('Magikarp', 'Water', 15, 15, 0, False,\n\
+                        ['Splash', 'Better Splash'], [0, 0]))\n\
+            print('You got a Magicarp! Ha Ha Ha!')\n\
+            break\n\
+            \n\
+            \n\
+def heal_all():\n\
+    Grasslands[2].fainted = False\n\
+    Forest[3].fainted = False\n\
+    Grasslands[0].fainted = False\n\
+    Mountain[3].fainted = False\n\
+    Haunted_house[0].fainted = False\n\
+    Grasslands[3].fainted = False\n\
+    Forest[0].fainted = False\n\
+    Grasslands[1].fainted = False\n\
+    Dessert[3].fainted = False\n\
+    Haunted_house[2].fainted = False\n\
+    Dessert[2].fainted = False\n\
+    Mountain[3].fainted = False\n\
+    Haunted_house[0].fainted = False\n\
+    Mountain[3].fainted = False\n\
+    Dessert[0].fainted = False\n\
+    Grasslands[2].health = Grasslands[2].health_cap\n\
+    Forest[3].health = Forest[3].health_cap\n\
+    Grasslands[0].health = Grasslands[0].health_cap\n\
+    Mountain[3].health = Mountain[3].health_cap\n\
+    Haunted_house[0].health = Haunted_house[0].health_cap\n\
+    Grasslands[3].health = Grasslands[3].health_cap\n\
+    Forest[0].health = Forest[0].health_cap\n\
+    Grasslands[1].health = Grasslands[1].health_cap\n\
+    Dessert[3].health = Dessert[3].health_cap\n\
+    Haunted_house[2].health = Haunted_house[2].health_cap\n\
+    Dessert[2].health = Dessert[2].health_cap\n\
+    Mountain[0].health = Mountain[0].health_cap\n\
+    Haunted_house[0].health = Haunted_house[0].health_cap\n\
+    Mountain[0].health = Mountain[0].health_cap\n\
+    Dessert[2].health = Dessert[2].health_cap\n\
+    \n\
+    \n\
+def main() -> None:\n\
+    location = AREA['Safari Counter']\n\
+    print('Welcome to the world of pokemon, you start out with $1000 and 5 Pokeballs to catch some interesting pokemons, and of course you will start with a starter pokemon, but first!')\n\
+    player_name = input('What is your name? ')\n\
+    player = Player(player_name, [], 1000, [\n\
+      'Pokeball', 'Pokeball', 'Pokeball', 'Pokeball', 'Pokeball'\n\
+    ])\n\
+    pick_starter(player)\n\
+    while True:\n\
+        print(f'You are in the {location.name}')\n\
+        print(location.description)\n\
+        print(location.connections)\n\
+        print('Where would you like to go?')\n\
+        location = area_movement(player, location)\n\
+        encounter(player, location)\n\
+        \n\
+        \n\
+if __name__ == '__main__':\n\
+    main()\n\
+";
+            var prev_result = 'in'; 
+
+
+            var isMobile = window.orientation > -1;
+            
+
+            editor.setTheme('ace/theme/tomorrow_night_bright');
+            editor.container.style.lineHeight = 1.5;
+
+            editor_session[0] = ace.createEditSession(default_content, 'ace/mode/python');
+            editor.setSession(editor_session[0]);
+            var active_editor_id = $('#editor-1').children('a');
+            var active_file_name = 'main.py';
+            var repl_host = get_host();
+            var command_list = [];
+            var command_index = 0;
+            var cur_cmd;
+            var hint_glow;
+
+            var y = document.getElementById('editor_footer');
+            var output = document.getElementById('output');
+            var exec_detail = document.getElementById('output-status');
+            var progress_status = document.getElementById('progress-status');
+
+
+            $('body').addClass('dark');
+            
+
+            socket_options = { 
+                transports: ['websocket'], 
+                'timeout': 3000, 
+                'connect timeout': 3000,
+                'reconnection': true,
+                'reconnectionDelay': 1000,
+                'reconnectionDelayMax' : 5000,
+                'reconnectionAttempts': 5
+            };
+
+            socket_options['query'] = { type : 'shell'};
+
+            alert("Please click the run button to start the demo of the code!")
+        </script>
+
+    </div>
+</body>
+</html>

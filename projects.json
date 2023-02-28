@@ -74,7 +74,7 @@
     {
       "favorite": 9,
       "title": "Pokemon Safari",
-      "link": "https://github.com/RJay-Pickering/Pokemon-Safari.py",
+      "link": "universal-terminal/pokemon-safari.html",
       "creator": "RJay Pickering and Logan Coley",
       "image_url": "imageStorage/projects/safari-park.jpeg",
       "language": "Python",
@@ -83,7 +83,7 @@
     {
       "favorite": 10,
       "title": "The Static at my Door",
-      "link": "https://github.com/RJay-Pickering/TheStaticAtMyDoor",
+      "link": "universal-terminal/static-door.html",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/static.jpeg",
       "language": "Python",
@@ -92,7 +92,7 @@
     {
       "favorite": 11,
       "title": "Demon Overthrow",
-      "link": "https://github.com/RJay-Pickering/HealthDepleter",
+      "link": "universal-terminal/health-depleter.html",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/demon.jpg",
       "language": "Python",
