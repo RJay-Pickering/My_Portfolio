@@ -11,7 +11,7 @@
     {
       "favorite": 1,
       "title": "Base Camp News",
-      "link": "https://github.com/RJay-Pickering/capstone_project_QS_WC_RP",
+      "link": "https://basecampnews.up.railway.app/home/",
       "creator": "RJay Pickering, Will Collins, and Quinton Summerford",
       "image_url": "imageStorage/projects/BCN.jpg",
       "language": "Django, HTML, CSS, JavaScript",
@@ -38,7 +38,7 @@
     {
       "favorite": 7,
       "title": "Rock, Paper, Scissors!",
-      "link": "https://github.com/RJay-Pickering/RockPaperScissorsGameJS",
+      "link": "https://rjay-pickering.github.io/RockPaperScissorsGameJS/",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/RockPaperScissors.png",
       "language": "HTML, CSS, JavaScript",
@@ -47,7 +47,7 @@
     {
       "favorite": 2,
       "title": "Base Camp ChatBot",
-      "link": "https://github.com/RJay-Pickering/JS-BOT-PROJECT-BCCA.git",
+      "link": "https://rjay-pickering.github.io/JS-BOT-PROJECT-BCCA/",
       "creator": "RJay Pickering and Randy Trullet",
       "image_url": "imageStorage/projects/bcca_logo.png",
       "language": "HTML, CSS, JavaScript",
@@ -56,7 +56,7 @@
     {
       "favorite": 3,
       "title": "Missing Cats of America",
-      "link": "https://github.com/RJay-Pickering/Missing-Cats-of-America",
+      "link": "https://missing-cats-of-america.up.railway.app/",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/naruto-with-cat.jpeg",
       "language": "Django, HTML, CSS",
@@ -65,7 +65,7 @@
     {
       "favorite": 6,
       "title": "Black Ops Fundraiser",
-      "link": "https://github.com/RJay-Pickering/Charity",
+      "link": "https://rjay-pickering.github.io/Charity/",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/BlackOps.jpeg",
       "language": "HTML, CSS",
