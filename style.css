@@ -141,21 +141,46 @@ body {
   /* transform: translate(5px, -5px); */
 }
 
-.about-me-content .images .images-cover {
-  transition: transform 0.1s ease;
+.images-cover{
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.about-me-content .images .images-cover:hover {
-  transform: translate(5px, -5px);
+.overlay {
+  position: absolute;
+  bottom: 0;
+  color: #f1f1f1;
+  transition: .5s ease;
+  opacity:0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  height: 44.5vh;
+  width: 22vh;
+  margin-bottom: 5vh;
+  transition: transform 0.1s ease;
+  text-align: center;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.quote {
+  background-color: rgba(14, 14, 16, 0.8);
+  position: absolute;
+  margin: 0;
+  padding: 1vh;
+  padding-top: 1.5vh;
+  left: 0;
+  bottom: 0;
 }
 
 .about-me-content .images .images-cover img {
   height: 50vh;
   margin-bottom: 5vh;
-}
-
-.about-me-content .images .images-cover:hover img {
-  box-shadow: -5px 5px rgb(37, 150, 190);
+  transition: transform 0.1s ease;
 }
 /* end of about me */
 
