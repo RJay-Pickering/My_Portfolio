@@ -157,14 +157,14 @@ body {
   padding: 20px;
   text-align: center;
   height: 44.5vh;
-  width: 22vh;
+  width: 23vh;
   margin-bottom: 5vh;
-  transition: transform 0.1s ease;
   text-align: center;
 }
 
 .overlay:hover {
   opacity: 1;
+  transition: 0.5s ease;
 }
 
 .quote {
