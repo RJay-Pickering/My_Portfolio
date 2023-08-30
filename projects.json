@@ -11,7 +11,7 @@
     {
       "favorite": 1,
       "title": "Base Camp News",
-      "link": "https://basecampnews.up.railway.app/home/",
+      "link": "",
       "creator": "RJay Pickering, Will Collins, and Quinton Summerford",
       "old_image_url": "imageStorage/projects/BCN.jpg",
       "image_url": "imageStorage/not_available_to_view.png",
@@ -57,7 +57,7 @@
     {
       "favorite": 3,
       "title": "Missing Cats of America",
-      "link": "https://missing-cats-of-america.up.railway.app/",
+      "link": "",
       "creator": "RJay Pickering",
       "old_image_url": "imageStorage/projects/naruto-with-cat.jpeg",
       "image_url": "imageStorage/not_available_to_view.png",
