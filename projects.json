@@ -13,7 +13,8 @@
       "title": "Base Camp News",
       "link": "https://basecampnews.up.railway.app/home/",
       "creator": "RJay Pickering, Will Collins, and Quinton Summerford",
-      "image_url": "imageStorage/projects/BCN.jpg",
+      "old_image_url": "imageStorage/projects/BCN.jpg",
+      "image_url": "imageStorage/not_available_to_view.png",
       "language": "Django, HTML, CSS, JavaScript",
       "description": "This was my final project for Base Camp Coding Academy, Capstone Project, that my two partners and I had a full month to come up with. We had a Front-End, Back-End, and a Full-Stack Developer. I was the Full-Stack and leader of our group. We decided on a project that was really a great idea, a News Aggregator. We decided to call it, Base Camp News. I helped the Back-End with handling the apis and printing them onto the webpage, while I helped the Front-End with styling and fixing it for multiple screen sizes."
     },
@@ -58,7 +59,8 @@
       "title": "Missing Cats of America",
       "link": "https://missing-cats-of-america.up.railway.app/",
       "creator": "RJay Pickering",
-      "image_url": "imageStorage/projects/naruto-with-cat.jpeg",
+      "old_image_url": "imageStorage/projects/naruto-with-cat.jpeg",
+      "image_url": "imageStorage/not_available_to_view.png",
       "language": "Django, HTML, CSS",
       "description": "This is my first Django project that I had made in my time at Base Camp. This project is called Missing Cats Of America, a website for posting or finding missing cats. You can add your missing cats and see others missing cats to see if you have seen them. I made this website because during the time of learning Django, my cat went missing, so I made this website for my cat."
     },
