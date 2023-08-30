@@ -10,6 +10,6 @@ My portfolio is about me and the skill that i have learned over the years of pro
 
 3. Projects with the image "Currently Not Available", are projects that currently unavailable to be shown because of complications with the hosting platform (Railway). The projects will return to be viewed soon!
 
-- **Projects Effected...**
-  - Base Camp News
-  - Missing Cats of America
+  - **Projects Effected...**
+    - Base Camp News
+    - Missing Cats of America
