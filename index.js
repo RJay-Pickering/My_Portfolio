@@ -1898,7 +1898,7 @@ function myFunction() {
             //end of language
     
             //creating the element to have everything be put together
-            const elements = document.createElement("div");
+            const elements = document.createElement("li");
             elements.classList.add("card");
             // end of elements
     
@@ -1965,7 +1965,7 @@ function myFunction() {
             //end of language
     
             //creating the element to have everything be put together
-            const elements = document.createElement("div");
+            const elements = document.createElement("li");
             elements.classList.add("card");
             // end of elements
     
@@ -2032,7 +2032,7 @@ function myFunction() {
             //end of language
     
             //creating the element to have everything be put together
-            const elements = document.createElement("div");
+            const elements = document.createElement("li");
             elements.classList.add("card");
             // end of elements
     
@@ -2098,7 +2098,7 @@ function myFunction() {
             //end of language
     
             //creating the element to have everything be put together
-            const elements = document.createElement("div");
+            const elements = document.createElement("li");
             elements.classList.add("card");
             // end of elements
     
@@ -2165,7 +2165,7 @@ function myFunction() {
               //end of language
       
               //creating the element to have everything be put together
-              const elements = document.createElement("div");
+              const elements = document.createElement("li");
               elements.classList.add("card");
               // end of elements
       
@@ -2239,7 +2239,7 @@ function myFunction() {
             //end of language
     
             //creating the element to have everything be put together
-            const elements = document.createElement("div");
+            const elements = document.createElement("li");
             elements.classList.add("card");
             // end of elements
     
@@ -2308,7 +2308,7 @@ function myFunction() {
             //end of language
     
             //creating the element to have everything be put together
-            const elements = document.createElement("div");
+            const elements = document.createElement("li");
             elements.classList.add("card");
             // end of elements
     
@@ -2451,7 +2451,7 @@ function myFunction() {
             //end of language
     
             //creating the element to have everything be put together
-            const elements = document.createElement("div");
+            const elements = document.createElement("li");
             elements.classList.add("card");
             // end of elements
     

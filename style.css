@@ -135,12 +135,6 @@ body {
   margin-right: 26vh;
 }
 
-.para:hover {
-  cursor:default;
-  color: rgb(37, 150, 190);
-  /* transform: translate(5px, -5px); */
-}
-
 .images-cover{
   position: relative;
   display: flex;
@@ -210,7 +204,13 @@ body {
 	padding: 0;
 }
 
+.skills ul a {
+  color: rgb(211, 211, 211);
+  text-decoration: none;
+}
+
 .skills ul li {
+  transition: 0.5s;
 	border: 1px solid #2D2747;
 	border-radius: 2px;
 	display: inline-block;
@@ -226,6 +226,7 @@ body {
 }
 
 .skills ul li:hover {
+  transition: 0.5s;
   color: #0e0e10;
   background-color: rgb(37, 150, 190);
   cursor: default;
@@ -252,7 +253,13 @@ body {
   text-align: center;
 }
 
+.aLink {
+  color: black;
+  text-decoration: none;
+}
+
 .card {
+  list-style-type: none;
   background-color: #0e0e10;
   border-radius: 25px;
   height: fit-content;
@@ -270,11 +277,6 @@ body {
 .apiImage {
   height: 200px;
   width: 250px;
-}
-
-.aLink {
-  color: black;
-  text-decoration: none;
 }
 
 .filterForm {
@@ -620,6 +622,12 @@ body {
   .para {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media screen and (max-height: 600px){
+  .overlay {
+    display: none;
   }
 }
 /* end of media screens */
