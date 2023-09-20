@@ -240,12 +240,20 @@ body {
   margin-bottom: 25vh;
 }
 
-.project-content {
+/* .project-content {
   max-width: 100%;
   display: grid;
   height: auto;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 50px;
+} */
+
+.project-content {
+  padding: 3.75%;
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 5vw;
+  justify-content: center;
 }
 
 .projects h3{
@@ -628,6 +636,18 @@ body {
 @media screen and (max-height: 600px){
   .overlay {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 981px) {
+  .project-content {
+    grid-template-columns: 47.5% 47.5%;
+  }
+}
+
+@media only screen and (min-width: 1350px) {
+  .project-content {
+    grid-template-columns: 30% 30% 30%;
   }
 }
 /* end of media screens */
