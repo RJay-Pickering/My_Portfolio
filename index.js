@@ -3213,3 +3213,19 @@ function myFunction() {
   //-------------------------
 }
 // end of this function that filters the projects section
+
+// secret image inside my portfolio 🤫
+spooky = document.getElementById("spooky")
+
+// dis is spooky 💀
+spooky.addEventListener("click", () => {
+  spooky.classList.toggle("dancing_skeleton")
+  if (spooky.classList != "dancing_skeleton") {
+    spooky.style.width = "10vh";
+    spooky.style.height = "10vh";
+  } else {
+    spooky.style.width = null;
+    spooky.style.height = null;
+  }
+})
+// end of secret image

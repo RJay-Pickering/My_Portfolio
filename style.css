@@ -48,6 +48,18 @@ body {
   padding-left: 0.7em;
 }
 
+#spooky:hover {
+  cursor: pointer;
+}
+
+.dancing_skeleton {
+  display: flex;
+  align-items: center;
+  padding-left: 0.7em;
+  width: 0.1em;
+  height: 0.1em;
+}
+
 .logo {
   height: 30px;
   width: auto;
@@ -133,6 +145,17 @@ body {
   font-size: 3.15vh;
   margin-left: 26vh;
   margin-right: 26vh;
+}
+
+.para a {
+  font-family: 'arcon';
+  color: rgb(211, 211, 211);
+  text-decoration: none;
+}
+
+.para a:hover {
+  color: rgb(37, 150, 190);
+  text-decoration: double;
 }
 
 .images-cover{
@@ -239,14 +262,6 @@ body {
 .projects{
   margin-bottom: 25vh;
 }
-
-/* .project-content {
-  max-width: 100%;
-  display: grid;
-  height: auto;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 50px;
-} */
 
 .project-content {
   padding: 3.75%;
