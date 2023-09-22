@@ -1,145 +1,79 @@
 //fetching json file
 fetch(
-    `projects.json`
-  )
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
+  `projects.json`
+)
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
 
-      // adding a description for default
-      var cue = document.getElementById("cubone")
-      var bones = document.createElement("p")
-      bones.classList.add("projectDesc")
-      bones.innerText = "This will show the projects by the dates added (recent to oldest)!"
-      cue.appendChild(bones)
-      // end of adding description
+    // adding a description for default
+    var cue = document.getElementById("cubone")
+    var bones = document.createElement("p")
+    bones.classList.add("projectDesc")
+    bones.innerText = "This will show the projects by the dates added (recent to oldest)!"
+    cue.appendChild(bones)
+    // end of adding description
 
-      Array.from(data).forEach(function (project) {
-          //the link that links every project to a repository
-          const aLink = document.createElement("a");
-          aLink.href = `${project.link}`;
-          aLink.target = "_blank";
-          aLink.classList.add("aLink");
-          //end of links
+    Array.from(data).forEach(function (project) {
+        //the link that links every project to a repository
+        const aLink = document.createElement("a");
+        aLink.href = `${project.link}`;
+        aLink.target = "_blank";
+        aLink.classList.add("aLink");
+        //end of links
 
-          //description of the projects
-          const desc = document.createElement("p");
-          desc.innerText = project.description;
-          desc.style.fontSize = "2.5vh";
-          desc.style.paddingTop = "15px"
-          desc.style.paddingBottom = "15px"
-          //end of descriptions
+        //description of the projects
+        const desc = document.createElement("p");
+        desc.innerText = project.description;
+        desc.style.fontSize = "2.5vh";
+        desc.style.paddingTop = "15px"
+        desc.style.paddingBottom = "15px"
+        //end of descriptions
 
-          //creators of the project
-          const creators = document.createElement("p");
-          creators.innerText = `Created By: ${project.creator}`;
-          creators.style.fontSize = "2.5vh";
-          creators.style.paddingBottom = "15px"
-          //end of creators
+        //creators of the project
+        const creators = document.createElement("p");
+        creators.innerText = `Created By: ${project.creator}`;
+        creators.style.fontSize = "2.5vh";
+        creators.style.paddingBottom = "15px"
+        //end of creators
 
-          //cards image
-          const image = document.createElement("img");
-          image.src = project.image_url;
-          image.classList.add("apiImage");
-          //end of image
+        //cards image
+        const image = document.createElement("img");
+        image.src = project.image_url;
+        image.classList.add("apiImage");
+        //end of image
 
-          //title of the card
-          const title = document.createElement("p");
-          title.innerText = project.title;
-          title.style.fontSize = "4vh";
-          title.style.paddingBottom = "15px"
-          //end of title
+        //title of the card
+        const title = document.createElement("p");
+        title.innerText = project.title;
+        title.style.fontSize = "4vh";
+        title.style.paddingBottom = "15px"
+        //end of title
 
-          //coding language
-          const lang = document.createElement("p");
-          lang.innerText = `Language: ${project.language}`
-          //end of language
+        //coding language
+        const lang = document.createElement("p");
+        lang.innerText = `Language: ${project.language}`
+        //end of language
 
-          //creating the project to have everything be put together
-          const projects = document.createElement("div");
-          projects.classList.add("card");
-          // end of projects
+        //creating the project to have everything be put together
+        const projects = document.createElement("div");
+        projects.classList.add("card");
+        // end of projects
 
-          //adding everything together
-          projects.appendChild(title);
-          projects.appendChild(image);
-          projects.appendChild(desc);
-          projects.appendChild(creators);
-          projects.appendChild(lang)
-          aLink.appendChild(projects);
-          const one = document.getElementById("one");
-          one.appendChild(aLink);
-          //end of adding everything together
-      });
+        //adding everything together
+        projects.appendChild(title);
+        projects.appendChild(image);
+        projects.appendChild(desc);
+        projects.appendChild(creators);
+        projects.appendChild(lang)
+        aLink.appendChild(projects);
+        const one = document.getElementById("one");
+        one.appendChild(aLink);
+        //end of adding everything together
     });
+  });
 // end of fetch
-
-// getting the navagation buttons and div
-var navDiv = document.getElementsByClassName("nav");
-var aboutBtn = document.getElementsByClassName("aboutLink")[0];
-var skillsBtn = document.getElementsByClassName("skillsLink")[0];
-var projBtn = document.getElementsByClassName("projectsLink")[0];
-// end of getting nav buttons and div
-
-// getting content
-var aboutContent = document.getElementsByClassName("about-me")[0];
-var skillsContent = document.getElementsByClassName("my-skills")[0];
-var projContent = document.getElementsByClassName("projects")[0];
-// end of getting content
-
-// making webpage start off by showing about me
-skillsContent.classList.add("hiding-content")
-projContent.classList.add("hiding-content")
-// end of webpage start off
-
-// about me functionality
-aboutBtn.addEventListener("click", function() {
-  // adding the selected feature to the about me button
-  aboutBtn.setAttribute('id','selected');
-  skillsBtn.removeAttribute('id','selected');
-  projBtn.removeAttribute('id','selected');
-  // end of adding the selected feature
-
-  // removing skills and projects content from view
-  aboutContent.classList.remove("hiding-content")
-  skillsContent.classList.add("hiding-content")
-  projContent.classList.add("hiding-content")
-  // end of removing skills and projects content
-});
-// end of about me functionality
-
-// skills functionality
-skillsBtn.addEventListener("click", function() {
-  // adding the selected feature to the skills button
-  skillsBtn.setAttribute('id','selected');
-  aboutBtn.removeAttribute('id','selected');
-  projBtn.removeAttribute('id','selected');
-  // end of adding the selected feature
-
-  // removing about me and projects content from view
-  skillsContent.classList.remove("hiding-content")
-  aboutContent.classList.add("hiding-content")
-  projContent.classList.add("hiding-content")
-  // end of removing about me and projects content
-});
-// end of skills functionality
-
-// projects functionality
-projBtn.addEventListener("click", function() {
-  // adding the selected feature to the projects button
-  projBtn.setAttribute('id','selected');
-  aboutBtn.removeAttribute('id','selected');
-  skillsBtn.removeAttribute('id','selected');
-  // end of adding the selected feature
-
-  // removing about me and skills content from view
-  projContent.classList.remove("hiding-content")
-  aboutContent.classList.add("hiding-content")
-  skillsContent.classList.add("hiding-content")
-  // end of removing about me and skills content
-});
-// end of projects functionality
 
 var languageFuction = document.getElementsByClassName("o-divider2")[0]
 languageFuction.classList.add("hiding-content")
@@ -3213,19 +3147,3 @@ function myFunction() {
   //-------------------------
 }
 // end of this function that filters the projects section
-
-// secret image inside my portfolio 🤫
-spooky = document.getElementById("spooky")
-
-// dis is spooky 💀
-spooky.addEventListener("click", () => {
-  spooky.classList.toggle("dancing_skeleton")
-  if (spooky.classList != "dancing_skeleton") {
-    spooky.style.width = "10vh";
-    spooky.style.height = "10vh";
-  } else {
-    spooky.style.width = null;
-    spooky.style.height = null;
-  }
-})
-// end of secret image

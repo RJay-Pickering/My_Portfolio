@@ -151,9 +151,11 @@ body {
   font-family: 'arcon';
   color: rgb(211, 211, 211);
   text-decoration: none;
+  transition: 0.8s;
 }
 
 .para a:hover {
+  transition: 0.8s;
   color: rgb(37, 150, 190);
   text-decoration: double;
 }
@@ -615,6 +617,21 @@ body {
   }
 }
 /* end of footer */
+
+/* inactivity content */
+.judging_skeleton {
+  position: fixed;
+  bottom:0;
+  right: 0;
+  z-index: 10000;
+  animation: fadeIn 15s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* end of inactivity content */
 
 
 
