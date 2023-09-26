@@ -178,7 +178,6 @@ function myFunction() {
   var filterType = projFilter.selectedIndex;
   //search by name
   if (projFilter.options[filterType].text == "Name") {
-    console.log("name 1.0");
 
     // adding a description for name
     var cue = document.getElementById("cubone")
@@ -1764,7 +1763,6 @@ function myFunction() {
     languageBottom6.classList.remove("hiding-content")
     languageBottom7.classList.remove("hiding-content")
 
-    console.log("language 2.0");
     fetch(
       `projects.json`
     )
@@ -1851,7 +1849,6 @@ function myFunction() {
         // end of python
 
         // divider
-        console.log(mainProj)
         // end of divider
 
         // html and css
@@ -1918,7 +1915,6 @@ function myFunction() {
         //end of html and css
 
         // divider
-        console.log(mainProj)
         // end of divider
 
         // django
@@ -1984,7 +1980,6 @@ function myFunction() {
         //end of django
 
         // divider
-        console.log(mainProj)
         // end of divider
 
         // javascript
@@ -2050,7 +2045,6 @@ function myFunction() {
         //end of javascript
 
         // divider
-        console.log(mainProj)
         // end of divider
 
         // java
@@ -2123,7 +2117,6 @@ function myFunction() {
         // var tempPara = document.createElement("p")
         // tempPara.innerText = "Spring"
         // languageFuction6.appendChild(tempPara)
-        // console.log(mainProj)
         // // end of divider
 
         // end comment
@@ -2194,7 +2187,6 @@ function myFunction() {
         //end of Spring
 
         // divider
-        console.log(mainProj)
         // end of divider
 
         // sql
@@ -2265,7 +2257,6 @@ function myFunction() {
         // var tempPara = document.createElement("p")
         // tempPara.innerText = "C++"
         // languageFuction8.appendChild(tempPara)
-        // console.log(mainProj)
         // // end of divider
 
         // end comment
@@ -2337,7 +2328,6 @@ function myFunction() {
         //end of C++
 
         // divider
-        console.log(mainProj)
         // end of divider
 
         // Ruby
@@ -2407,7 +2397,6 @@ function myFunction() {
   //-----------------------------------------------------------------------------------
   //lists the top 10 favorite projects
   else if (projFilter.options[filterType].text == "Favorite") {
-    console.log("favorites 3.0");
     fetch(
       `projects.json`
     )
@@ -2431,7 +2420,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 1) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2494,7 +2482,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 2) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2557,7 +2544,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 3) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2620,7 +2606,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 4) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2683,7 +2668,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 5) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2746,7 +2730,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 6) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2809,7 +2792,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 7) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2872,7 +2854,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 8) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2935,7 +2916,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 9) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -2998,7 +2978,6 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 10) {
-            console.log("hi")
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -3063,7 +3042,6 @@ function myFunction() {
   //---------------------------------------------------------------
   //default (newest to oldest)
   else {
-    console.log("pick a filter 4.0")
     //fetching json file
     fetch(
       `projects.json`
