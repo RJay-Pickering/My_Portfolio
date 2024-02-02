@@ -53,7 +53,7 @@ fetch(
 
         //coding language
         const lang = document.createElement("p");
-        lang.innerText = `Language: ${project.language}`
+        lang.innerText = `Skills: ${project.language}`
         //end of language
 
         //creating the project to have everything be put together
@@ -237,7 +237,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -296,7 +296,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -355,7 +355,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -414,7 +414,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -473,7 +473,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -532,7 +532,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -591,7 +591,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -650,7 +650,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -709,7 +709,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -768,7 +768,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -827,7 +827,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -886,7 +886,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -945,7 +945,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1004,7 +1004,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1063,7 +1063,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1122,7 +1122,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1181,7 +1181,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1240,7 +1240,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1299,7 +1299,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1358,7 +1358,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1417,7 +1417,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1476,7 +1476,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1535,7 +1535,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1594,7 +1594,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1653,7 +1653,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1712,7 +1712,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
 
             //creating the element to have everything be put together
@@ -1826,7 +1826,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -1854,7 +1854,7 @@ function myFunction() {
         // html and css
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
-          if (element.language.includes("HTML, CSS")) {
+          if (element.language.includes("HTML/CSS")) {
             //the link that links every element to a repository
             const aLink = document.createElement("a");
             aLink.href = `${element.link}`;
@@ -1892,7 +1892,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -1958,7 +1958,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2023,7 +2023,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2089,7 +2089,7 @@ function myFunction() {
       
               //coding language
               const lang = document.createElement("p");
-              lang.innerText = `Language: ${element.language}`
+              lang.innerText = `Skills: ${element.language}`
               //end of language
       
               //creating the element to have everything be put together
@@ -2162,7 +2162,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2230,7 +2230,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2302,7 +2302,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2371,7 +2371,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2395,7 +2395,7 @@ function myFunction() {
     // end of fetch
   } 
   //-----------------------------------------------------------------------------------
-  //lists the top 10 favorite projects
+  //lists the projects by the order of my favorite
   else if (projFilter.options[filterType].text == "Favorite") {
     fetch(
       `projects.json`
@@ -2410,7 +2410,7 @@ function myFunction() {
         cue.replaceChildren()
         var bones = document.createElement("p")
         bones.classList.add("projectDesc")
-        bones.innerText = "This will show the top ten best projects recommended by me (left to right)!"
+        bones.innerText = "This will show the best projects recommended by me (left to right)!"
         cue.appendChild(bones)
         // end of adding description
 
@@ -2457,7 +2457,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2519,7 +2519,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2581,7 +2581,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2643,7 +2643,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2705,7 +2705,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2767,7 +2767,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2829,7 +2829,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2891,7 +2891,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -2953,7 +2953,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -3015,7 +3015,7 @@ function myFunction() {
     
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${element.language}`
+            lang.innerText = `Skills: ${element.language}`
             //end of language
     
             //creating the element to have everything be put together
@@ -3036,6 +3036,130 @@ function myFunction() {
           }
         }
         // end of favorite 10
+        // favorite 11
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.favorite === 11) {
+            //the link that links every element to a repository
+            const aLink = document.createElement("a");
+            aLink.href = `${element.link}`;
+            aLink.target = "_blank";
+            aLink.classList.add("aLink");
+            //end of links
+    
+            //description of the elements
+            const desc = document.createElement("p");
+            desc.innerText = element.description;
+            desc.style.fontSize = "2.5vh";
+            desc.style.paddingTop = "15px"
+            desc.style.paddingBottom = "15px"
+            //end of descriptions
+    
+            //creators of the element
+            const creators = document.createElement("p");
+            creators.innerText = `Created By: ${element.creator}`;
+            creators.style.fontSize = "2.5vh";
+            creators.style.paddingBottom = "15px"
+            //end of creators
+    
+            //cards image
+            const image = document.createElement("img");
+            image.src = element.image_url;
+            image.classList.add("apiImage");
+            //end of image
+    
+            //title of the card
+            const title = document.createElement("p");
+            title.innerText = element.title;
+            title.style.fontSize = "4vh";
+            title.style.paddingBottom = "15px"
+            //end of title
+    
+            //coding language
+            const lang = document.createElement("p");
+            lang.innerText = `Skills: ${element.language}`
+            //end of language
+    
+            //creating the element to have everything be put together
+            const elements = document.createElement("div");
+            elements.classList.add("card");
+            // end of elements
+    
+            //adding everything together
+            elements.appendChild(title);
+            elements.appendChild(image);
+            elements.appendChild(desc);
+            elements.appendChild(creators);
+            elements.appendChild(lang)
+            aLink.appendChild(elements);
+            const one = document.getElementById("one");
+            one.appendChild(aLink);
+            //end of adding everything together
+          }
+        }
+        // end of favorite 11
+        // favorite 12
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.favorite === 12) {
+            //the link that links every element to a repository
+            const aLink = document.createElement("a");
+            aLink.href = `${element.link}`;
+            aLink.target = "_blank";
+            aLink.classList.add("aLink");
+            //end of links
+    
+            //description of the elements
+            const desc = document.createElement("p");
+            desc.innerText = element.description;
+            desc.style.fontSize = "2.5vh";
+            desc.style.paddingTop = "15px"
+            desc.style.paddingBottom = "15px"
+            //end of descriptions
+    
+            //creators of the element
+            const creators = document.createElement("p");
+            creators.innerText = `Created By: ${element.creator}`;
+            creators.style.fontSize = "2.5vh";
+            creators.style.paddingBottom = "15px"
+            //end of creators
+    
+            //cards image
+            const image = document.createElement("img");
+            image.src = element.image_url;
+            image.classList.add("apiImage");
+            //end of image
+    
+            //title of the card
+            const title = document.createElement("p");
+            title.innerText = element.title;
+            title.style.fontSize = "4vh";
+            title.style.paddingBottom = "15px"
+            //end of title
+    
+            //coding language
+            const lang = document.createElement("p");
+            lang.innerText = `Skills: ${element.language}`
+            //end of language
+    
+            //creating the element to have everything be put together
+            const elements = document.createElement("div");
+            elements.classList.add("card");
+            // end of elements
+    
+            //adding everything together
+            elements.appendChild(title);
+            elements.appendChild(image);
+            elements.appendChild(desc);
+            elements.appendChild(creators);
+            elements.appendChild(lang)
+            aLink.appendChild(elements);
+            const one = document.getElementById("one");
+            one.appendChild(aLink);
+            //end of adding everything together
+          }
+        }
+        // end of favorite 12
       });
     // end of fetch
   } 
@@ -3100,7 +3224,7 @@ function myFunction() {
 
             //coding language
             const lang = document.createElement("p");
-            lang.innerText = `Language: ${project.language}`
+            lang.innerText = `Skills: ${project.language}`
             //end of language
 
             //creating the project to have everything be put together

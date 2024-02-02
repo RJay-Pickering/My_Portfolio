@@ -1,6 +1,6 @@
 # **MY PORTFOLIO OVERVIEW**
 
-My portfolio is about me and the skill that i have learned over the years of programming. All of my projects are also there, to be seen in action or the code of the project depending on the language they are in (Ruby, etc.)
+My portfolio is about me and the skill that i have learned over the years of programming. All of my projects are also there, to be seen in action or the code of the python projects.
 
 ### Notes on this repository!
 
@@ -8,8 +8,9 @@ My portfolio is about me and the skill that i have learned over the years of pro
 
 2. The folder labeled **"testing-new-web"** will be testing new functionalities for the portfolio.
 
-3. Projects with the image "Currently Not Available", are projects that currently unavailable to be shown because of complications with the hosting platform (Railway). The projects will return to be viewed soon!
+3. All Django projects, are currently unavailable for viewing because of complications with the hosting platform (Railway). The projects will return to be viewed soon!
 
   - **Projects Effected...**
     - Base Camp News
     - Missing Cats of America
+    - Apawcalyptic Partners

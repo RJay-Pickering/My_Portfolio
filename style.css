@@ -48,16 +48,13 @@ body {
   padding-left: 0.7em;
 }
 
-#spooky:hover {
-  cursor: pointer;
-}
-
-.dancing_skeleton {
+.season_gif {
   display: flex;
   align-items: center;
   padding-left: 0.7em;
-  width: 0.1em;
-  height: 0.1em;
+  width: 0.2em;
+  height: 0.2em;
+  cursor: pointer;
 }
 
 .logo {
@@ -619,7 +616,7 @@ body {
 /* end of footer */
 
 /* inactivity content */
-.judging_skeleton {
+.inactive_class {
   position: fixed;
   bottom:0;
   right: 0;
