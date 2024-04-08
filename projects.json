@@ -2,7 +2,7 @@
     {
       "favorite": 4,
       "title": "Apawcalyptic Partners",
-      "link": "",
+      "link": "https://github.com/RJay-Pickering/Django-Pet-Store",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/pet_finder.jpg",
       "language": "Django, React, HTML/CSS, JavaScript",
@@ -20,7 +20,7 @@
     {
       "favorite": 1,
       "title": "Base Camp News",
-      "link": "",
+      "link": "https://github.com/RJay-Pickering/capstone_project_QS_WC_RP",
       "creator": "RJay Pickering, Will Collins, and Quinton Summerford",
       "image_url": "imageStorage/projects/BCN.jpg",
       "language": "Django, HTML/CSS, JavaScript",
@@ -51,7 +51,7 @@
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/RockPaperScissors.jpg",
       "language": "HTML/CSS, JavaScript",
-      "description": "This project allows users to engage in a game of 'Rock, Paper, Scissors' against a computer opponent. The primary motivation behind this project was to create a straightforward game using JavaScript. During gameplay, the chosen option by the player is highlighted in a shade of yellowish green, while the computer's selection is marked in red. After each game, players can initiate a new round by pressing the 'New Game' button. The user's score is maintained between sessions but can only be reset by refreshing the page."
+      "description": "This project allows users to engage in a game of 'Rock, Paper, Scissors' against a computer opponent. The primary motivation behind this project was to create a straightforward game using JavaScript. During game play, the chosen option by the player is highlighted in a shade of yellowish green, while the computer's selection is marked in red. After each game, players can initiate a new round by pressing the 'New Game' button. The user's score is maintained between sessions but can only be reset by refreshing the page."
     },
     {
       "favorite": 2,
@@ -65,7 +65,7 @@
     {
       "favorite": 3,
       "title": "Missing Cats of America",
-      "link": "",
+      "link": "https://github.com/RJay-Pickering/Missing-Cats-of-America",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/MCOA.jpg",
       "language": "Django, HTML/CSS",
