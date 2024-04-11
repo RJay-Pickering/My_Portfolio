@@ -1,3 +1,122 @@
+// this display the data given by the fetch information
+function displayingData(project) {
+  //the link that links every project to a repository
+  const aLink = document.createElement("a");
+  aLink.href = `${project.link}`;
+  aLink.target = "_blank";
+  aLink.classList.add("aLink");
+  //end of links
+
+  //description of the projects
+  const desc = document.createElement("p");
+  desc.innerText = project.description;
+  desc.style.fontSize = "2.5vh";
+  desc.style.paddingTop = "15px"
+  desc.style.paddingBottom = "15px"
+  //end of descriptions
+
+  //creators of the project
+  const creators = document.createElement("p");
+  creators.innerText = `Created By: ${project.creator}`;
+  creators.style.fontSize = "2.5vh";
+  creators.style.paddingBottom = "15px"
+  //end of creators
+
+  //cards image
+  const image = document.createElement("img");
+  image.src = project.image_url;
+  image.classList.add("apiImage");
+  //end of image
+
+  //title of the card
+  const title = document.createElement("p");
+  title.innerText = project.title;
+  title.style.fontSize = "4vh";
+  title.style.paddingBottom = "15px"
+  //end of title
+
+  //coding language
+  const lang = document.createElement("p");
+  lang.innerText = `Skills: ${project.language}`
+  //end of language
+
+  //creating the project to have everything be put together
+  const projects = document.createElement("div");
+  projects.classList.add("card");
+  // end of projects
+
+  //adding everything together
+  projects.appendChild(title);
+  projects.appendChild(image);
+  projects.appendChild(desc);
+  projects.appendChild(creators);
+  projects.appendChild(lang)
+  aLink.appendChild(projects);
+  const one = document.getElementById("one");
+  one.appendChild(aLink);
+  //end of adding everything together
+}
+// end of displaying the fetch
+
+// this displays the language data
+function displayLanguageData(location, project) {
+  //the link that links every element to a repository
+  const aLink = document.createElement("a");
+  aLink.href = `${project.link}`;
+  aLink.target = "_blank";
+  aLink.classList.add("aLink");
+  //end of links
+
+  //description of the elements
+  const desc = document.createElement("p");
+  desc.innerText = project.description;
+  desc.style.fontSize = "2.5vh";
+  desc.style.paddingTop = "15px"
+  desc.style.paddingBottom = "15px"
+  //end of descriptions
+
+  //creators of the element
+  const creators = document.createElement("p");
+  creators.innerText = `Created By: ${project.creator}`;
+  creators.style.fontSize = "2.5vh";
+  creators.style.paddingBottom = "15px"
+  //end of creators
+
+  //cards image
+  const image = document.createElement("img");
+  image.src = project.image_url;
+  image.classList.add("apiImage");
+  //end of image
+
+  //title of the card
+  const title = document.createElement("p");
+  title.innerText = project.title;
+  title.style.fontSize = "4vh";
+  title.style.paddingBottom = "15px"
+  //end of title
+
+  //coding language
+  const lang = document.createElement("p");
+  lang.innerText = `Skills: ${project.language}`
+  //end of language
+
+  //creating the element to have everything be put together
+  const elements = document.createElement("li");
+  elements.classList.add("card");
+  // end of elements
+
+  //adding everything together
+  elements.appendChild(title);
+  elements.appendChild(image);
+  elements.appendChild(desc);
+  elements.appendChild(creators);
+  elements.appendChild(lang)
+  aLink.appendChild(elements);
+  location.appendChild(aLink);
+  //end of adding everything together
+}
+// end of display of language data
+
 //fetching json file
 fetch(
   `projects.json`
@@ -16,61 +135,7 @@ fetch(
     // end of adding description
 
     Array.from(data).forEach(function (project) {
-        //the link that links every project to a repository
-        const aLink = document.createElement("a");
-        aLink.href = `${project.link}`;
-        aLink.target = "_blank";
-        aLink.classList.add("aLink");
-        //end of links
-
-        //description of the projects
-        const desc = document.createElement("p");
-        desc.innerText = project.description;
-        desc.style.fontSize = "2.5vh";
-        desc.style.paddingTop = "15px"
-        desc.style.paddingBottom = "15px"
-        //end of descriptions
-
-        //creators of the project
-        const creators = document.createElement("p");
-        creators.innerText = `Created By: ${project.creator}`;
-        creators.style.fontSize = "2.5vh";
-        creators.style.paddingBottom = "15px"
-        //end of creators
-
-        //cards image
-        const image = document.createElement("img");
-        image.src = project.image_url;
-        image.classList.add("apiImage");
-        //end of image
-
-        //title of the card
-        const title = document.createElement("p");
-        title.innerText = project.title;
-        title.style.fontSize = "4vh";
-        title.style.paddingBottom = "15px"
-        //end of title
-
-        //coding language
-        const lang = document.createElement("p");
-        lang.innerText = `Skills: ${project.language}`
-        //end of language
-
-        //creating the project to have everything be put together
-        const projects = document.createElement("div");
-        projects.classList.add("card");
-        // end of projects
-
-        //adding everything together
-        projects.appendChild(title);
-        projects.appendChild(image);
-        projects.appendChild(desc);
-        projects.appendChild(creators);
-        projects.appendChild(lang)
-        aLink.appendChild(projects);
-        const one = document.getElementById("one");
-        one.appendChild(aLink);
-        //end of adding everything together
+        displayingData(project)
     });
   });
 // end of fetch
@@ -88,18 +153,18 @@ languageBottom5.classList.add("hiding-content")
 var languageBottom6 = document.getElementsByClassName("o-divider-under")[5]
 languageBottom6.classList.add("hiding-content")
 
-var languageFuction = document.getElementsByClassName("o-divider2")[0]
-languageFuction.classList.add("hiding-content")
-var languageFuction2 = document.getElementsByClassName("o-divider3")[0]
-languageFuction2.classList.add("hiding-content")
-var languageFuction3 = document.getElementsByClassName("o-divider4")[0]
-languageFuction3.classList.add("hiding-content")
-var languageFuction4 = document.getElementsByClassName("o-divider5")[0]
-languageFuction4.classList.add("hiding-content")
-var languageFuction5 = document.getElementsByClassName("o-divider6")[0]
-languageFuction5.classList.add("hiding-content")
-var languageFuction9 = document.getElementsByClassName("o-divider10")[0]
-languageFuction9.classList.add("hiding-content")
+var languageFunction = document.getElementsByClassName("o-divider2")[0]
+languageFunction.classList.add("hiding-content")
+var languageFunction2 = document.getElementsByClassName("o-divider3")[0]
+languageFunction2.classList.add("hiding-content")
+var languageFunction3 = document.getElementsByClassName("o-divider4")[0]
+languageFunction3.classList.add("hiding-content")
+var languageFunction4 = document.getElementsByClassName("o-divider5")[0]
+languageFunction4.classList.add("hiding-content")
+var languageFunction5 = document.getElementsByClassName("o-divider6")[0]
+languageFunction5.classList.add("hiding-content")
+var languageFunction6 = document.getElementsByClassName("o-divider7")[0]
+languageFunction6.classList.add("hiding-content")
 
 const hide2 = document.getElementById("two")
 hide2.classList.add("hiding-content")
@@ -109,51 +174,51 @@ const hide4 = document.getElementById("four")
 hide4.classList.add("hiding-content")
 const hide5 = document.getElementById("five")
 hide5.classList.add("hiding-content")
-const hide9 = document.getElementById("nine")
-hide9.classList.add("hiding-content")
+const hide6 = document.getElementById("six")
+hide6.classList.add("hiding-content")
 
 var tempPara = document.createElement("p")
 tempPara.innerText = "HTML / CSS"
-languageFuction2.appendChild(tempPara)
+languageFunction2.appendChild(tempPara)
 
 var tempPara = document.createElement("p")
 tempPara.innerText = "Django"
-languageFuction3.appendChild(tempPara)
+languageFunction3.appendChild(tempPara)
 
 var tempPara = document.createElement("p")
 tempPara.innerText = "JavaScript"
-languageFuction4.appendChild(tempPara)
+languageFunction4.appendChild(tempPara)
 
 var tempPara = document.createElement("p")
 tempPara.innerText = "Java"
-languageFuction5.appendChild(tempPara)
+languageFunction5.appendChild(tempPara)
 
 var tempPara = document.createElement("p")
 tempPara.innerText = "Other Languages"
-languageFuction9.appendChild(tempPara)
+languageFunction6.appendChild(tempPara)
 
 // this function deals with the filter in the projects section
 function myFunction() {
-  languageFuction.classList.add("hiding-content")
-  languageFuction2.classList.add("hiding-content")
-  languageFuction3.classList.add("hiding-content")
-  languageFuction4.classList.add("hiding-content")
-  languageFuction5.classList.add("hiding-content")
-  // languageFuction7.classList.add("hiding-content")
+  languageFunction.classList.add("hiding-content")
+  languageFunction2.classList.add("hiding-content")
+  languageFunction3.classList.add("hiding-content")
+  languageFunction4.classList.add("hiding-content")
+  languageFunction5.classList.add("hiding-content")
+  languageFunction6.classList.add("hiding-content")
+
   languageBottom.classList.add("hiding-content")
   languageBottom2.classList.add("hiding-content")
   languageBottom3.classList.add("hiding-content")
   languageBottom4.classList.add("hiding-content")
   languageBottom5.classList.add("hiding-content")
   languageBottom6.classList.add("hiding-content")
-  // languageBottom7.classList.add("hiding-content")
-  languageFuction9.classList.add("hiding-content")
+
   hide2.classList.add("hiding-content")
   hide3.classList.add("hiding-content")
   hide4.classList.add("hiding-content")
   hide5.classList.add("hiding-content")
-  // hide7.classList.add("hiding-content")
-  hide9.classList.add("hiding-content")
+  hide6.classList.add("hiding-content")
+
   var projFilter = document.getElementById("mySelect");
   var filterType = projFilter.selectedIndex;
   //search by name
@@ -178,1539 +243,16 @@ function myFunction() {
       .then((data) => {
         const one = document.getElementById("one");
         one.replaceChildren()
+        // sorting it in alphabetical order
+        data.sort(function(a, b) {
+            var textA = a.title.toUpperCase();
+            var textB = b.title.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        });
+        // end of sorting alphabetically
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
-          if (element.title[0] == "A") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "B") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "C") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "D") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "E") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "F") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "G") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "H") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "I") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "J") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "K") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "L") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "M") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "N") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "O") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "P") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "Q") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "R") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "S") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "T") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "U") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "V") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "W") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "X") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "Y") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
-        }
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.title[0] == "Z") {
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
-          }
+          displayingData(element)
         }
       });
     // end of fetch
@@ -1718,18 +260,18 @@ function myFunction() {
   //------------------------------------------------------
   //please update language when learning and uploading a new project with said language
   else if (projFilter.options[filterType].text == "Language") {
-    languageFuction.classList.remove("hiding-content")
-    languageFuction2.classList.remove("hiding-content")
-    languageFuction3.classList.remove("hiding-content")
-    languageFuction4.classList.remove("hiding-content")
-    languageFuction5.classList.remove("hiding-content")
-    languageFuction9.classList.remove("hiding-content")
+    languageFunction.classList.remove("hiding-content")
+    languageFunction2.classList.remove("hiding-content")
+    languageFunction3.classList.remove("hiding-content")
+    languageFunction4.classList.remove("hiding-content")
+    languageFunction5.classList.remove("hiding-content")
+    languageFunction6.classList.remove("hiding-content")
 
     hide2.classList.remove("hiding-content")
     hide3.classList.remove("hiding-content")
     hide4.classList.remove("hiding-content")
     hide5.classList.remove("hiding-content")
-    hide9.classList.remove("hiding-content")
+    hide6.classList.remove("hiding-content")
 
     languageBottom.classList.remove("hiding-content")
     languageBottom2.classList.remove("hiding-content")
@@ -1756,69 +298,21 @@ function myFunction() {
         // end of adding description
     
         const one = document.getElementById("one");
-        const mainProj = document.getElementById("projectsId")
 
+        // empties out the ul so we don`t have duplication when the user constantly opens the language filter
         one.replaceChildren()
+        hide2.replaceChildren()
+        hide3.replaceChildren()
+        hide4.replaceChildren()
+        hide5.replaceChildren()
+        hide6.replaceChildren()
+        // end of emptying out the ul
         
         // python
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.language.includes("Python")) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("li");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayLanguageData(one, element)
           }
         }
         // end of python
@@ -1830,61 +324,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.language.includes("HTML/CSS")) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("li");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            hide2.appendChild(aLink)
-            //end of adding everything together
-            
+            displayLanguageData(hide2, element)
           }
         }
         //end of html and css
@@ -1896,60 +336,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.language.includes("Django")) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("li");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            hide3.appendChild(aLink)
-            //end of adding everything together
+            displayLanguageData(hide3, element)
           }
         }
         //end of django
@@ -1961,60 +348,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.language.includes("JavaScript")) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("li");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements)
-            hide4.appendChild(aLink)
-            //end of adding everything together
+            displayLanguageData(hide4, element)
           }
         }
         //end of javascript
@@ -2027,60 +361,7 @@ function myFunction() {
           const element = data[i];
           if (element.language.includes("Java")) {
             if (!element.language.includes("JavaScript")) {
-              //the link that links every element to a repository
-              const aLink = document.createElement("a");
-              aLink.href = `${element.link}`;
-              aLink.target = "_blank";
-              aLink.classList.add("aLink");
-              //end of links
-      
-              //description of the elements
-              const desc = document.createElement("p");
-              desc.innerText = element.description;
-              desc.style.fontSize = "2.5vh";
-              desc.style.paddingTop = "15px"
-              desc.style.paddingBottom = "15px"
-              //end of descriptions
-      
-              //creators of the element
-              const creators = document.createElement("p");
-              creators.innerText = `Created By: ${element.creator}`;
-              creators.style.fontSize = "2.5vh";
-              creators.style.paddingBottom = "15px"
-              //end of creators
-      
-              //cards image
-              const image = document.createElement("img");
-              image.src = element.image_url;
-              image.classList.add("apiImage");
-              //end of image
-      
-              //title of the card
-              const title = document.createElement("p");
-              title.innerText = element.title;
-              title.style.fontSize = "4vh";
-              title.style.paddingBottom = "15px"
-              //end of title
-      
-              //coding language
-              const lang = document.createElement("p");
-              lang.innerText = `Skills: ${element.language}`
-              //end of language
-      
-              //creating the element to have everything be put together
-              const elements = document.createElement("li");
-              elements.classList.add("card");
-              // end of elements
-      
-              //adding everything together
-              elements.appendChild(title);
-              elements.appendChild(image);
-              elements.appendChild(desc);
-              elements.appendChild(creators);
-              elements.appendChild(lang)
-              aLink.appendChild(elements);
-              hide5.appendChild(aLink)
-              //end of adding everything together
+              displayLanguageData(hide5, element)
             }
           }
         }
@@ -2093,60 +374,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.language.includes("Ruby") || element.language.includes("SQL")) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("li");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            hide9.appendChild(aLink)
-            //end of adding everything together
+            displayLanguageData(hide6, element)
           }
         }
         //end of all of the other languages
@@ -2179,61 +407,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 1) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 1
@@ -2241,61 +415,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 2) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 2
@@ -2303,61 +423,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 3) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 3
@@ -2365,61 +431,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 4) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 4
@@ -2427,61 +439,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 5) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 5
@@ -2489,61 +447,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 6) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 6
@@ -2551,61 +455,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 7) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 7
@@ -2613,61 +463,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 8) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 8
@@ -2675,61 +471,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 9) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 9
@@ -2737,61 +479,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 10) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 10
@@ -2799,61 +487,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 11) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 11
@@ -2861,61 +495,7 @@ function myFunction() {
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.favorite === 12) {
-            //the link that links every element to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${element.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-    
-            //description of the elements
-            const desc = document.createElement("p");
-            desc.innerText = element.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-    
-            //creators of the element
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${element.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-    
-            //cards image
-            const image = document.createElement("img");
-            image.src = element.image_url;
-            image.classList.add("apiImage");
-            //end of image
-    
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = element.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-    
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${element.language}`
-            //end of language
-    
-            //creating the element to have everything be put together
-            const elements = document.createElement("div");
-            elements.classList.add("card");
-            // end of elements
-    
-            //adding everything together
-            elements.appendChild(title);
-            elements.appendChild(image);
-            elements.appendChild(desc);
-            elements.appendChild(creators);
-            elements.appendChild(lang)
-            aLink.appendChild(elements);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(element)
           }
         }
         // end of favorite 12
@@ -2946,61 +526,7 @@ function myFunction() {
         const one = document.getElementById("one");
         one.replaceChildren()
         Array.from(data).forEach(function (project) {
-            //the link that links every project to a repository
-            const aLink = document.createElement("a");
-            aLink.href = `${project.link}`;
-            aLink.target = "_blank";
-            aLink.classList.add("aLink");
-            //end of links
-
-            //description of the projects
-            const desc = document.createElement("p");
-            desc.innerText = project.description;
-            desc.style.fontSize = "2.5vh";
-            desc.style.paddingTop = "15px"
-            desc.style.paddingBottom = "15px"
-            //end of descriptions
-
-            //creators of the project
-            const creators = document.createElement("p");
-            creators.innerText = `Created By: ${project.creator}`;
-            creators.style.fontSize = "2.5vh";
-            creators.style.paddingBottom = "15px"
-            //end of creators
-
-            //cards image
-            const image = document.createElement("img");
-            image.src = project.image_url;
-            image.classList.add("apiImage");
-            //end of image
-
-            //title of the card
-            const title = document.createElement("p");
-            title.innerText = project.title;
-            title.style.fontSize = "4vh";
-            title.style.paddingBottom = "15px"
-            //end of title
-
-            //coding language
-            const lang = document.createElement("p");
-            lang.innerText = `Skills: ${project.language}`
-            //end of language
-
-            //creating the project to have everything be put together
-            const projects = document.createElement("div");
-            projects.classList.add("card");
-            // end of projects
-
-            //adding everything together
-            projects.appendChild(title);
-            projects.appendChild(image);
-            projects.appendChild(desc);
-            projects.appendChild(creators);
-            projects.appendChild(lang)
-            aLink.appendChild(projects);
-            const one = document.getElementById("one");
-            one.appendChild(aLink);
-            //end of adding everything together
+            displayingData(project)
         });
       });
     // end of fetch

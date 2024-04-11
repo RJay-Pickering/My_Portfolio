@@ -5,7 +5,6 @@ const months = ["January","February","March","April","May","June","July","August
 
 const dates = new Date();
 let current_date = months[dates.getMonth()];
-console.log(current_date)
 // end of getting month
 
 season = document.getElementById("season")
