@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'arcon';
+  font-family: "Prata", serif;
   color: rgb(211, 211, 211);
   background-color: #0e0e10;
   box-sizing: border-box;
+  cursor: default;
 }
 
 .container {
@@ -109,6 +112,17 @@ body {
   cursor: pointer;
 }
 
+.bar .nav .yearsOfCoding {
+  font-size: 14px;
+  margin: 0 20px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  color: rgb(211, 211, 211);
+}
+
 #selected {
   color: rgb(37, 150, 190);
   border-bottom: 2px solid rgb(37, 150, 190);
@@ -130,10 +144,6 @@ body {
 .about-me-content {
   max-width: 100%;
   text-align: center;
-  /* display: grid;
-  height: auto;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-gap: 50px; */
 }
 
 .para {
@@ -161,6 +171,10 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
+}
+
+.images-cover img {
+  border-radius: 1em;
 }
 
 .overlay {
@@ -251,7 +265,6 @@ body {
   transition: 0.5s;
   color: #0e0e10;
   background-color: rgb(37, 150, 190);
-  cursor: default;
 }
 /* end of skills */
 
@@ -284,8 +297,8 @@ body {
   list-style-type: none;
   background-color: #0e0e10;
   border-radius: 25px;
-  height: fit-content;
-  min-height: 84vh;
+  min-height: fit-content;
+  max-height: 84vh;
   padding: 20px;
   text-align: center;
   box-shadow: 0 0 0 5px rgb(211, 211, 211);
@@ -641,6 +654,12 @@ body {
 
 
 /* media screens */
+@media screen and (max-width: 700px) {
+  .bar .nav .yearsOfCoding {
+    display: none;
+  }
+}
+
 @media (max-width: 1305px) {
   .main {
     grid-template-columns: 50px 12fr;

@@ -10,9 +10,12 @@ function displayingData(project) {
   //description of the projects
   const desc = document.createElement("p");
   desc.innerText = project.description;
-  desc.style.fontSize = "2.5vh";
-  desc.style.paddingTop = "15px"
-  desc.style.paddingBottom = "15px"
+  desc.style.fontSize = "1em";
+  desc.style.padding = "0"
+  desc.style.margin = "0"
+  desc.style.marginTop = "14px"
+  desc.style.maxHeight = "10em"
+  desc.style.overflow = "scroll"
   //end of descriptions
 
   //creators of the project
@@ -31,7 +34,9 @@ function displayingData(project) {
   //title of the card
   const title = document.createElement("p");
   title.innerText = project.title;
-  title.style.fontSize = "4vh";
+  title.style.fontSize = "1.8em";
+  title.style.marginTop = "0.5em"
+  title.style.marginBottom = "0"
   title.style.paddingBottom = "15px"
   //end of title
 
@@ -70,9 +75,12 @@ function displayLanguageData(location, project) {
   //description of the elements
   const desc = document.createElement("p");
   desc.innerText = project.description;
-  desc.style.fontSize = "2.5vh";
-  desc.style.paddingTop = "15px"
-  desc.style.paddingBottom = "15px"
+  desc.style.fontSize = "1em";
+  desc.style.padding = "0"
+  desc.style.margin = "0"
+  desc.style.marginTop = "14px"
+  desc.style.maxHeight = "10em"
+  desc.style.overflow = "scroll"
   //end of descriptions
 
   //creators of the element
