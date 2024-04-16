@@ -10,18 +10,13 @@ function displayingData(project) {
   //description of the projects
   const desc = document.createElement("p");
   desc.innerText = project.description;
-  desc.style.fontSize = "1em";
-  desc.style.padding = "0"
-  desc.style.margin = "0"
-  desc.style.marginTop = "14px"
-  desc.style.maxHeight = "10em"
-  desc.style.overflow = "scroll"
+  desc.classList.add("card-description")
   //end of descriptions
 
   //creators of the project
   const creators = document.createElement("p");
   creators.innerText = `Created By: ${project.creator}`;
-  creators.style.fontSize = "2.5vh";
+  creators.style.fontSize = "1em";
   creators.style.paddingBottom = "15px"
   //end of creators
 
@@ -75,18 +70,13 @@ function displayLanguageData(location, project) {
   //description of the elements
   const desc = document.createElement("p");
   desc.innerText = project.description;
-  desc.style.fontSize = "1em";
-  desc.style.padding = "0"
-  desc.style.margin = "0"
-  desc.style.marginTop = "14px"
-  desc.style.maxHeight = "10em"
-  desc.style.overflow = "scroll"
+  desc.classList.add("card-description")
   //end of descriptions
 
   //creators of the element
   const creators = document.createElement("p");
   creators.innerText = `Created By: ${project.creator}`;
-  creators.style.fontSize = "2.5vh";
+  creators.style.fontSize = "1em";
   creators.style.paddingBottom = "15px"
   //end of creators
 
