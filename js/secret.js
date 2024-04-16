@@ -56,33 +56,30 @@ if (current_date == "January" && current_time == 1) {
 } else if (current_date == "July" && current_time == 4) {
     const achievementMessage = "Achievement Unlocked: Its 4th of July, go shoot fireworks weirdo!"
     inactive_secret_image("imageStorage/seasons/fireworks.gif", "none", achievementMessage, "initial")
+} else if (current_date == "October" && current_time == 31) {
+  // secret image inside my portfolio 🤫
+  season.style.display = null
+  season.addEventListener("click", () => {
+    console.log("Achievement Unlocked: Find hidden dancing bones")
+    season.classList.toggle("season_gif")
+    if (season.classList != "season_gif") {
+      season.style.width = "10vh";
+      season.style.height = "10vh";
+    } else {
+      season.style.width = null;
+      season.style.height = null;
+    }
+  })
+  // end of secret image
+  const achievementMessage = "Achievement Unlocked: You died while viewing this website... You dead weirdo..."
+  inactive_secret_image("imageStorage/seasons/skeleton.png", "sounds/halloweenBackgroundMusic.mp3", achievementMessage, "initial")
+} else if (current_date == "November" && current_time >= 24 && current_time <= 30) {
+  const achievementMessage = "Achievement Unlocked: Happy Thanksgiving weirdo =)"
+  inactive_secret_image("imageStorage/seasons/thanksgiving.jpeg", "none", achievementMessage, "90em")
+} else if (current_date == "December" && (current_time == 24 || current_time == 25)) {
+  const achievementMessage = "Achievement Unlocked: You saw santa delivering presents to you... Merry Christmas Weirdo =)"
+  inactive_secret_image("imageStorage/seasons/santa.png", "none", achievementMessage, "initial")
 } else {
   var inactive_img = document.getElementById("inactive_id");
   inactive_img.style.display = "none";
 }
-
-
-// if (current_date == "October") {
-//   // secret image inside my portfolio 🤫
-//   season.style.display = null
-//   season.addEventListener("click", () => {
-//     console.log("Achievement Unlocked: Find hidden dancing bones")
-//     season.classList.toggle("season_gif")
-//     if (season.classList != "season_gif") {
-//       season.style.width = "10vh";
-//       season.style.height = "10vh";
-//     } else {
-//       season.style.width = null;
-//       season.style.height = null;
-//     }
-//   })
-//   // end of secret image
-//   const achievementMessage = "Achievement Unlocked: You died while viewing this website..."
-//   inactive_secret_image("imageStorage/seasons/skeleton.png", "sounds/halloweenBackgroundMusic.mp3", achievementMessage, "initial")
-// } else if (current_date == "November") {
-//   const achievementMessage = "Achievement Unlocked: Happy Thanksgiving weirdo =)"
-//   inactive_secret_image("imageStorage/seasons/thanksgiving.jpeg", "none", achievementMessage, "90em")
-// } else if (current_date == "December") {
-//   const achievementMessage = "Achievement Unlocked: You saw santa delivering presents to you... Merry Christmas Weirdo =)"
-//   inactive_secret_image("imageStorage/seasons/santa.png", "none", achievementMessage, "initial")
-// }
