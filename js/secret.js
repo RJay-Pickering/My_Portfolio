@@ -48,15 +48,15 @@ if (current_date == "January" && current_time == 1) {
   const achievementMessage = "Achievement Unlocked: You visited me on New Years day? Put down to potato chips and spend your time with your family, you weirdo!"
   inactive_secret_image("imageStorage/seasons/newyears.png", "none", achievementMessage, "initial")
 } else if (current_date == "February" && current_time == 14) {
-  const achievementMessage = "Achievement Unlocked: If your seeing this now, you obviously get no bitches! Your a bitchless weirdo!"
+  const achievementMessage = "Achievement Unlocked: If your seeing this now, your obviously lonely! You weirdo!"
   inactive_secret_image("imageStorage/seasons/valentines.png", "none", achievementMessage, "10em")
 } else if (current_date == "March" && current_time == 17) {
     const achievementMessage = "Achievement Unlocked: Its saint patty's day, what are you doing here? Go to the pub you bloody weirdo!"
     inactive_secret_image("imageStorage/seasons/stpattysday.png", "none", achievementMessage, "10em")
-} else if (current_date == "July" && current_time == 4) {
+} else if (current_date == "July" && current_time <= 4) {
     const achievementMessage = "Achievement Unlocked: Its 4th of July, go shoot fireworks weirdo!"
     inactive_secret_image("imageStorage/seasons/fireworks.gif", "none", achievementMessage, "initial")
-} else if (current_date == "October" && current_time == 31) {
+} else if (current_date == "October") {
   // secret image inside my portfolio 🤫
   season.style.display = null
   season.addEventListener("click", () => {
@@ -76,7 +76,7 @@ if (current_date == "January" && current_time == 1) {
 } else if (current_date == "November" && current_time >= 24 && current_time <= 30) {
   const achievementMessage = "Achievement Unlocked: Happy Thanksgiving weirdo =)"
   inactive_secret_image("imageStorage/seasons/thanksgiving.jpeg", "none", achievementMessage, "90em")
-} else if (current_date == "December" && (current_time == 24 || current_time == 25)) {
+} else if (current_date == "December") {
   const achievementMessage = "Achievement Unlocked: You saw santa delivering presents to you... Merry Christmas Weirdo =)"
   inactive_secret_image("imageStorage/seasons/santa.png", "none", achievementMessage, "initial")
 } else {
