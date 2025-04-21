@@ -1,3 +1,83 @@
+var limitedProjects = 0;
+const one = document.getElementById("one");
+const two = document.getElementById("two");
+const three = document.getElementById("three");
+const leftBtn = document.getElementById("left-btn")
+const rightBtn = document.getElementById("right-btn")
+two.classList.add("hiding-content")
+three.classList.add("hiding-content")
+
+function removeButton() {
+   //remove button visibility if there is no project on row
+   if (two.innerHTML === "") {
+    console.log("There is no content in the second column")
+    leftBtn.classList.add("hiding-content")
+    rightBtn.classList.add("hiding-content")
+  } else {
+    leftBtn.classList.remove("hiding-content")
+    rightBtn.classList.remove("hiding-content")
+  }
+  // end of removing button visibility
+}
+
+function project_reset() {
+  // this resets the projects section
+  limitedProjects = 0
+  one.innerHTML = ""
+  two.innerHTML = ""
+  three.innerHTML = ""
+  // this resets the language section
+
+  if (!two.classList.contains("hiding-content")) {
+    one.classList.remove("hiding-content");
+    two.classList.add("hiding-content");
+    leftBtn.disabled = true;
+    rightBtn.disabled = false;
+  }
+}
+
+function button_handler() {
+  // check which button to disable
+  if (!one.classList.contains("hiding-content")) {
+    leftBtn.disabled = true;
+    rightBtn.disabled = false;
+  } else if (!two.classList.contains("hiding-content")) {
+    leftBtn.disabled = false;
+    rightBtn.disabled = true;
+  } else {
+    leftBtn.disabled = false;
+    rightBtn.disabled = false;
+  }
+  // end of check
+}
+
+// check which button to disable and what to show
+button_handler()
+function projects_switcher(buttonPressed) {
+  if (buttonPressed.target.id === "left-btn") {
+    if (!one.classList.contains("hiding-content")) {
+      one.classList.add("hiding-content");
+      two.classList.remove("hiding-content");
+    } else if (!two.classList.contains("hiding-content")) {
+      one.classList.remove("hiding-content");
+      two.classList.add("hiding-content");
+    }
+  } else if (buttonPressed.target.id === "right-btn") {
+    if (!one.classList.contains("hiding-content")) {
+      one.classList.add("hiding-content");
+      two.classList.remove("hiding-content");
+    } else if (!two.classList.contains("hiding-content")) {
+      one.classList.remove("hiding-content");
+      two.classList.add("hiding-content");
+    }
+  }
+  button_handler()
+}
+// end of check
+
+leftBtn.addEventListener("click", projects_switcher);
+rightBtn.addEventListener("click", projects_switcher);
+
 // this display the data given by the fetch information
 function displayingData(project) {
   //the link that links every project to a repository
@@ -11,13 +91,15 @@ function displayingData(project) {
   const desc = document.createElement("p");
   desc.innerText = project.description;
   desc.classList.add("card-description")
+  desc.style.padding = "0 10px";
   //end of descriptions
 
   //creators of the project
   const creators = document.createElement("p");
   creators.innerText = `Created By: ${project.creator}`;
-  creators.style.fontSize = "1em";
-  creators.style.paddingBottom = "15px"
+  creators.style.fontSize = "calc(0.4vh + 0.4vw)";
+  creators.style.padding = "10px";
+  creators.style.margin = 0;
   //end of creators
 
   //cards image
@@ -29,91 +111,60 @@ function displayingData(project) {
   //title of the card
   const title = document.createElement("p");
   title.innerText = project.title;
-  title.style.fontSize = "1.8em";
-  title.style.marginTop = "0.5em"
-  title.style.marginBottom = "0"
-  title.style.paddingBottom = "15px"
   //end of title
 
   //coding language
   const lang = document.createElement("p");
   lang.innerText = `Skills: ${project.language}`
+  lang.style.fontSize = "calc(0.4vh + 0.4vw)";
+  lang.style.padding = "0 10px";
+  lang.style.margin = "0 0 calc(0.3vh + 0.3vh) 0";
   //end of language
 
   //creating the project to have everything be put together
-  const projects = document.createElement("div");
-  projects.classList.add("card");
-  // end of projects
+  const projectCard = document.createElement("div");
+  projectCard.classList.add("proj-card");
+  const flipCard = document.createElement("div");
+  flipCard.classList.add("flip-card");
+  const flipCardInner = document.createElement("div");
+  flipCardInner.classList.add("flip-card-inner");
+  const flipCardFront = document.createElement("div");
+  flipCardFront.classList.add("flip-card-front");
+  const flipCardBack = document.createElement("div");
+  flipCardBack.classList.add("flip-card-back");
+  const titleCard = document.createElement("div");
+  titleCard.classList.add("title-card");
+  // end of creating projects
 
   //adding everything together
-  projects.appendChild(title);
-  projects.appendChild(image);
-  projects.appendChild(desc);
-  projects.appendChild(creators);
-  projects.appendChild(lang)
-  aLink.appendChild(projects);
-  const one = document.getElementById("one");
-  one.appendChild(aLink);
+  projectCard.appendChild(flipCard);
+  flipCard.appendChild(flipCardInner);
+  flipCardInner.appendChild(flipCardFront);
+  flipCardInner.appendChild(flipCardBack);
+  flipCardFront.appendChild(image);
+  flipCardBack.appendChild(desc);
+  flipCardBack.appendChild(creators);
+  flipCardBack.appendChild(lang);
+  titleCard.appendChild(title);
+  aLink.appendChild(projectCard);
+  aLink.appendChild(titleCard);
+  // will output limited projects
+  if (limitedProjects < 6) {
+    one.appendChild(aLink);
+  } else if (limitedProjects < 12) {
+    two.appendChild(aLink);
+  } else if (limitedProjects < 18) {
+    three.appendChild(aLink);
+  } else {
+    console.log("Hey dumbass, you have reached the limit of projects to display");
+    console.log("Add another column");
+    alert("DeveloperError: check console for more information.")
+  }
+  limitedProjects++
+  // end of limiting the projects
   //end of adding everything together
 }
 // end of displaying the fetch
-
-// this displays the language data
-function displayLanguageData(location, project) {
-  //the link that links every element to a repository
-  const aLink = document.createElement("a");
-  aLink.href = `${project.link}`;
-  aLink.target = "_blank";
-  aLink.classList.add("aLink");
-  //end of links
-
-  //description of the elements
-  const desc = document.createElement("p");
-  desc.innerText = project.description;
-  desc.classList.add("card-description")
-  //end of descriptions
-
-  //creators of the element
-  const creators = document.createElement("p");
-  creators.innerText = `Created By: ${project.creator}`;
-  creators.style.fontSize = "1em";
-  creators.style.paddingBottom = "15px"
-  //end of creators
-
-  //cards image
-  const image = document.createElement("img");
-  image.src = project.image_url;
-  image.classList.add("apiImage");
-  //end of image
-
-  //title of the card
-  const title = document.createElement("p");
-  title.innerText = project.title;
-  title.style.fontSize = "4vh";
-  title.style.paddingBottom = "15px"
-  //end of title
-
-  //coding language
-  const lang = document.createElement("p");
-  lang.innerText = `Skills: ${project.language}`
-  //end of language
-
-  //creating the element to have everything be put together
-  const elements = document.createElement("li");
-  elements.classList.add("card");
-  // end of elements
-
-  //adding everything together
-  elements.appendChild(title);
-  elements.appendChild(image);
-  elements.appendChild(desc);
-  elements.appendChild(creators);
-  elements.appendChild(lang)
-  aLink.appendChild(elements);
-  location.appendChild(aLink);
-  //end of adding everything together
-}
-// end of display of language data
 
 //fetching json file
 fetch(
@@ -138,90 +189,14 @@ fetch(
   });
 // end of fetch
 
-var languageBottom = document.getElementsByClassName("o-divider-under")[0]
-languageBottom.classList.add("hiding-content")
-var languageBottom2 = document.getElementsByClassName("o-divider-under")[1]
-languageBottom2.classList.add("hiding-content")
-var languageBottom3 = document.getElementsByClassName("o-divider-under")[2]
-languageBottom3.classList.add("hiding-content")
-var languageBottom4 = document.getElementsByClassName("o-divider-under")[3]
-languageBottom4.classList.add("hiding-content")
-var languageBottom5 = document.getElementsByClassName("o-divider-under")[4]
-languageBottom5.classList.add("hiding-content")
-var languageBottom6 = document.getElementsByClassName("o-divider-under")[5]
-languageBottom6.classList.add("hiding-content")
-
-var languageFunction = document.getElementsByClassName("o-divider2")[0]
-languageFunction.classList.add("hiding-content")
-var languageFunction2 = document.getElementsByClassName("o-divider3")[0]
-languageFunction2.classList.add("hiding-content")
-var languageFunction3 = document.getElementsByClassName("o-divider4")[0]
-languageFunction3.classList.add("hiding-content")
-var languageFunction4 = document.getElementsByClassName("o-divider5")[0]
-languageFunction4.classList.add("hiding-content")
-var languageFunction5 = document.getElementsByClassName("o-divider6")[0]
-languageFunction5.classList.add("hiding-content")
-var languageFunction6 = document.getElementsByClassName("o-divider7")[0]
-languageFunction6.classList.add("hiding-content")
-
-const hide2 = document.getElementById("two")
-hide2.classList.add("hiding-content")
-const hide3 = document.getElementById("three")
-hide3.classList.add("hiding-content")
-const hide4 = document.getElementById("four")
-hide4.classList.add("hiding-content")
-const hide5 = document.getElementById("five")
-hide5.classList.add("hiding-content")
-const hide6 = document.getElementById("six")
-hide6.classList.add("hiding-content")
-
-var tempPara = document.createElement("p")
-tempPara.innerText = "HTML / CSS"
-languageFunction2.appendChild(tempPara)
-
-var tempPara = document.createElement("p")
-tempPara.innerText = "Django"
-languageFunction3.appendChild(tempPara)
-
-var tempPara = document.createElement("p")
-tempPara.innerText = "JavaScript"
-languageFunction4.appendChild(tempPara)
-
-var tempPara = document.createElement("p")
-tempPara.innerText = "Java"
-languageFunction5.appendChild(tempPara)
-
-var tempPara = document.createElement("p")
-tempPara.innerText = "Other Languages"
-languageFunction6.appendChild(tempPara)
-
 // this function deals with the filter in the projects section
 function myFunction() {
-  languageFunction.classList.add("hiding-content")
-  languageFunction2.classList.add("hiding-content")
-  languageFunction3.classList.add("hiding-content")
-  languageFunction4.classList.add("hiding-content")
-  languageFunction5.classList.add("hiding-content")
-  languageFunction6.classList.add("hiding-content")
-
-  languageBottom.classList.add("hiding-content")
-  languageBottom2.classList.add("hiding-content")
-  languageBottom3.classList.add("hiding-content")
-  languageBottom4.classList.add("hiding-content")
-  languageBottom5.classList.add("hiding-content")
-  languageBottom6.classList.add("hiding-content")
-
-  hide2.classList.add("hiding-content")
-  hide3.classList.add("hiding-content")
-  hide4.classList.add("hiding-content")
-  hide5.classList.add("hiding-content")
-  hide6.classList.add("hiding-content")
-
   var projFilter = document.getElementById("mySelect");
   var filterType = projFilter.selectedIndex;
+
   //search by name
   if (projFilter.options[filterType].text == "Name") {
-
+    project_reset()
     // adding a description for name
     var cue = document.getElementById("cubone")
     cue.replaceChildren()
@@ -252,31 +227,150 @@ function myFunction() {
           const element = data[i];
           displayingData(element)
         }
+        removeButton()
       });
     // end of fetch
   } 
   //------------------------------------------------------
-  //please update language when learning and uploading a new project with said language
-  else if (projFilter.options[filterType].text == "Language") {
-    languageFunction.classList.remove("hiding-content")
-    languageFunction2.classList.remove("hiding-content")
-    languageFunction3.classList.remove("hiding-content")
-    languageFunction4.classList.remove("hiding-content")
-    languageFunction5.classList.remove("hiding-content")
-    languageFunction6.classList.remove("hiding-content")
+  //search by Python
+  else if (projFilter.options[filterType].text == "Python") {
+    project_reset()
 
-    hide2.classList.remove("hiding-content")
-    hide3.classList.remove("hiding-content")
-    hide4.classList.remove("hiding-content")
-    hide5.classList.remove("hiding-content")
-    hide6.classList.remove("hiding-content")
+    fetch(
+      `projects.json`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
 
-    languageBottom.classList.remove("hiding-content")
-    languageBottom2.classList.remove("hiding-content")
-    languageBottom3.classList.remove("hiding-content")
-    languageBottom4.classList.remove("hiding-content")
-    languageBottom5.classList.remove("hiding-content")
-    languageBottom6.classList.remove("hiding-content")
+        // adding a description for Language
+        var cue = document.getElementById("cubone")
+        cue.replaceChildren()
+        var bones = document.createElement("p")
+        bones.classList.add("projectDesc")
+        bones.innerText = "This will show the projects made in python!"
+        cue.appendChild(bones)
+        // end of adding description
+        
+        // python
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.language.includes("Python")) {
+            displayingData(element)
+          }
+        }
+        // end of python
+        removeButton()
+      });
+    // end of fetch
+  } 
+  //-----------------------------------------------------------------------------------
+  //search by HTML/CSS
+  else if (projFilter.options[filterType].text == "HTML/CSS") {
+    project_reset()
+
+    fetch(
+      `projects.json`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+
+        // adding a description for Language
+        var cue = document.getElementById("cubone")
+        cue.replaceChildren()
+        var bones = document.createElement("p")
+        bones.classList.add("projectDesc")
+        bones.innerText = "This will show the projects made in HTML and CSS!"
+        cue.appendChild(bones)
+        // end of adding description
+
+        // html and css
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.language.includes("HTML/CSS")) {
+            displayingData(element)
+          }
+        }
+        //end of html and css
+        removeButton()
+      });
+    // end of fetch
+  } 
+  //-----------------------------------------------------------------------------------
+  //search by Django
+  else if (projFilter.options[filterType].text == "Django") {
+    project_reset()
+
+    fetch(
+      `projects.json`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+
+        // adding a description for Language
+        var cue = document.getElementById("cubone")
+        cue.replaceChildren()
+        var bones = document.createElement("p")
+        bones.classList.add("projectDesc")
+        bones.innerText = "This will show the projects made in Django!"
+        cue.appendChild(bones)
+        // end of adding description
+
+        // django
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.language.includes("Django")) {
+            displayingData(element)
+          }
+        }
+        // end of django
+        removeButton()
+      });
+    // end of fetch
+  } 
+  //-----------------------------------------------------------------------------------
+  //search by JavaScript
+  else if (projFilter.options[filterType].text == "JavaScript") {
+    project_reset()
+
+    fetch(
+      `projects.json`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+
+        // adding a description for Language
+        var cue = document.getElementById("cubone")
+        cue.replaceChildren()
+        var bones = document.createElement("p")
+        bones.classList.add("projectDesc")
+        bones.innerText = "This will show the projects made in JavaScript!"
+        cue.appendChild(bones)
+        // end of adding description
+
+        // javascript
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.language.includes("JavaScript")) {
+            displayingData(element)
+          }
+        }
+        //end of javascript
+        removeButton()
+      });
+    // end of fetch
+  } 
+  //-----------------------------------------------------------------------------------
+  //search by Java
+  else if (projFilter.options[filterType].text == "Java") {
+    project_reset()
 
     fetch(
       `projects.json`
@@ -294,94 +388,60 @@ function myFunction() {
         bones.innerText = "This will show the projects by their language!"
         cue.appendChild(bones)
         // end of adding description
-    
-        const one = document.getElementById("one");
-
-        // empties out the ul so we don`t have duplication when the user constantly opens the language filter
-        one.replaceChildren()
-        hide2.replaceChildren()
-        hide3.replaceChildren()
-        hide4.replaceChildren()
-        hide5.replaceChildren()
-        hide6.replaceChildren()
-        // end of emptying out the ul
-        
-        // python
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.language.includes("Python")) {
-            displayLanguageData(one, element)
-          }
-        }
-        // end of python
-
-        // divider
-        // end of divider
-
-        // html and css
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.language.includes("HTML/CSS")) {
-            displayLanguageData(hide2, element)
-          }
-        }
-        //end of html and css
-
-        // divider
-        // end of divider
-
-        // django
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.language.includes("Django")) {
-            displayLanguageData(hide3, element)
-          }
-        }
-        //end of django
-
-        // divider
-        // end of divider
-
-        // javascript
-        for (let i = 0; i < data.length; i++) {
-          const element = data[i];
-          if (element.language.includes("JavaScript")) {
-            displayLanguageData(hide4, element)
-          }
-        }
-        //end of javascript
-
-        // divider
-        // end of divider
 
         // java
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.language.includes("Java")) {
             if (!element.language.includes("JavaScript")) {
-              displayLanguageData(hide5, element)
+              displayingData(element)
             }
           }
         }
         //end of java
+        removeButton()
+      });
+    // end of fetch
+  } 
+  //-----------------------------------------------------------------------------------
+  //please update language when learning and uploading a new project with said language
+  else if (projFilter.options[filterType].text == "Other") {
+    project_reset()
 
-        // divider
-        // end of divider
+    fetch(
+      `projects.json`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+
+        // adding a description for Language
+        var cue = document.getElementById("cubone")
+        cue.replaceChildren()
+        var bones = document.createElement("p")
+        bones.classList.add("projectDesc")
+        bones.innerText = "This will show the projects by their language!"
+        cue.appendChild(bones)
+        // end of adding description
 
         // all the other languages that did not have enough content to display
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
           if (element.language.includes("Ruby") || element.language.includes("SQL")) {
-            displayLanguageData(hide6, element)
+            displayingData(element)
           }
         }
         //end of all of the other languages
+        removeButton()
       });
     // end of fetch
   } 
   //-----------------------------------------------------------------------------------
   //lists the projects by the order of my favorite
   else if (projFilter.options[filterType].text == "Favorite") {
+    project_reset()
+
     fetch(
       `projects.json`
     )
@@ -497,12 +557,14 @@ function myFunction() {
           }
         }
         // end of favorite 12
+        removeButton()
       });
     // end of fetch
   } 
   //---------------------------------------------------------------
   //default (newest to oldest)
   else {
+    project_reset()
     //fetching json file
     fetch(
       `projects.json`
@@ -526,6 +588,9 @@ function myFunction() {
         Array.from(data).forEach(function (project) {
             displayingData(project)
         });
+        //remove button visibility if there is no project on row
+        removeButton()
+        // end of removing button visibility
       });
     // end of fetch
   }

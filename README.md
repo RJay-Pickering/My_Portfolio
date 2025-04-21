@@ -4,11 +4,24 @@ My portfolio is about me and the skill that i have learned over the years of pro
 
 ### Notes on this repository!
 
-1. The folder labeled **"past-portfolios"** is all of the past editions of my page!
+1. The folder labeled **"past-portfolios"** has been removed to save space.
 
-2. All Django projects, are currently unavailable for viewing because of complications with the hosting platform (Railway). The projects will return to be viewed soon!
+2. Revamped the entire portfolio to make crucial fixes and updates.
+
+3. New Godot project will be added soon, after making a bit of changes to the gameplay.
+
+4. Ruby projects will hopefully be runnable like the python project on the next update.
+
+4. All Django projects, are currently unavailable for viewing because of complications with the hosting platform (Railway). The projects will return to be viewed soon!
 
   - **Projects Effected...**
     - Base Camp News
     - Missing Cats of America
     - Apawcalyptic Partners
+
+5. New projects on the way:
+  - Vehicle lookup app
+  - A gym app interactive challenger 
+  - Gym partner app
+  - 20 second game jam game (updated)
+  - Mercenaries Contract

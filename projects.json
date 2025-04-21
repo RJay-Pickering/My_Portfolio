@@ -6,7 +6,7 @@
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/pet_finder.jpg",
       "language": "Django, React, HTML/CSS, JavaScript",
-      "description": "'Apawcalyptic Partners' is a web application that was heavily inspired by one of my old projects, 'Missing Cats of America'. Unlike 'MCOA', this project provides real life data from actual shelters across the U.S. On the homepage, you are shown animals that have been recently added to the adoption site. You can also show animals that are near you (if you don't have a vpn) and search for specific animal types."
+      "description": "'Apawcalyptic Partners' is a web application that was heavily inspired by one of my old projects, 'Missing Cats of America'. Unlike 'MCOA', this project provides real life data from actual shelters across the U.S. On the homepage, you are shown animals that have been recently added to the adoption site. You can also show animals that are near you and search for specific animal types."
     },
     {
       "favorite": 6,

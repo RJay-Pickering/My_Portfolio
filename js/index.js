@@ -6,7 +6,7 @@ var projBtn = document.getElementsByClassName("projectsLink")[0];
 // end of getting nav buttons and div
 
 // getting content
-var aboutContent = document.getElementsByClassName("about-me")[0];
+var aboutContent = document.getElementsByClassName("about-section")[0];
 var skillsContent = document.getElementsByClassName("my-skills")[0];
 var projContent = document.getElementsByClassName("projects")[0];
 // end of getting content
@@ -63,3 +63,7 @@ projBtn.addEventListener("click", function() {
   // end of removing about me and skills content
 });
 // end of projects functionality
+
+//making it unable to go landscape mode
+screen.orientation.lock()
+// end of making it unable to go landscape mode
