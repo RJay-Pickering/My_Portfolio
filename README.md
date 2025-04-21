@@ -12,14 +12,17 @@ My portfolio is about me and the skill that i have learned over the years of pro
 
 4. Ruby projects will hopefully be runnable like the python project on the next update.
 
-4. All Django projects, are currently unavailable for viewing because of complications with the hosting platform (Railway). The projects will return to be viewed soon!
+5. All Python and Django projects, are currently unavailable for viewing because of complications with the hosting platform (Railway) or with terminal access. The projects will return to be viewed soon!
 
   - **Projects Effected...**
     - Base Camp News
     - Missing Cats of America
     - Apawcalyptic Partners
+    - Pokemon Safari
+    - The Static at my Door
+    - Demon Overthrow
 
-5. New projects on the way:
+6. New projects on the way:
   - Vehicle lookup app
   - A gym app interactive challenger 
   - Gym partner app
