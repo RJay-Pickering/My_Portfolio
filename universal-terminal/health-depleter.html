@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Health Deplete(r)</title>
@@ -10,32 +10,27 @@
 
     <link rel="icon" type="image/jpg" href="../imageStorage/projects/demon.jpg">
 
-    <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="https://www.online-python.com/assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="https://www.online-python.com/assets/dist/css/ide.css?v=a1">
 
-    <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-    <!-- jQuery 3 -->
     <script src="https://www.online-python.com/assets/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap 3.3.7 -->
+
     <script src="https://www.online-python.com/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script src="https://www.online-python.com/assets/dist/js/ide.js?v=a1"></script>
 
-    <!-- Ace Editor -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-settings_menu.min.js" type="text/javascript" charset="utf-8"></script>
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.8/ext-keybinding_menu.min.js" type="text/javascript" charset="utf-8"></script>
 
-    <!-- Split JS -->
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.6.2/split.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
@@ -48,8 +43,6 @@
     <div>
         <div class="container" id="container">
             <div id="mi" class="split" style="height: auto;">
-
-                <!-- editor -->
                 <ul class="nav nav-tabs" role="tablist" style="display:none;">
                     <li class="active" id="editor-1"><a data-toggle="tab">main.py</a></li>
                     <li id="new_file_btn"><button type="button" class="btn btn-default btn-sm add-editor" id="create_tab" data-title="New File"><i class="fas fa-plus"></i></button></li>
@@ -58,7 +51,6 @@
                 <div id="editor" style="display:none;"></div>
 
                 <div class="boxed" id="editor_footer"></div>
-                <!-- ------ -->
 
                 <div class="control-bar">
                     <div id="control-btn">
@@ -87,7 +79,7 @@
         </div>
 
 
-        <!-- Save Result modal -->
+
         <div class="modal fade" tabindex="-1" role="dialog" id="downloadResult">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -103,9 +95,9 @@
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" onclick="download_output()" data-dismiss="modal">Download</button>
                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+                </div>
+            </div>
+        </div>
 
 
 
@@ -528,5 +520,50 @@ elif boss <= 0:\n\
         </script>
 
     </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDoodle API Example</title>
+</head>
+<body>
+    <h1>Run Code with JDoodle</h1>
+    <textarea id="code" rows="10" cols="50">print("Hello, World!")</textarea><br>
+    <button id="run">Run Code</button>
+    <h2>Output:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById('run').onclick = function() {
+            const code = document.getElementById('code').value;
+            const apiUrl = 'https://api.jdoodle.com/v1/execute';
+            const data = {
+                script: code,
+                language: 'python3',
+                versionIndex: '3',
+                clientId: '3160d8956975db59cee806fceeefb3c3',
+                clientSecret: '79b8611a6b22bce4f5ba687d516d4e3a4ba92f22fa19f94048a5e9c7b9e5b317'
+            };
+
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('output').textContent = data.output || data.error;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        };
+    </script>
 </body>
 </html>
