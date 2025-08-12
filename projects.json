@@ -38,7 +38,7 @@
     {
       "favorite": 9,
       "title": "The Hacker Man",
-      "link": "https://github.com/RJay-Pickering/hacker-game.git",
+      "link": "https://github.com/RJay-Pickering/hacker-game",
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/Hackerman.jpeg",
       "language": "Java",
@@ -105,6 +105,6 @@
       "creator": "RJay Pickering",
       "image_url": "imageStorage/projects/demon.jpg",
       "language": "Python",
-      "description": "During my third week at Base Camp Coding Academy, we were tasked with creating a health-depleting game using Python and applying the knowledge we had gained up to that point. This game unfolds as the user find themselves pulled into their television by a static humanoid, subsequently awakening in a forest clearing. Confronted by three goblins and the formidable static humanoid, your objective is to engage in battles with the goblins and ultimately defeat the boss at the end of this level. "
+      "description": "During my third week at Base Camp Coding Academy, we were tasked with creating a health-depleting game using Python and applying the knowledge we had gained up to that point. This game unfolds as the user find themselves pulled into their television by a static humanoid, subsequently awakening in a forest clearing. Confronted by three goblins and the formidable static humanoid, your objective is to engage in battles with the goblins and ultimately defeat the boss at the end of this level."
     }
   ]

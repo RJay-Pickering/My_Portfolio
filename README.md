@@ -18,12 +18,8 @@ My portfolio is about me and the skill that i have learned over the years of pro
     - Base Camp News
     - Missing Cats of America
     - Apawcalyptic Partners
-    - Pokemon Safari
-    - The Static at my Door
-    - Demon Overthrow
 
 6. New projects on the way:
-  - Vehicle lookup app
   - A gym app interactive challenger 
   - Gym partner app
   - 20 second game jam game (updated)
