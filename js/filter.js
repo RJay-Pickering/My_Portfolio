@@ -428,7 +428,7 @@ function myFunction() {
         // all the other languages that did not have enough content to display
         for (let i = 0; i < data.length; i++) {
           const element = data[i];
-          if (element.language.includes("Ruby") || element.language.includes("SQL")) {
+          if (element.language.includes("Ruby") || element.language.includes("SQL") || element.language.includes("GDScript") || element.language.includes("HLSL")) {
             displayingData(element)
           }
         }

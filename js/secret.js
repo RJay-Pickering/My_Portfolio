@@ -21,7 +21,7 @@ function inactive_secret_image(image_url, sound, message, size) {
   var nowPlaying = sound;
   var audio = new Audio(nowPlaying);
 
-  onInactive(5000, function () {
+  onInactive(25000, function () {
     console.log(message)
     inactive_img.style.display = null;
     audio.autoplay = true;
