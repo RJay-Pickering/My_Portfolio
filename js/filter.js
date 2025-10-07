@@ -10,7 +10,6 @@ three.classList.add("hiding-content")
 function removeButton() {
    //remove button visibility if there is no project on row
    if (two.innerHTML === "") {
-    console.log("There is no content in the second column")
     leftBtn.classList.add("hiding-content")
     rightBtn.classList.add("hiding-content")
   } else {
@@ -43,6 +42,9 @@ function button_handler() {
     rightBtn.disabled = false;
   } else if (!two.classList.contains("hiding-content")) {
     leftBtn.disabled = false;
+    rightBtn.disabled = false;
+  } else if (!three.classList.contains("hiding-content")) {
+    leftBtn.disabled = false;
     rightBtn.disabled = true;
   } else {
     leftBtn.disabled = false;
@@ -58,17 +60,29 @@ function projects_switcher(buttonPressed) {
     if (!one.classList.contains("hiding-content")) {
       one.classList.add("hiding-content");
       two.classList.remove("hiding-content");
+      three.classList.add("hiding-content");
     } else if (!two.classList.contains("hiding-content")) {
       one.classList.remove("hiding-content");
       two.classList.add("hiding-content");
+      three.classList.add("hiding-content");
+    } else if (!three.classList.contains("hiding-content")) {
+      one.classList.add("hiding-content");
+      two.classList.remove("hiding-content");
+      three.classList.add("hiding-content");
     }
   } else if (buttonPressed.target.id === "right-btn") {
     if (!one.classList.contains("hiding-content")) {
       one.classList.add("hiding-content");
       two.classList.remove("hiding-content");
+      three.classList.add("hiding-content");
     } else if (!two.classList.contains("hiding-content")) {
+      one.classList.add("hiding-content");
+      two.classList.add("hiding-content");
+      three.classList.remove("hiding-content");
+    } else if (!three.classList.contains("hiding-content")) {
       one.classList.remove("hiding-content");
       two.classList.add("hiding-content");
+      three.classList.add("hiding-content");
     }
   }
   button_handler()
