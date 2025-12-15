@@ -571,6 +571,22 @@ function myFunction() {
           }
         }
         // end of favorite 12
+        // favorite 13
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.favorite === 13) {
+            displayingData(element)
+          }
+        }
+        // end of favorite 13
+        // favorite 14
+        for (let i = 0; i < data.length; i++) {
+          const element = data[i];
+          if (element.favorite === 14) {
+            displayingData(element)
+          }
+        }
+        // end of favorite 14
         removeButton()
       });
     // end of fetch

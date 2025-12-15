@@ -1,5 +1,14 @@
 [
     {
+      "favorite": 5,
+      "title": "Take it or Leave it",
+      "link": "https://shotgungoblinstudio.itch.io/take-it-or-leave-it",
+      "creator": "RJay Pickering, Stanlee Tutor",
+      "image_url": "imageStorage/projects/take-it-or-leave-it.png",
+      "language": "GDScript, GLSL",
+      "description": "You're enjoying your time in a tavern when a goblin approaches you with a drinking game! Some drinks are good, others are bad...so think fast! Because in this game you only have a moment to choose...to take it, or leave it! This game was made for the 20 second game jam with a team of 2 people. I was the programmer on the team and played many other roles for the game like the bartenders voice lines and music editing."
+    },
+    {
       "favorite": 2,
       "title": "A Cat-astrophic Case",
       "link": "https://bubblepunk.itch.io/a-cat-astrophic-case",
@@ -18,7 +27,7 @@
       "description": "'Apawcalyptic Partners' is a web application that was heavily inspired by one of my old projects, 'Missing Cats of America'. Unlike 'MCOA', this project provides real life data from actual shelters across the U.S. On the homepage, you are shown animals that have been recently added to the adoption site. You can also show animals that are near you and search for specific animal types."
     },
     {
-      "favorite": 7,
+      "favorite": 10,
       "title": "Ruby University",
       "link": "https://github.com/RJay-Pickering/Ruby_University",
       "creator": "RJay Pickering",
@@ -36,7 +45,7 @@
       "description": "This project served as my final project at Base Camp Coding Academy. Over the course of a month, my two collaborators and I collaborated to make this project. As the team's Full-Stack developer and leader, I assisted the Back-End and Front-End to read the API's and made it mobile friendly."
     },
     {
-      "favorite": 6,
+      "favorite": 7,
       "title": "Animoo Hub",
       "link": "https://github.com/RJay-Pickering/AnimeStorage",
       "creator": "RJay Pickering",
@@ -63,7 +72,7 @@
       "description": "This project allows users to engage in a game of 'Rock, Paper, Scissors' against a computer opponent. The primary motivation behind this project was to create a straightforward game using JavaScript. During game play, the chosen option by the player is highlighted in a shade of yellowish green, while the computer's selection is marked in red. After each game, players can initiate a new round by pressing the 'New Game' button. The user's score is maintained between sessions but can only be reset by refreshing the page."
     },
     {
-      "favorite": 5,
+      "favorite": 6,
       "title": "Everest",
       "link": "https://rjay-pickering.github.io/JS-BOT-PROJECT-BCCA/",
       "creator": "RJay Pickering and Randy Trullet",
@@ -81,7 +90,7 @@
       "description": "This project is named 'Missing Cats of America,' and it functions as a platform for both posting and discovering information about missing animals. Users have the ability to add details about their lost companions and view information about other missing animals to see if they have come across them. The inspiration for creating this website stemmed from an personal experience—my feline companion went missing during the period when I was learning Django, motivating me to create a resource to assist others in similar situations."
     },
     {
-      "favorite": 11,
+      "favorite": 12,
       "title": "Black Ops Fundraiser",
       "link": "https://rjay-pickering.github.io/Charity/",
       "creator": "RJay Pickering",
@@ -90,7 +99,7 @@
       "description": "This fake charity website is my first HTML and CSS project. This project centers around a campaign advocating for the revival of 'Black Ops' for the modern-generation consoles. My approach to this project prioritized a straightforward, infographic-style design, aimed at delivering essential information rather than focusing on visual appeal or entertainment value. Despite its simplicity, creating this website was an enjoyable and educational experience."
     },
     {
-      "favorite": 10,
+      "favorite": 11,
       "title": "Pokemon Safari",
       "link": "universal-terminal/pokemon-safari.html",
       "creator": "RJay Pickering and Logan Coley",
@@ -99,7 +108,7 @@
       "description": "For a unit project, my classmate and I collaborated on a Python-based endeavor. We chose to create a Pokemon safari park game, featuring the third-generation Pokemon's. In this game, players experienced random encounters with wild Pokemon or could engage in battles with the gym leaders to earn Bronze, Silver, and Gold Medals. To add an extra layer of excitement, we introduced the concept of a Legendary Pokemon that players could discover and capture after achieving the Golden Medal from the battle towers."
     },
     {
-      "favorite": 12,
+      "favorite": 13,
       "title": "The Static at my Door",
       "link": "universal-terminal/static-door.html",
       "creator": "RJay Pickering",
@@ -108,7 +117,7 @@
       "description": "During my sixth week at Base Camp, we were tasked with creating a choose-your-own-adventure game using Python with the knowledge we had acquired up to that point. The storyline of this game revolves around a sleep paralysis demon infiltrating the users house, and their mission is to find a way to evade capture by this menacing entity. Each decision you make carries consequences. The game offers multiple paths to explore, making every choice a critical juncture in your quest for survival."
     },
     {
-      "favorite": 13,
+      "favorite": 14,
       "title": "Demon Overthrow",
       "link": "universal-terminal/health-depleter.html",
       "creator": "RJay Pickering",
