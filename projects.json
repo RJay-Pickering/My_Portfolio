@@ -1,5 +1,14 @@
 [
     {
+      "favorite": 8,
+      "title": "Trials for Relic",
+      "link": "https://shotgungoblinstudio.itch.io/trials-for-relic",
+      "creator": "RJay Pickering",
+      "image_url": "imageStorage/projects/Trials for Relics.png",
+      "language": "GDScript, GLSL",
+      "description": "Play three minigames, beat a high score, and see how far you get. Not every game ends the way you expect it to. Not everyone can find out what the relic actually is, but everyone is good for being an experiment. This game was made for the OLYGAMES 2026. I developed and designed this game by myself."
+    },
+    {
       "favorite": 5,
       "title": "Take it or Leave it",
       "link": "https://shotgungoblinstudio.itch.io/take-it-or-leave-it",
@@ -27,7 +36,7 @@
       "description": "'Apawcalyptic Partners' is a web application that was heavily inspired by one of my old projects, 'Missing Cats of America'. Unlike 'MCOA', this project provides real life data from actual shelters across the U.S. On the homepage, you are shown animals that have been recently added to the adoption site. You can also show animals that are near you and search for specific animal types."
     },
     {
-      "favorite": 10,
+      "favorite": 11,
       "title": "Ruby University",
       "link": "https://github.com/RJay-Pickering/Ruby_University",
       "creator": "RJay Pickering",
@@ -54,7 +63,7 @@
       "description": "This project represents my work in Java and SQL, resulting in a basic CRUD (Create, Read, Update, and Delete) application called 'Animoo Hub'. 'Animoo Hub' allows users to manage their very own anime storage that they can store any anime that the user enjoys or would like to watch. To utilize this application, please ensure you have downloaded the necessary code."
     },
     {
-      "favorite": 9,
+      "favorite": 10,
       "title": "The Hacker Man",
       "link": "https://github.com/RJay-Pickering/hacker-game",
       "creator": "RJay Pickering",
@@ -63,7 +72,7 @@
       "description": "This project represents one of my early Java projects. Its a guessing game where the player is a expert hacker whose computer has been compromised. To protect their personal information from getting leaked, they must login to their hacking program on the compromised computer to destroy the hack. However, they have forgotten their password and must attempt to guess it using their password book. This project offers an enjoyable experience and shows my basic skills of Java. To utilize this application, please ensure you have downloaded the necessary code."
     },
     {
-      "favorite": 8,
+      "favorite": 9,
       "title": "Rock, Paper, Scissors!",
       "link": "https://rjay-pickering.github.io/RockPaperScissorsGameJS/",
       "creator": "RJay Pickering",
@@ -90,7 +99,7 @@
       "description": "This project is named 'Missing Cats of America,' and it functions as a platform for both posting and discovering information about missing animals. Users have the ability to add details about their lost companions and view information about other missing animals to see if they have come across them. The inspiration for creating this website stemmed from an personal experience—my feline companion went missing during the period when I was learning Django, motivating me to create a resource to assist others in similar situations."
     },
     {
-      "favorite": 12,
+      "favorite": 13,
       "title": "Black Ops Fundraiser",
       "link": "https://rjay-pickering.github.io/Charity/",
       "creator": "RJay Pickering",
@@ -99,7 +108,7 @@
       "description": "This fake charity website is my first HTML and CSS project. This project centers around a campaign advocating for the revival of 'Black Ops' for the modern-generation consoles. My approach to this project prioritized a straightforward, infographic-style design, aimed at delivering essential information rather than focusing on visual appeal or entertainment value. Despite its simplicity, creating this website was an enjoyable and educational experience."
     },
     {
-      "favorite": 11,
+      "favorite": 12,
       "title": "Pokemon Safari",
       "link": "universal-terminal/pokemon-safari.html",
       "creator": "RJay Pickering and Logan Coley",
@@ -108,7 +117,7 @@
       "description": "For a unit project, my classmate and I collaborated on a Python-based endeavor. We chose to create a Pokemon safari park game, featuring the third-generation Pokemon's. In this game, players experienced random encounters with wild Pokemon or could engage in battles with the gym leaders to earn Bronze, Silver, and Gold Medals. To add an extra layer of excitement, we introduced the concept of a Legendary Pokemon that players could discover and capture after achieving the Golden Medal from the battle towers."
     },
     {
-      "favorite": 13,
+      "favorite": 14,
       "title": "The Static at my Door",
       "link": "universal-terminal/static-door.html",
       "creator": "RJay Pickering",
@@ -117,7 +126,7 @@
       "description": "During my sixth week at Base Camp, we were tasked with creating a choose-your-own-adventure game using Python with the knowledge we had acquired up to that point. The storyline of this game revolves around a sleep paralysis demon infiltrating the users house, and their mission is to find a way to evade capture by this menacing entity. Each decision you make carries consequences. The game offers multiple paths to explore, making every choice a critical juncture in your quest for survival."
     },
     {
-      "favorite": 14,
+      "favorite": 15,
       "title": "Demon Overthrow",
       "link": "universal-terminal/health-depleter.html",
       "creator": "RJay Pickering",
