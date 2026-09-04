@@ -47,7 +47,7 @@
     {
       "favorite": 1,
       "title": "Base Camp News",
-      "link": "https://github.com/RJay-Pickering/capstone_project_QS_WC_RP",
+      "link": "https://basecampnews.up.railway.app/home/",
       "creator": "RJay Pickering, Will Collins, and Quinton Summerford",
       "image_url": "imageStorage/projects/BCN.jpg",
       "language": "Django, HTML/CSS, JavaScript",
